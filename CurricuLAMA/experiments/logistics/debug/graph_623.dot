@@ -1,0 +1,29 @@
+digraph G {
+  lm0 [label="Atom obj-at(p0, l2-1)", style=filled];
+  lm1 [label="Atom truck-at(t2, l2-0)", style=bold];
+      lm1 -> lm0 [label="n"];
+      lm1 -> lm2 [label="gn"];
+      lm1 -> lm6 [label="gn"];
+  lm2 [label="Atom truck-at(t2, l2-1)"];
+      lm2 -> lm0 [label="gn"];
+  lm3 [label="Atom airplane-at(a0, l0-0)", style=bold];
+      lm3 -> lm5 [label="gn"];
+      lm3 -> lm4 [label="n"];
+  lm4 [label="Atom airplane-at(a0, l2-0)"];
+      lm4 -> lm0 [label="n"];
+      lm4 -> lm8 [label="gn"];
+  lm5 [label="Atom in-airplane(p0, a0)"];
+      lm5 -> lm6 [label="r", style=dashed];
+      lm5 -> lm8 [label="gn"];
+      lm5 -> lm0 [label="n"];
+  lm6 [label="Atom in-truck(p0, t2)"];
+      lm6 -> lm0 [label="gn"];
+  lm7 [label="Atom obj-at(p0, l0-0)", style=bold];
+      lm7 -> lm6 [label="r", style=dashed];
+      lm7 -> lm0 [label="r", style=dashed];
+      lm7 -> lm5 [label="gn"];
+      lm7 -> lm8 [label="n"];
+  lm8 [label="Atom obj-at(p0, l2-0)"];
+      lm8 -> lm0 [label="n"];
+      lm8 -> lm6 [label="gn"];
+}

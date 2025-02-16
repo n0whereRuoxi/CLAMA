@@ -1,0 +1,2505 @@
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.006s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.217s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84373 total queue pushes
+Completing instantiation... [1.740s CPU, 1.755s wall-clock]
+Instantiating: [1.970s CPU, 1.987s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.020s CPU, 0.023s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.010s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.040s CPU, 0.034s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.001s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.001s wall-clock]
+Processing axioms: [0.090s CPU, 0.102s wall-clock]
+Translating task: [1.470s CPU, 1.490s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.780s CPU, 0.787s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.380s CPU, 0.385s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222256 KB
+Writing output... [0.260s CPU, 0.306s wall-clock]
+Done! [5.020s CPU, 5.117s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'lazy_greedy([landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1, conjunctive_landmarks=true, use_orders=true), verbosity=normal                    ))])' --internal-plan-file sas_plan < output.sas
+[t=0.000591229s, 21664 KB] reading input...
+[t=0.0828847s, 29584 KB] done reading input!
+[t=0.0829624s, 29584 KB] getting initial state...
+[t=0.0830559s, 29584 KB] Number of vars:56
+[t=0.0830951s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0831376s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0831764s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0832113s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.083249s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0832884s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0833225s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0833582s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0833919s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0834251s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0834633s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0834973s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0835334s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0835757s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0836107s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0836434s, 29584 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0836802s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.083718s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0837518s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0837856s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0838231s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0838549s, 29584 KB] Fact name:Atom zero(index0-1-0)
+[t=0.0838917s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0839272s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0839605s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0839952s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0840318s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0840649s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0841009s, 29584 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0841349s, 29584 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0841709s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.084205s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0842395s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0842724s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0843068s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0843386s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0843723s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0844046s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0844352s, 29584 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0844698s, 29584 KB] Fact name:Atom on(crate0, crate1)
+[t=0.0845056s, 29584 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0845376s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0845731s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0846061s, 29584 KB] Fact name:Atom depth(crate2, index0-1-1)
+[t=0.0846399s, 29584 KB] Fact name:Atom on(crate2, crate0)
+[t=0.0846712s, 29584 KB] Fact name:Atom surface-at(crate2, place0)
+[t=0.0847033s, 29584 KB] Fact name:Atom depth(crate3, index0-1-0)
+[t=0.0847346s, 29584 KB] Fact name:Atom on(crate3, crate2)
+[t=0.0847673s, 29584 KB] Fact name:Atom surface-at(crate3, place0)
+[t=0.0848038s, 29584 KB] Fact name:Atom available(hoist0)
+[t=0.0848355s, 29584 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0848707s, 29584 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0849011s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0849333s, 29584 KB] Fact name:Atom clear(crate3)
+[t=0.0849646s, 29584 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0849987s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0862413s, 29980 KB] Initializing landmark sum heuristic...
+[t=0.086597s, 29980 KB] Generating landmark graph...
+[t=0.0868523s, 30564 KB] Building a landmark graph with reasonable orders.
+[t=0.0876719s, 31124 KB] h^m landmarks m=1
+[t=0.0884904s, 31124 KB] Using 252 P^m fluents.
+[t=1.33307s, 39036 KB] h^m landmarks computed.
+[t=1.33686s, 39036 KB] Calculating achievers.
+[t=1.34359s, 39036 KB] Landmarks generation time: 1.25606s
+[t=1.34442s, 39036 KB] Discovered 23 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=1.34447s, 39036 KB] 54 edges
+[t=1.34452s, 39036 KB] Saving landmark graph: 
+[t=1.34467s, 39036 KB] Landmark graph end.
+[t=1.34471s, 39036 KB] approx. reasonable orders
+[t=1.34978s, 39036 KB] Landmarks generation time: 1.26314s
+[t=1.35029s, 39036 KB] Discovered 23 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=1.35032s, 39036 KB] 61 edges
+[t=1.35036s, 39036 KB] Saving landmark graph: 
+[t=1.35054s, 39036 KB] Landmark graph end.
+[t=1.35059s, 39036 KB] Landmark graph generation time: 1.26399s
+[t=1.35063s, 39036 KB] Landmark graph contains 23 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=1.35066s, 39036 KB] Landmark graph contains 61 orderings.
+[t=1.3507s, 39036 KB] Building successor generator...done!
+[t=1.3578s, 39036 KB] peak memory difference for successor generator creation: 0 KB
+[t=1.35786s, 39036 KB] time for successor generation creation: 0.00625508s
+[t=1.3579s, 39036 KB] Variables: 56
+[t=1.35797s, 39036 KB] FactPairs: 252
+[t=1.35801s, 39036 KB] Bytes per state: 12
+[t=1.35804s, 39036 KB] Conducting lazy best first search, (real) bound = 2147483647
+[t=1.35811s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 8
+[t=1.35816s, 39036 KB] g=0, 1 evaluated, 0 expanded
+[t=1.35819s, 39036 KB] Initial heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 8
+[t=1.35823s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 7
+[t=1.35828s, 39036 KB] g=1, 4 evaluated, 3 expanded
+[t=1.35832s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 6
+[t=1.35836s, 39036 KB] g=2, 7 evaluated, 6 expanded
+[t=1.3584s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 5
+[t=1.35845s, 39036 KB] g=3, 10 evaluated, 9 expanded
+[t=1.35849s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 4
+[t=1.35854s, 39036 KB] g=4, 13 evaluated, 12 expanded
+[t=1.35857s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 3
+[t=1.35864s, 39036 KB] g=6, 24 evaluated, 23 expanded
+[t=1.35867s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 2
+[t=1.35872s, 39036 KB] g=7, 29 evaluated, 28 expanded
+[t=1.35875s, 39036 KB] New best heuristic value for landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1,conjunctive_landmarks=true,use_orders=true),verbosity=normal)): 1
+[t=1.35891s, 39036 KB] g=10, 81 evaluated, 80 expanded
+[t=1.35921s, 39036 KB] Solution found!
+[t=1.35986s, 39036 KB] Printing and saving the current state to current_state.1
+[t=1.35994s, 39036 KB] Fact name:Atom truck-at(truck1, place1)
+[t=1.35998s, 39036 KB] Fact name:Atom truck-at(truck0, place1)
+[t=1.36001s, 39036 KB] Fact name:Atom clear(pallet0-0)
+[t=1.36005s, 39036 KB] Fact name:Atom zero(index0-0-4)
+[t=1.36008s, 39036 KB] Fact name:Atom clear(pallet0-1)
+[t=1.36012s, 39036 KB] Fact name:Atom zero(index0-1-4)
+[t=1.36015s, 39036 KB] Fact name:Atom clear(pallet0-2)
+[t=1.36018s, 39036 KB] Fact name:Atom zero(index0-2-4)
+[t=1.36021s, 39036 KB] Fact name:NegatedAtom clear(pallet1-0)
+[t=1.36024s, 39036 KB] Fact name:NegatedAtom zero(index1-0-4)
+[t=1.36028s, 39036 KB] Fact name:Atom clear(pallet1-1)
+[t=1.36031s, 39036 KB] Fact name:Atom zero(index1-1-4)
+[t=1.36034s, 39036 KB] Fact name:Atom clear(pallet1-2)
+[t=1.36037s, 39036 KB] Fact name:Atom zero(index1-2-4)
+[t=1.3604s, 39036 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=1.36044s, 39036 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=1.36047s, 39036 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=1.3605s, 39036 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=1.36053s, 39036 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=1.36056s, 39036 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=1.36059s, 39036 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=1.36063s, 39036 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=1.36066s, 39036 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=1.36069s, 39036 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=1.36072s, 39036 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=1.36076s, 39036 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=1.36079s, 39036 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=1.36083s, 39036 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=1.36086s, 39036 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=1.3609s, 39036 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=1.36093s, 39036 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=1.36096s, 39036 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=1.36099s, 39036 KB] Fact name:Atom zero(index1-0-2)
+[t=1.36102s, 39036 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=1.36105s, 39036 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=1.36108s, 39036 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=1.36111s, 39036 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=1.36115s, 39036 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=1.36118s, 39036 KB] Fact name:Atom depth(crate0, index1-0-3)
+[t=1.36121s, 39036 KB] Fact name:Atom on(crate0, pallet1-0)
+[t=1.36124s, 39036 KB] Fact name:Atom surface-at(crate0, place1)
+[t=1.36128s, 39036 KB] Fact name:Atom depth(crate1, index1-0-2)
+[t=1.36132s, 39036 KB] Fact name:Atom surface-at(crate1, place1)
+[t=1.36135s, 39036 KB] Fact name:Atom in(crate2, truck0)
+[t=1.36138s, 39036 KB] Fact name:<none of those>
+[t=1.36141s, 39036 KB] Fact name:<none of those>
+[t=1.36144s, 39036 KB] Fact name:Atom in(crate3, truck0)
+[t=1.36147s, 39036 KB] Fact name:<none of those>
+[t=1.36151s, 39036 KB] Fact name:<none of those>
+[t=1.36154s, 39036 KB] Fact name:Atom available(hoist0)
+[t=1.36158s, 39036 KB] Fact name:NegatedAtom clear(crate0)
+[t=1.36161s, 39036 KB] Fact name:NegatedAtom clear(crate2)
+[t=1.36164s, 39036 KB] Fact name:Atom available(hoist1)
+[t=1.36168s, 39036 KB] Fact name:NegatedAtom clear(crate3)
+[t=1.36171s, 39036 KB] Fact name:Atom clear(crate1)
+[t=1.36174s, 39036 KB] Fact name:Atom on(crate1, crate0)
+[t=1.36182s, 39036 KB] Actual search time: 0.00371114s
+[t=1.36186s, 39036 KB] Saving plan to sas_plan
+!lift hoist0 crate3 crate2 place0 index0-1-0 index0-1-1 (1)
+!load hoist0 crate3 truck0 place0 (1)
+!lift hoist0 crate2 crate0 place0 index0-1-1 index0-1-2 (1)
+!load hoist0 crate2 truck0 place0 (1)
+!lift hoist0 crate0 crate1 place0 index0-1-2 index0-1-3 (1)
+!load hoist0 crate0 truck0 place0 (1)
+!lift hoist0 crate1 pallet0-1 place0 index0-1-3 index0-1-4 (1)
+!drive truck0 place0 place1 (1)
+!unload hoist1 crate0 truck0 place1 (1)
+!drop hoist1 crate0 pallet1-0 place1 index1-0-3 index1-0-4 (1)
+!drive truck1 place1 place0 (1)
+!load hoist0 crate1 truck1 place0 (1)
+!drive truck1 place0 place1 (1)
+!unload hoist1 crate1 truck1 place1 (1)
+!drop hoist1 crate1 crate0 place1 index1-0-2 index1-0-3 (1)
+[t=1.36186s, 39036 KB] Plan length: 15 step(s).
+[t=1.36186s, 39036 KB] Plan cost: 15
+[t=1.36186s, 39036 KB] Expanded 444 state(s).
+[t=1.36186s, 39036 KB] Reopened 0 state(s).
+[t=1.36186s, 39036 KB] Evaluated 445 state(s).
+[t=1.36186s, 39036 KB] Evaluations: 445
+[t=1.36186s, 39036 KB] Generated 3214 state(s).
+[t=1.36186s, 39036 KB] Dead ends: 0 state(s).
+[t=1.36186s, 39036 KB] Number of registered states: 445
+[t=1.36186s, 39036 KB] Int hash set load factor: 445/512 = 0.869141
+[t=1.36186s, 39036 KB] Int hash set resizes: 9
+[t=1.36186s, 39036 KB] Search time: 0.00381125s
+[t=1.36186s, 39036 KB] Total time: 1.36186s
+Solution found.
+Peak memory: 39036 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 6.50s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.0.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.006s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.218s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84373 total queue pushes
+Completing instantiation... [1.750s CPU, 1.759s wall-clock]
+Instantiating: [1.980s CPU, 1.992s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.030s CPU, 0.025s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.039s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.001s wall-clock]
+Processing axioms: [0.110s CPU, 0.100s wall-clock]
+Translating task: [1.520s CPU, 1.514s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.780s CPU, 0.787s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.380s CPU, 0.389s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222256 KB
+Writing output... [0.270s CPU, 0.297s wall-clock]
+Done! [5.080s CPU, 5.140s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_0.plan < output.sas
+[t=0.000854934s, 21664 KB] reading input...
+[t=0.0834983s, 29584 KB] done reading input!
+[t=0.0836046s, 29584 KB] getting initial state...
+[t=0.0836956s, 29584 KB] Number of vars:56
+[t=0.0837361s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0837799s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.083822s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0838606s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0838962s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0839322s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0839673s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0840045s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0840399s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0840779s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0841161s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0841504s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0841855s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0842214s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0842562s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0842985s, 29584 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0843369s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0843708s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0844051s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0844413s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0844773s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0845121s, 29584 KB] Fact name:Atom zero(index0-1-0)
+[t=0.084545s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0845787s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0846137s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0846468s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0846798s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0847122s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0847465s, 29584 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0847803s, 29584 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0848135s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0848486s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0848832s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0849171s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0849487s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0849808s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0850139s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0850465s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0850745s, 29584 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0851065s, 29584 KB] Fact name:Atom on(crate0, crate1)
+[t=0.0851396s, 29584 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0851731s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0852075s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0852422s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0852747s, 29584 KB] Fact name:Atom depth(crate2, index0-1-1)
+[t=0.0853041s, 29584 KB] Fact name:Atom on(crate2, crate0)
+[t=0.0853381s, 29584 KB] Fact name:Atom surface-at(crate2, place0)
+[t=0.0853714s, 29584 KB] Fact name:Atom depth(crate3, index0-1-0)
+[t=0.0854025s, 29584 KB] Fact name:Atom on(crate3, crate2)
+[t=0.0854336s, 29584 KB] Fact name:Atom surface-at(crate3, place0)
+[t=0.0854656s, 29584 KB] Fact name:Atom available(hoist0)
+[t=0.0855038s, 29584 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0855371s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0855696s, 29584 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0856041s, 29584 KB] Fact name:Atom clear(crate3)
+[t=0.0856365s, 29584 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0863292s, 29980 KB] Initializing blind search heuristic...
+[t=0.0867168s, 29980 KB] Building successor generator...done!
+[t=0.0950765s, 33368 KB] peak memory difference for successor generator creation: 3388 KB
+[t=0.0952862s, 33368 KB] time for successor generation creation: 0.00744475s
+[t=0.0953237s, 33368 KB] Variables: 56
+[t=0.0953943s, 33368 KB] FactPairs: 252
+[t=0.0954268s, 33368 KB] Bytes per state: 12
+[t=0.0954624s, 33368 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0955152s, 33368 KB] New best heuristic value for blind(): 1
+[t=0.0955595s, 33368 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0955961s, 33368 KB] f = 1, 1 evaluated, 0 expanded
+[t=0.0956285s, 33368 KB] Initial heuristic value for blind(): 1
+[t=0.0956628s, 33368 KB] pruning method: none
+[t=0.0956991s, 33368 KB] New best heuristic value for blind(): 0
+[t=0.0957463s, 33368 KB] g=1, 4 evaluated, 1 expanded
+[t=0.0957819s, 33368 KB] Solution found!
+[t=0.0958229s, 33368 KB] Printing and saving the current state to current_state.1
+[t=0.0959052s, 33368 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0959402s, 33368 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0959782s, 33368 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0960167s, 33368 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0960505s, 33368 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0960837s, 33368 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0961177s, 33368 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0961498s, 33368 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0961843s, 33368 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0962174s, 33368 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0962541s, 33368 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0962904s, 33368 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0963265s, 33368 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0963586s, 33368 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0963915s, 33368 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0964238s, 33368 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0964547s, 33368 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0964908s, 33368 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0965304s, 33368 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0965601s, 33368 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0965939s, 33368 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0966307s, 33368 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0966589s, 33368 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0966882s, 33368 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0967247s, 33368 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0967562s, 33368 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0967854s, 33368 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0968186s, 33368 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0968511s, 33368 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0968838s, 33368 KB] Fact name:Atom zero(index0-1-1)
+[t=0.0969181s, 33368 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.096951s, 33368 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0969833s, 33368 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.097016s, 33368 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0970491s, 33368 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0970835s, 33368 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0971172s, 33368 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0971505s, 33368 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0971818s, 33368 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0972138s, 33368 KB] Fact name:Atom on(crate0, crate1)
+[t=0.0972489s, 33368 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.097281s, 33368 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0973138s, 33368 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0973494s, 33368 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.097383s, 33368 KB] Fact name:Atom depth(crate2, index0-1-1)
+[t=0.0974153s, 33368 KB] Fact name:Atom on(crate2, crate0)
+[t=0.0974486s, 33368 KB] Fact name:Atom surface-at(crate2, place0)
+[t=0.0974804s, 33368 KB] Fact name:Atom lifting(hoist0, crate3)
+[t=0.0975166s, 33368 KB] Fact name:<none of those>
+[t=0.0975501s, 33368 KB] Fact name:<none of those>
+[t=0.0975845s, 33368 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0976167s, 33368 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0976467s, 33368 KB] Fact name:Atom available(hoist1)
+[t=0.0976783s, 33368 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0977114s, 33368 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0977448s, 33368 KB] Fact name:Atom clear(crate2)
+[t=0.0978083s, 33368 KB] Actual search time: 0.00210921s
+[t=0.0978417s, 33368 KB] Saving plan to intermediate_plan_0_0.plan
+!lift hoist0 crate3 crate2 place0 index0-1-0 index0-1-1 (1)
+[t=0.0978417s, 33368 KB] Plan length: 1 step(s).
+[t=0.0978417s, 33368 KB] Plan cost: 1
+[t=0.0978417s, 33368 KB] Expanded 2 state(s).
+[t=0.0978417s, 33368 KB] Reopened 0 state(s).
+[t=0.0978417s, 33368 KB] Evaluated 4 state(s).
+[t=0.0978417s, 33368 KB] Evaluations: 4
+[t=0.0978417s, 33368 KB] Generated 3 state(s).
+[t=0.0978417s, 33368 KB] Dead ends: 0 state(s).
+[t=0.0978417s, 33368 KB] Expanded until last jump: 0 state(s).
+[t=0.0978417s, 33368 KB] Reopened until last jump: 0 state(s).
+[t=0.0978417s, 33368 KB] Evaluated until last jump: 1 state(s).
+[t=0.0978417s, 33368 KB] Generated until last jump: 0 state(s).
+[t=0.0978417s, 33368 KB] Number of registered states: 4
+[t=0.0978417s, 33368 KB] Int hash set load factor: 4/4 = 1
+[t=0.0978417s, 33368 KB] Int hash set resizes: 2
+[t=0.0978417s, 33368 KB] Search time: 0.00237933s
+[t=0.0978417s, 33368 KB] Total time: 0.0978417s
+Solution found.
+Peak memory: 33368 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.29s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.1.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.221s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84370 total queue pushes
+Completing instantiation... [1.760s CPU, 1.767s wall-clock]
+Instantiating: [1.980s CPU, 2.000s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.030s CPU, 0.024s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.010s CPU, 0.001s wall-clock]
+Computing fact groups: [0.040s CPU, 0.034s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.100s CPU, 0.102s wall-clock]
+Translating task: [1.500s CPU, 1.513s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.820s CPU, 0.814s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.380s CPU, 0.380s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222488 KB
+Writing output... [0.290s CPU, 0.426s wall-clock]
+Done! [5.120s CPU, 5.289s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_1.plan < output.sas
+[t=0.000497582s, 21664 KB] reading input...
+[t=0.0831801s, 29584 KB] done reading input!
+[t=0.0832645s, 29584 KB] getting initial state...
+[t=0.083354s, 29584 KB] Number of vars:56
+[t=0.0833954s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0834341s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.083472s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0835066s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0835454s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0835838s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.083618s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0836533s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0836864s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.083717s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0837541s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0837877s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0838197s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0838497s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0838771s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0839058s, 29584 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0839333s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0839607s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0839873s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0840202s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0840484s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0840751s, 29584 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0841031s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0841339s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0841683s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0842021s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0842357s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0842773s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0843097s, 29584 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0843421s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0843727s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0844033s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0844334s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0844678s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0844998s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0845335s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.084565s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0845978s, 29584 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0846302s, 29584 KB] Fact name:Atom on(crate0, crate1)
+[t=0.0846641s, 29584 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.084697s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0847294s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0847605s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0847929s, 29584 KB] Fact name:Atom depth(crate2, index0-1-1)
+[t=0.0848232s, 29584 KB] Fact name:Atom on(crate2, crate0)
+[t=0.0848533s, 29584 KB] Fact name:Atom surface-at(crate2, place0)
+[t=0.0848846s, 29584 KB] Fact name:Atom lifting(hoist0, crate3)
+[t=0.0849156s, 29584 KB] Fact name:<none of those>
+[t=0.0849483s, 29584 KB] Fact name:<none of those>
+[t=0.0849798s, 29584 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0850072s, 29584 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0850359s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0850641s, 29584 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0850984s, 29584 KB] Fact name:Atom clear(crate2)
+[t=0.0851298s, 29584 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0851665s, 29584 KB] Fact name:Atom zero(index0-1-1)
+[t=0.0858371s, 29980 KB] Initializing blind search heuristic...
+[t=0.0862151s, 29980 KB] Building successor generator...done!
+[t=0.0943662s, 33368 KB] peak memory difference for successor generator creation: 3388 KB
+[t=0.0945702s, 33368 KB] time for successor generation creation: 0.00799023s
+[t=0.0946093s, 33368 KB] Variables: 56
+[t=0.0946789s, 33368 KB] FactPairs: 252
+[t=0.0947154s, 33368 KB] Bytes per state: 12
+[t=0.0947471s, 33368 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0947991s, 33368 KB] New best heuristic value for blind(): 0
+[t=0.0948401s, 33368 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0948743s, 33368 KB] f = 0, 1 evaluated, 0 expanded
+[t=0.0949082s, 33368 KB] Initial heuristic value for blind(): 0
+[t=0.0949417s, 33368 KB] pruning method: none
+[t=0.0949711s, 33368 KB] Solution found!
+[t=0.0950038s, 33368 KB] Printing and saving the current state to current_state.1
+[t=0.0950743s, 33368 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0951088s, 33368 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0951459s, 33368 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0951834s, 33368 KB] Fact name:Atom zero(index0-0-4)
+[t=0.095215s, 33368 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0952475s, 33368 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0952808s, 33368 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0953287s, 33368 KB] Fact name:Atom zero(index0-2-4)
+[t=0.095359s, 33368 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0953913s, 33368 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0954264s, 33368 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0954607s, 33368 KB] Fact name:Atom zero(index1-1-4)
+[t=0.095492s, 33368 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0955262s, 33368 KB] Fact name:Atom zero(index1-2-4)
+[t=0.095557s, 33368 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0955919s, 33368 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0956246s, 33368 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0956634s, 33368 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.095697s, 33368 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0957298s, 33368 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.095761s, 33368 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0957934s, 33368 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0958285s, 33368 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.09586s, 33368 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0958897s, 33368 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0959241s, 33368 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0959554s, 33368 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.095984s, 33368 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0960192s, 33368 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0960509s, 33368 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0960825s, 33368 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.096113s, 33368 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0961479s, 33368 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0961813s, 33368 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0962143s, 33368 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0962494s, 33368 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0962818s, 33368 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0963169s, 33368 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0963486s, 33368 KB] Fact name:Atom on(crate0, crate1)
+[t=0.09638s, 33368 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0964136s, 33368 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.096444s, 33368 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0964785s, 33368 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0965078s, 33368 KB] Fact name:Atom depth(crate2, index0-1-1)
+[t=0.0965422s, 33368 KB] Fact name:Atom on(crate2, crate0)
+[t=0.096577s, 33368 KB] Fact name:Atom surface-at(crate2, place0)
+[t=0.0966146s, 33368 KB] Fact name:Atom lifting(hoist0, crate3)
+[t=0.0966435s, 33368 KB] Fact name:<none of those>
+[t=0.096677s, 33368 KB] Fact name:<none of those>
+[t=0.0967113s, 33368 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0967442s, 33368 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0967806s, 33368 KB] Fact name:Atom available(hoist1)
+[t=0.0968101s, 33368 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0968458s, 33368 KB] Fact name:Atom clear(crate2)
+[t=0.0968805s, 33368 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0969143s, 33368 KB] Fact name:Atom zero(index0-1-1)
+[t=0.096975s, 33368 KB] Actual search time: 0.0020039s
+[t=0.0970113s, 33368 KB] Saving plan to intermediate_plan_0_1.plan
+[t=0.0970113s, 33368 KB] Plan length: 0 step(s).
+[t=0.0970113s, 33368 KB] Plan cost: 0
+[t=0.0970113s, 33368 KB] Expanded 1 state(s).
+[t=0.0970113s, 33368 KB] Reopened 0 state(s).
+[t=0.0970113s, 33368 KB] Evaluated 1 state(s).
+[t=0.0970113s, 33368 KB] Evaluations: 1
+[t=0.0970113s, 33368 KB] Generated 0 state(s).
+[t=0.0970113s, 33368 KB] Dead ends: 0 state(s).
+[t=0.0970113s, 33368 KB] Expanded until last jump: 0 state(s).
+[t=0.0970113s, 33368 KB] Reopened until last jump: 0 state(s).
+[t=0.0970113s, 33368 KB] Evaluated until last jump: 1 state(s).
+[t=0.0970113s, 33368 KB] Generated until last jump: 0 state(s).
+[t=0.0970113s, 33368 KB] Number of registered states: 1
+[t=0.0970113s, 33368 KB] Int hash set load factor: 1/1 = 1
+[t=0.0970113s, 33368 KB] Int hash set resizes: 0
+[t=0.0970113s, 33368 KB] Search time: 0.0022642s
+[t=0.0970113s, 33368 KB] Total time: 0.0970113s
+Solution found.
+Peak memory: 33368 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.32s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.2.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.223s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84370 total queue pushes
+Completing instantiation... [1.800s CPU, 1.805s wall-clock]
+Instantiating: [2.020s CPU, 2.039s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.030s CPU, 0.024s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.010s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.040s CPU, 0.034s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.100s CPU, 0.101s wall-clock]
+Translating task: [1.530s CPU, 1.540s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.800s CPU, 0.800s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.390s CPU, 0.383s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222256 KB
+Writing output... [0.270s CPU, 0.275s wall-clock]
+Done! [5.180s CPU, 5.209s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_2.plan < output.sas
+[t=0.000578995s, 21664 KB] reading input...
+[t=0.083293s, 29584 KB] done reading input!
+[t=0.083388s, 29584 KB] getting initial state...
+[t=0.0834931s, 29584 KB] Number of vars:56
+[t=0.0835333s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0835706s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.083612s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0836472s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0836865s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0837276s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0837633s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0838103s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0838466s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.083882s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0839288s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0839648s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0840007s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0840376s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0840706s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0841038s, 29584 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0841409s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0841754s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0842079s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0842457s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0842812s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0843184s, 29584 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0843506s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0843832s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0844168s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0844489s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0844828s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0845181s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0845536s, 29584 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0845879s, 29584 KB] Fact name:Atom zero(index0-1-1)
+[t=0.0846225s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.084657s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0846884s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0847259s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0847592s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.084792s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0848278s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0848599s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0848881s, 29584 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0849228s, 29584 KB] Fact name:Atom on(crate0, crate1)
+[t=0.084956s, 29584 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0849892s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0850209s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0850607s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0850922s, 29584 KB] Fact name:Atom depth(crate2, index0-1-1)
+[t=0.0851273s, 29584 KB] Fact name:Atom on(crate2, crate0)
+[t=0.085161s, 29584 KB] Fact name:Atom surface-at(crate2, place0)
+[t=0.0851959s, 29584 KB] Fact name:Atom lifting(hoist0, crate3)
+[t=0.0852353s, 29584 KB] Fact name:<none of those>
+[t=0.0852681s, 29584 KB] Fact name:<none of those>
+[t=0.0853051s, 29584 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0853401s, 29584 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0853787s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0854148s, 29584 KB] Fact name:Atom clear(crate2)
+[t=0.0854486s, 29584 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.085482s, 29584 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0863625s, 29980 KB] Initializing blind search heuristic...
+[t=0.0865451s, 29980 KB] Building successor generator...done!
+[t=0.0950587s, 33368 KB] peak memory difference for successor generator creation: 3388 KB
+[t=0.0952713s, 33368 KB] time for successor generation creation: 0.00833616s
+[t=0.0953104s, 33368 KB] Variables: 56
+[t=0.095382s, 33368 KB] FactPairs: 252
+[t=0.0954199s, 33368 KB] Bytes per state: 12
+[t=0.0954548s, 33368 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.09551s, 33368 KB] New best heuristic value for blind(): 1
+[t=0.0955575s, 33368 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0955962s, 33368 KB] f = 1, 1 evaluated, 0 expanded
+[t=0.0956325s, 33368 KB] Initial heuristic value for blind(): 1
+[t=0.0956712s, 33368 KB] pruning method: none
+[t=0.0957076s, 33368 KB] f = 2, 7 evaluated, 1 expanded
+[t=0.0957633s, 33368 KB] New best heuristic value for blind(): 0
+[t=0.0958198s, 33368 KB] g=2, 18 evaluated, 4 expanded
+[t=0.0958563s, 33368 KB] Solution found!
+[t=0.0958953s, 33368 KB] Printing and saving the current state to current_state.1
+[t=0.0959879s, 33368 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0960312s, 33368 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0960745s, 33368 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0961137s, 33368 KB] Fact name:Atom zero(index0-0-4)
+[t=0.096147s, 33368 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.096186s, 33368 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0962229s, 33368 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0962626s, 33368 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0962976s, 33368 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0963312s, 33368 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0963661s, 33368 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0964022s, 33368 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0964403s, 33368 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0964819s, 33368 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0965124s, 33368 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0965474s, 33368 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0965871s, 33368 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0966214s, 33368 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0966598s, 33368 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0966984s, 33368 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0967331s, 33368 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0967676s, 33368 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0968037s, 33368 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0968389s, 33368 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0968735s, 33368 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0969059s, 33368 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0969414s, 33368 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0969788s, 33368 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0970163s, 33368 KB] Fact name:Atom zero(index0-1-2)
+[t=0.0970505s, 33368 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.097086s, 33368 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0971189s, 33368 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0971559s, 33368 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.097188s, 33368 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0972207s, 33368 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0972556s, 33368 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0972906s, 33368 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0973237s, 33368 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0973528s, 33368 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0973894s, 33368 KB] Fact name:Atom on(crate0, crate1)
+[t=0.0974295s, 33368 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0974618s, 33368 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0974917s, 33368 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0975263s, 33368 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0975612s, 33368 KB] Fact name:Atom lifting(hoist0, crate2)
+[t=0.0975953s, 33368 KB] Fact name:<none of those>
+[t=0.0976281s, 33368 KB] Fact name:<none of those>
+[t=0.0976589s, 33368 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0976908s, 33368 KB] Fact name:<none of those>
+[t=0.0977259s, 33368 KB] Fact name:<none of those>
+[t=0.0977568s, 33368 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0977873s, 33368 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0978182s, 33368 KB] Fact name:Atom available(hoist1)
+[t=0.0978501s, 33368 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0978843s, 33368 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0979209s, 33368 KB] Fact name:Atom clear(crate0)
+[t=0.0979805s, 33368 KB] Actual search time: 0.00227292s
+[t=0.0980175s, 33368 KB] Saving plan to intermediate_plan_0_2.plan
+!load hoist0 crate3 truck0 place0 (1)
+!lift hoist0 crate2 crate0 place0 index0-1-1 index0-1-2 (1)
+[t=0.0980175s, 33368 KB] Plan length: 2 step(s).
+[t=0.0980175s, 33368 KB] Plan cost: 2
+[t=0.0980175s, 33368 KB] Expanded 5 state(s).
+[t=0.0980175s, 33368 KB] Reopened 0 state(s).
+[t=0.0980175s, 33368 KB] Evaluated 18 state(s).
+[t=0.0980175s, 33368 KB] Evaluations: 18
+[t=0.0980175s, 33368 KB] Generated 22 state(s).
+[t=0.0980175s, 33368 KB] Dead ends: 0 state(s).
+[t=0.0980175s, 33368 KB] Expanded until last jump: 1 state(s).
+[t=0.0980175s, 33368 KB] Reopened until last jump: 0 state(s).
+[t=0.0980175s, 33368 KB] Evaluated until last jump: 7 state(s).
+[t=0.0980175s, 33368 KB] Generated until last jump: 6 state(s).
+[t=0.0980175s, 33368 KB] Number of registered states: 18
+[t=0.0980175s, 33368 KB] Int hash set load factor: 18/32 = 0.5625
+[t=0.0980175s, 33368 KB] Int hash set resizes: 5
+[t=0.0980175s, 33368 KB] Search time: 0.00256276s
+[t=0.0980175s, 33368 KB] Total time: 0.0980175s
+Solution found.
+Peak memory: 33368 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.39s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.3.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.218s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84368 total queue pushes
+Completing instantiation... [1.760s CPU, 1.775s wall-clock]
+Instantiating: [2.000s CPU, 2.006s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.020s CPU, 0.027s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.037s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.090s CPU, 0.101s wall-clock]
+Translating task: [1.500s CPU, 1.512s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.770s CPU, 0.777s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.380s CPU, 0.382s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222232 KB
+Writing output... [0.280s CPU, 0.270s wall-clock]
+Done! [5.080s CPU, 5.103s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_3.plan < output.sas
+[t=0.000507681s, 21664 KB] reading input...
+[t=0.0832591s, 29584 KB] done reading input!
+[t=0.0833448s, 29584 KB] getting initial state...
+[t=0.0834438s, 29584 KB] Number of vars:56
+[t=0.0834822s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.08352s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0835603s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0835941s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0836261s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0836584s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0836964s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0837328s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0837658s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0837987s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0838349s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0838678s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0839022s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0839524s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0839893s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0840222s, 29584 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0840539s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0840913s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0841266s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0841579s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0841932s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0842283s, 29584 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0842609s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0842953s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0843276s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0843602s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0843958s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0844263s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0844566s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0844903s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0845218s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0845513s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0845853s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0846172s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0846523s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0846839s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.084717s, 29584 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0847495s, 29584 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0847811s, 29584 KB] Fact name:Atom on(crate0, crate1)
+[t=0.0848111s, 29584 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.084852s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0848825s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0849155s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0849484s, 29584 KB] Fact name:Atom lifting(hoist0, crate2)
+[t=0.0849813s, 29584 KB] Fact name:<none of those>
+[t=0.0850114s, 29584 KB] Fact name:<none of those>
+[t=0.0850466s, 29584 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0850773s, 29584 KB] Fact name:<none of those>
+[t=0.0851094s, 29584 KB] Fact name:<none of those>
+[t=0.0851577s, 29584 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0851874s, 29584 KB] Fact name:Atom clear(crate0)
+[t=0.0852158s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0852482s, 29584 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0852769s, 29584 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0853111s, 29584 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0853429s, 29584 KB] Fact name:Atom zero(index0-1-2)
+[t=0.0860188s, 29980 KB] Initializing blind search heuristic...
+[t=0.0863962s, 29980 KB] Building successor generator...done!
+[t=0.0948122s, 33368 KB] peak memory difference for successor generator creation: 3388 KB
+[t=0.0950174s, 33368 KB] time for successor generation creation: 0.00799678s
+[t=0.0950547s, 33368 KB] Variables: 56
+[t=0.0951227s, 33368 KB] FactPairs: 252
+[t=0.0951547s, 33368 KB] Bytes per state: 12
+[t=0.0951905s, 33368 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0952412s, 33368 KB] New best heuristic value for blind(): 0
+[t=0.0952862s, 33368 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0953187s, 33368 KB] f = 0, 1 evaluated, 0 expanded
+[t=0.0953475s, 33368 KB] Initial heuristic value for blind(): 0
+[t=0.0953848s, 33368 KB] pruning method: none
+[t=0.0954167s, 33368 KB] Solution found!
+[t=0.0954546s, 33368 KB] Printing and saving the current state to current_state.1
+[t=0.0955319s, 33368 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0955721s, 33368 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0956072s, 33368 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0956371s, 33368 KB] Fact name:Atom zero(index0-0-4)
+[t=0.095687s, 33368 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0957174s, 33368 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0957484s, 33368 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0957828s, 33368 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0958185s, 33368 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0958523s, 33368 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0958864s, 33368 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0959253s, 33368 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0959602s, 33368 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0959919s, 33368 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0960301s, 33368 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0960617s, 33368 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0960959s, 33368 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0961275s, 33368 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0961592s, 33368 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0961929s, 33368 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0962248s, 33368 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0962582s, 33368 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0962884s, 33368 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0963174s, 33368 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0963524s, 33368 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0963851s, 33368 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0964162s, 33368 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0964502s, 33368 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0964799s, 33368 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0965083s, 33368 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0965381s, 33368 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0965685s, 33368 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0965999s, 33368 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.096632s, 33368 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0966636s, 33368 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.096694s, 33368 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0967219s, 33368 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0967589s, 33368 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0967885s, 33368 KB] Fact name:Atom on(crate0, crate1)
+[t=0.096821s, 33368 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0968549s, 33368 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0968873s, 33368 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.096918s, 33368 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0969533s, 33368 KB] Fact name:Atom lifting(hoist0, crate2)
+[t=0.0969837s, 33368 KB] Fact name:<none of those>
+[t=0.097016s, 33368 KB] Fact name:<none of those>
+[t=0.0970489s, 33368 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0970837s, 33368 KB] Fact name:<none of those>
+[t=0.0971134s, 33368 KB] Fact name:<none of those>
+[t=0.0971436s, 33368 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0971767s, 33368 KB] Fact name:Atom clear(crate0)
+[t=0.097211s, 33368 KB] Fact name:Atom available(hoist1)
+[t=0.0972428s, 33368 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0972738s, 33368 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.097302s, 33368 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0973303s, 33368 KB] Fact name:Atom zero(index0-1-2)
+[t=0.097385s, 33368 KB] Actual search time: 0.0019683s
+[t=0.0974204s, 33368 KB] Saving plan to intermediate_plan_0_3.plan
+[t=0.0974204s, 33368 KB] Plan length: 0 step(s).
+[t=0.0974204s, 33368 KB] Plan cost: 0
+[t=0.0974204s, 33368 KB] Expanded 1 state(s).
+[t=0.0974204s, 33368 KB] Reopened 0 state(s).
+[t=0.0974204s, 33368 KB] Evaluated 1 state(s).
+[t=0.0974204s, 33368 KB] Evaluations: 1
+[t=0.0974204s, 33368 KB] Generated 0 state(s).
+[t=0.0974204s, 33368 KB] Dead ends: 0 state(s).
+[t=0.0974204s, 33368 KB] Expanded until last jump: 0 state(s).
+[t=0.0974204s, 33368 KB] Reopened until last jump: 0 state(s).
+[t=0.0974204s, 33368 KB] Evaluated until last jump: 1 state(s).
+[t=0.0974204s, 33368 KB] Generated until last jump: 0 state(s).
+[t=0.0974204s, 33368 KB] Number of registered states: 1
+[t=0.0974204s, 33368 KB] Int hash set load factor: 1/1 = 1
+[t=0.0974204s, 33368 KB] Int hash set resizes: 0
+[t=0.0974204s, 33368 KB] Search time: 0.0022299s
+[t=0.0974204s, 33368 KB] Total time: 0.0974204s
+Solution found.
+Peak memory: 33368 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.28s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.4.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.220s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84368 total queue pushes
+Completing instantiation... [1.750s CPU, 1.755s wall-clock]
+Instantiating: [1.980s CPU, 1.987s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.020s CPU, 0.024s wall-clock]
+Checking invariant weight... [0.010s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.033s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.090s CPU, 0.097s wall-clock]
+Translating task: [1.500s CPU, 1.501s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.770s CPU, 0.777s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.380s CPU, 0.379s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222232 KB
+Writing output... [0.260s CPU, 0.281s wall-clock]
+Done! [5.030s CPU, 5.070s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_4.plan < output.sas
+[t=0.000642434s, 21664 KB] reading input...
+[t=0.0835678s, 29584 KB] done reading input!
+[t=0.0836451s, 29584 KB] getting initial state...
+[t=0.0837475s, 29584 KB] Number of vars:56
+[t=0.0837899s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0838307s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0838642s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0839023s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0839391s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0839727s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0840071s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0840402s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0840752s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0841129s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0841478s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0841794s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0842139s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0842509s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0842874s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0843328s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0843664s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0843975s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0844311s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0844664s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0844962s, 29584 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0845271s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0845574s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0845922s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0846225s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0846564s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0846877s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0847213s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0847613s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.084793s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0848268s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0848623s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0848987s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0849305s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0849627s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0850002s, 29584 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0850359s, 29584 KB] Fact name:Atom zero(index0-1-2)
+[t=0.0850726s, 29584 KB] Fact name:Atom depth(crate0, index0-1-2)
+[t=0.0851071s, 29584 KB] Fact name:Atom on(crate0, crate1)
+[t=0.0851372s, 29584 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0851763s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0852101s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0852454s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0852789s, 29584 KB] Fact name:Atom lifting(hoist0, crate2)
+[t=0.085313s, 29584 KB] Fact name:<none of those>
+[t=0.0853492s, 29584 KB] Fact name:<none of those>
+[t=0.0853808s, 29584 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0854137s, 29584 KB] Fact name:<none of those>
+[t=0.0854446s, 29584 KB] Fact name:<none of those>
+[t=0.0854784s, 29584 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0855119s, 29584 KB] Fact name:Atom clear(crate0)
+[t=0.0855457s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0855803s, 29584 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0856163s, 29584 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0856507s, 29584 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0856867s, 29584 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0863603s, 29980 KB] Initializing blind search heuristic...
+[t=0.0867203s, 29980 KB] Building successor generator...done!
+[t=0.0950685s, 33368 KB] peak memory difference for successor generator creation: 3388 KB
+[t=0.0952169s, 33368 KB] time for successor generation creation: 0.00737759s
+[t=0.0952481s, 33368 KB] Variables: 56
+[t=0.0953173s, 33368 KB] FactPairs: 252
+[t=0.0953518s, 33368 KB] Bytes per state: 12
+[t=0.0953877s, 33368 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0954419s, 33368 KB] New best heuristic value for blind(): 1
+[t=0.0954844s, 33368 KB] g=0, 1 evaluated, 0 expanded
+[t=0.095518s, 33368 KB] f = 1, 1 evaluated, 0 expanded
+[t=0.0955523s, 33368 KB] Initial heuristic value for blind(): 1
+[t=0.0955887s, 33368 KB] pruning method: none
+[t=0.0956188s, 33368 KB] f = 2, 7 evaluated, 1 expanded
+[t=0.095667s, 33368 KB] New best heuristic value for blind(): 0
+[t=0.0957297s, 33368 KB] g=2, 20 evaluated, 4 expanded
+[t=0.0957621s, 33368 KB] Solution found!
+[t=0.0957973s, 33368 KB] Printing and saving the current state to current_state.1
+[t=0.0958731s, 33368 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0959114s, 33368 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0959459s, 33368 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0959878s, 33368 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0960205s, 33368 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0960543s, 33368 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0960896s, 33368 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0961225s, 33368 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0961532s, 33368 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0961955s, 33368 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0962234s, 33368 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0962557s, 33368 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0962873s, 33368 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0963192s, 33368 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0963502s, 33368 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0963838s, 33368 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0964157s, 33368 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0964451s, 33368 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0964722s, 33368 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0965041s, 33368 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0965342s, 33368 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.096565s, 33368 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0965976s, 33368 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0966322s, 33368 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0966641s, 33368 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0967023s, 33368 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0967303s, 33368 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0967629s, 33368 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0968008s, 33368 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0968364s, 33368 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0968781s, 33368 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0969094s, 33368 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0969422s, 33368 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0969748s, 33368 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.09701s, 33368 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0970494s, 33368 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.097078s, 33368 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0971181s, 33368 KB] Fact name:Atom lifting(hoist0, crate0)
+[t=0.0971537s, 33368 KB] Fact name:<none of those>
+[t=0.0971861s, 33368 KB] Fact name:<none of those>
+[t=0.0972205s, 33368 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0972618s, 33368 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0972936s, 33368 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0973304s, 33368 KB] Fact name:Atom in(crate2, truck0)
+[t=0.0973636s, 33368 KB] Fact name:<none of those>
+[t=0.0973988s, 33368 KB] Fact name:<none of those>
+[t=0.0974254s, 33368 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0974548s, 33368 KB] Fact name:<none of those>
+[t=0.0974853s, 33368 KB] Fact name:<none of those>
+[t=0.0975168s, 33368 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0975458s, 33368 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0975791s, 33368 KB] Fact name:Atom available(hoist1)
+[t=0.0976142s, 33368 KB] Fact name:Atom clear(crate1)
+[t=0.0976485s, 33368 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.097681s, 33368 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0977116s, 33368 KB] Fact name:Atom zero(index0-1-3)
+[t=0.0977739s, 33368 KB] Actual search time: 0.00215516s
+[t=0.0978087s, 33368 KB] Saving plan to intermediate_plan_0_4.plan
+!load hoist0 crate2 truck0 place0 (1)
+!lift hoist0 crate0 crate1 place0 index0-1-2 index0-1-3 (1)
+[t=0.0978087s, 33368 KB] Plan length: 2 step(s).
+[t=0.0978087s, 33368 KB] Plan cost: 2
+[t=0.0978087s, 33368 KB] Expanded 5 state(s).
+[t=0.0978087s, 33368 KB] Reopened 0 state(s).
+[t=0.0978087s, 33368 KB] Evaluated 20 state(s).
+[t=0.0978087s, 33368 KB] Evaluations: 20
+[t=0.0978087s, 33368 KB] Generated 24 state(s).
+[t=0.0978087s, 33368 KB] Dead ends: 0 state(s).
+[t=0.0978087s, 33368 KB] Expanded until last jump: 1 state(s).
+[t=0.0978087s, 33368 KB] Reopened until last jump: 0 state(s).
+[t=0.0978087s, 33368 KB] Evaluated until last jump: 7 state(s).
+[t=0.0978087s, 33368 KB] Generated until last jump: 6 state(s).
+[t=0.0978087s, 33368 KB] Number of registered states: 20
+[t=0.0978087s, 33368 KB] Int hash set load factor: 20/32 = 0.625
+[t=0.0978087s, 33368 KB] Int hash set resizes: 5
+[t=0.0978087s, 33368 KB] Search time: 0.002421s
+[t=0.0978087s, 33368 KB] Total time: 0.0978087s
+Solution found.
+Peak memory: 33368 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.24s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.5.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.217s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84366 total queue pushes
+Completing instantiation... [1.770s CPU, 1.772s wall-clock]
+Instantiating: [2.000s CPU, 2.000s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.020s CPU, 0.025s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.030s CPU, 0.034s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.100s CPU, 0.098s wall-clock]
+Translating task: [1.500s CPU, 1.500s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.770s CPU, 0.784s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.390s CPU, 0.384s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 221948 KB
+Writing output... [0.270s CPU, 0.275s wall-clock]
+Done! [5.060s CPU, 5.092s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_5.plan < output.sas
+[t=0.000498372s, 21664 KB] reading input...
+[t=0.0937185s, 29584 KB] done reading input!
+[t=0.093796s, 29584 KB] getting initial state...
+[t=0.0938806s, 29584 KB] Number of vars:56
+[t=0.0939196s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0939562s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0939919s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0940226s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0940556s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0940886s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0941255s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0941587s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0941918s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.094223s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0942562s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0942873s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0943194s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0943533s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0943883s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0944221s, 29584 KB] Fact name:Atom zero(index0-1-3)
+[t=0.0944514s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0944841s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0945173s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0945514s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0945838s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.094619s, 29584 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0946507s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0946825s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0947124s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0947442s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0947812s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0948117s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0948397s, 29584 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0948702s, 29584 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0949027s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0949329s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0949668s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0950038s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0950376s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0950675s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0950957s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.09513s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0951608s, 29584 KB] Fact name:Atom lifting(hoist0, crate0)
+[t=0.0951926s, 29584 KB] Fact name:<none of those>
+[t=0.0952225s, 29584 KB] Fact name:<none of those>
+[t=0.0952549s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0952848s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0953213s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0953531s, 29584 KB] Fact name:Atom in(crate2, truck0)
+[t=0.0953854s, 29584 KB] Fact name:<none of those>
+[t=0.0954153s, 29584 KB] Fact name:<none of those>
+[t=0.0954487s, 29584 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0954788s, 29584 KB] Fact name:<none of those>
+[t=0.0955107s, 29584 KB] Fact name:<none of those>
+[t=0.0955419s, 29584 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0955735s, 29584 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0956046s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0956346s, 29584 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0956635s, 29584 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0956954s, 29584 KB] Fact name:Atom clear(crate1)
+[t=0.0966124s, 29980 KB] Initializing blind search heuristic...
+[t=0.0967403s, 29980 KB] Building successor generator...done!
+[t=0.105255s, 33368 KB] peak memory difference for successor generator creation: 3388 KB
+[t=0.105303s, 33368 KB] time for successor generation creation: 0.00755822s
+[t=0.105339s, 33368 KB] Variables: 56
+[t=0.105404s, 33368 KB] FactPairs: 252
+[t=0.105438s, 33368 KB] Bytes per state: 12
+[t=0.105469s, 33368 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.105521s, 33368 KB] New best heuristic value for blind(): 0
+[t=0.105566s, 33368 KB] g=0, 1 evaluated, 0 expanded
+[t=0.105602s, 33368 KB] f = 0, 1 evaluated, 0 expanded
+[t=0.105633s, 33368 KB] Initial heuristic value for blind(): 0
+[t=0.105663s, 33368 KB] pruning method: none
+[t=0.105695s, 33368 KB] Solution found!
+[t=0.105732s, 33368 KB] Printing and saving the current state to current_state.1
+[t=0.105814s, 33368 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.105854s, 33368 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.105889s, 33368 KB] Fact name:Atom clear(pallet0-0)
+[t=0.105927s, 33368 KB] Fact name:Atom zero(index0-0-4)
+[t=0.105959s, 33368 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.105992s, 33368 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.106025s, 33368 KB] Fact name:Atom clear(pallet0-2)
+[t=0.106061s, 33368 KB] Fact name:Atom zero(index0-2-4)
+[t=0.106093s, 33368 KB] Fact name:Atom clear(pallet1-0)
+[t=0.106131s, 33368 KB] Fact name:Atom zero(index1-0-4)
+[t=0.106162s, 33368 KB] Fact name:Atom clear(pallet1-1)
+[t=0.106195s, 33368 KB] Fact name:Atom zero(index1-1-4)
+[t=0.106226s, 33368 KB] Fact name:Atom clear(pallet1-2)
+[t=0.106258s, 33368 KB] Fact name:Atom zero(index1-2-4)
+[t=0.1063s, 33368 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.106329s, 33368 KB] Fact name:Atom zero(index0-1-3)
+[t=0.106359s, 33368 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.106391s, 33368 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.106424s, 33368 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.106457s, 33368 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.106483s, 33368 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.106513s, 33368 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.106545s, 33368 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.106574s, 33368 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.106615s, 33368 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.106643s, 33368 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.106676s, 33368 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.106708s, 33368 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.106741s, 33368 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.106773s, 33368 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.106803s, 33368 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.106847s, 33368 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.106878s, 33368 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.106908s, 33368 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.10694s, 33368 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.106981s, 33368 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.107008s, 33368 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.107036s, 33368 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.107071s, 33368 KB] Fact name:Atom lifting(hoist0, crate0)
+[t=0.107102s, 33368 KB] Fact name:<none of those>
+[t=0.107142s, 33368 KB] Fact name:<none of those>
+[t=0.10717s, 33368 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.107203s, 33368 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.107234s, 33368 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.107268s, 33368 KB] Fact name:Atom in(crate2, truck0)
+[t=0.107299s, 33368 KB] Fact name:<none of those>
+[t=0.107334s, 33368 KB] Fact name:<none of those>
+[t=0.107372s, 33368 KB] Fact name:Atom in(crate3, truck0)
+[t=0.107403s, 33368 KB] Fact name:<none of those>
+[t=0.107434s, 33368 KB] Fact name:<none of those>
+[t=0.107463s, 33368 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.10749s, 33368 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.107522s, 33368 KB] Fact name:Atom available(hoist1)
+[t=0.107554s, 33368 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.107587s, 33368 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.107621s, 33368 KB] Fact name:Atom clear(crate1)
+[t=0.10768s, 33368 KB] Actual search time: 0.00198552s
+[t=0.107716s, 33368 KB] Saving plan to intermediate_plan_0_5.plan
+[t=0.107716s, 33368 KB] Plan length: 0 step(s).
+[t=0.107716s, 33368 KB] Plan cost: 0
+[t=0.107716s, 33368 KB] Expanded 1 state(s).
+[t=0.107716s, 33368 KB] Reopened 0 state(s).
+[t=0.107716s, 33368 KB] Evaluated 1 state(s).
+[t=0.107716s, 33368 KB] Evaluations: 1
+[t=0.107716s, 33368 KB] Generated 0 state(s).
+[t=0.107716s, 33368 KB] Dead ends: 0 state(s).
+[t=0.107716s, 33368 KB] Expanded until last jump: 0 state(s).
+[t=0.107716s, 33368 KB] Reopened until last jump: 0 state(s).
+[t=0.107716s, 33368 KB] Evaluated until last jump: 1 state(s).
+[t=0.107716s, 33368 KB] Generated until last jump: 0 state(s).
+[t=0.107716s, 33368 KB] Number of registered states: 1
+[t=0.107716s, 33368 KB] Int hash set load factor: 1/1 = 1
+[t=0.107716s, 33368 KB] Int hash set resizes: 0
+[t=0.107716s, 33368 KB] Search time: 0.00224771s
+[t=0.107716s, 33368 KB] Total time: 0.107716s
+Solution found.
+Peak memory: 33368 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.28s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.6.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.216s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84366 total queue pushes
+Completing instantiation... [1.740s CPU, 1.740s wall-clock]
+Instantiating: [1.970s CPU, 1.968s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.020s CPU, 0.023s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.005s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.030s CPU, 0.032s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.090s CPU, 0.100s wall-clock]
+Translating task: [1.490s CPU, 1.502s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.770s CPU, 0.772s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.400s CPU, 0.393s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222204 KB
+Writing output... [0.270s CPU, 0.286s wall-clock]
+Done! [5.030s CPU, 5.066s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_6.plan < output.sas
+[t=0.000688771s, 21664 KB] reading input...
+[t=0.0845026s, 29584 KB] done reading input!
+[t=0.0845772s, 29584 KB] getting initial state...
+[t=0.0846735s, 29584 KB] Number of vars:56
+[t=0.084711s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0847494s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0847905s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0848291s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0848625s, 29584 KB] Fact name:NegatedAtom clear(pallet0-1)
+[t=0.0848931s, 29584 KB] Fact name:NegatedAtom zero(index0-1-4)
+[t=0.0849253s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0849615s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0849978s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0850288s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0850612s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0850917s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0851347s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0851689s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0852076s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0852391s, 29584 KB] Fact name:Atom zero(index0-1-3)
+[t=0.0852743s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0853076s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0853437s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0853801s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.085415s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0854562s, 29584 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0854921s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0855246s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0855608s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0855922s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0856238s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0856586s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0856918s, 29584 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0857229s, 29584 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0857544s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.085785s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0858201s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0858507s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0858791s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0859068s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0859405s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0859705s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0859993s, 29584 KB] Fact name:Atom lifting(hoist0, crate0)
+[t=0.0860328s, 29584 KB] Fact name:<none of those>
+[t=0.0860643s, 29584 KB] Fact name:<none of those>
+[t=0.0860938s, 29584 KB] Fact name:Atom in(crate2, truck0)
+[t=0.0861219s, 29584 KB] Fact name:<none of those>
+[t=0.0861499s, 29584 KB] Fact name:<none of those>
+[t=0.0861792s, 29584 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0862097s, 29584 KB] Fact name:<none of those>
+[t=0.0862391s, 29584 KB] Fact name:<none of those>
+[t=0.0862729s, 29584 KB] Fact name:Atom on(crate1, pallet0-1)
+[t=0.0863045s, 29584 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.0863337s, 29584 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0863662s, 29584 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0863973s, 29584 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0864298s, 29584 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0864593s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0864893s, 29584 KB] Fact name:Atom clear(crate1)
+[t=0.0865182s, 29584 KB] Fact name:Atom depth(crate1, index0-1-3)
+[t=0.0874041s, 29980 KB] Initializing blind search heuristic...
+[t=0.0875648s, 29980 KB] Building successor generator...done!
+[t=0.0956793s, 33236 KB] peak memory difference for successor generator creation: 3256 KB
+[t=0.0958884s, 33236 KB] time for successor generation creation: 0.00751833s
+[t=0.0959233s, 33236 KB] Variables: 56
+[t=0.0959884s, 33236 KB] FactPairs: 252
+[t=0.0960178s, 33236 KB] Bytes per state: 12
+[t=0.0960469s, 33236 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.096098s, 33236 KB] New best heuristic value for blind(): 1
+[t=0.0961395s, 33236 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0961754s, 33236 KB] f = 1, 1 evaluated, 0 expanded
+[t=0.096208s, 33236 KB] Initial heuristic value for blind(): 1
+[t=0.0962412s, 33236 KB] pruning method: none
+[t=0.0962714s, 33236 KB] f = 2, 7 evaluated, 1 expanded
+[t=0.096321s, 33236 KB] New best heuristic value for blind(): 0
+[t=0.0963745s, 33236 KB] g=2, 22 evaluated, 4 expanded
+[t=0.0964091s, 33236 KB] Solution found!
+[t=0.0964428s, 33236 KB] Printing and saving the current state to current_state.1
+[t=0.0965184s, 33236 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0965567s, 33236 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0965899s, 33236 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0966247s, 33236 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0966557s, 33236 KB] Fact name:Atom clear(pallet0-1)
+[t=0.0966876s, 33236 KB] Fact name:Atom zero(index0-1-4)
+[t=0.0967235s, 33236 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0967563s, 33236 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0967862s, 33236 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0968201s, 33236 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0968509s, 33236 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0968906s, 33236 KB] Fact name:Atom zero(index1-1-4)
+[t=0.096924s, 33236 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0969614s, 33236 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0969948s, 33236 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.097028s, 33236 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0970609s, 33236 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0970958s, 33236 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.097129s, 33236 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0971599s, 33236 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0971913s, 33236 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0972224s, 33236 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.097255s, 33236 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0972867s, 33236 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0973184s, 33236 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.097345s, 33236 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0973796s, 33236 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.097411s, 33236 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0974414s, 33236 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0974691s, 33236 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0975032s, 33236 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0975326s, 33236 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0975632s, 33236 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0975948s, 33236 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0976311s, 33236 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0976574s, 33236 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0976901s, 33236 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0977204s, 33236 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0977506s, 33236 KB] Fact name:Atom in(crate0, truck0)
+[t=0.0977823s, 33236 KB] Fact name:<none of those>
+[t=0.0978158s, 33236 KB] Fact name:<none of those>
+[t=0.0978492s, 33236 KB] Fact name:Atom in(crate2, truck0)
+[t=0.0978834s, 33236 KB] Fact name:<none of those>
+[t=0.0979157s, 33236 KB] Fact name:<none of those>
+[t=0.0979621s, 33236 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0979923s, 33236 KB] Fact name:<none of those>
+[t=0.0980267s, 33236 KB] Fact name:<none of those>
+[t=0.0980612s, 33236 KB] Fact name:<none of those>
+[t=0.0980904s, 33236 KB] Fact name:<none of those>
+[t=0.0981192s, 33236 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.0981519s, 33236 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0981803s, 33236 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.098215s, 33236 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0982495s, 33236 KB] Fact name:Atom available(hoist1)
+[t=0.0982789s, 33236 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0983111s, 33236 KB] Fact name:Atom lifting(hoist0, crate1)
+[t=0.0983699s, 33236 KB] Actual search time: 0.0020985s
+[t=0.0984048s, 33236 KB] Saving plan to intermediate_plan_0_6.plan
+!load hoist0 crate0 truck0 place0 (1)
+!lift hoist0 crate1 pallet0-1 place0 index0-1-3 index0-1-4 (1)
+[t=0.0984048s, 33236 KB] Plan length: 2 step(s).
+[t=0.0984048s, 33236 KB] Plan cost: 2
+[t=0.0984048s, 33236 KB] Expanded 5 state(s).
+[t=0.0984048s, 33236 KB] Reopened 0 state(s).
+[t=0.0984048s, 33236 KB] Evaluated 22 state(s).
+[t=0.0984048s, 33236 KB] Evaluations: 22
+[t=0.0984048s, 33236 KB] Generated 26 state(s).
+[t=0.0984048s, 33236 KB] Dead ends: 0 state(s).
+[t=0.0984048s, 33236 KB] Expanded until last jump: 1 state(s).
+[t=0.0984048s, 33236 KB] Reopened until last jump: 0 state(s).
+[t=0.0984048s, 33236 KB] Evaluated until last jump: 7 state(s).
+[t=0.0984048s, 33236 KB] Generated until last jump: 6 state(s).
+[t=0.0984048s, 33236 KB] Number of registered states: 22
+[t=0.0984048s, 33236 KB] Int hash set load factor: 22/32 = 0.6875
+[t=0.0984048s, 33236 KB] Int hash set resizes: 5
+[t=0.0984048s, 33236 KB] Search time: 0.00235781s
+[t=0.0984048s, 33236 KB] Total time: 0.0984048s
+Solution found.
+Peak memory: 33236 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.24s
+INFO     planner time limit: None
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /scratch/zt1/project/nau-lab/user/rli12314/myenv2/bin/python3 /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/translate/translate.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.7.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.005s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 60 rules.
+Computing model... [0.220s CPU, 0.221s wall-clock]
+20611 relevant atoms
+1532 auxiliary atoms
+22143 final queue length
+84364 total queue pushes
+Completing instantiation... [1.770s CPU, 1.781s wall-clock]
+Instantiating: [2.010s CPU, 2.014s wall-clock]
+Computing fact groups...
+Finding invariants...
+24 initial candidates
+Finding invariants: [0.030s CPU, 0.025s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.006s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+54 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.040s CPU, 0.036s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.090s CPU, 0.103s wall-clock]
+Translating task: [1.510s CPU, 1.528s wall-clock]
+45280 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.780s CPU, 0.781s wall-clock]
+Reordering and filtering variables...
+56 of 56 variables necessary.
+20 of 26 mutex groups necessary.
+15468 of 15468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.380s CPU, 0.386s wall-clock]
+Translator variables: 56
+Translator derived variables: 0
+Translator facts: 252
+Translator goal facts: 1
+Translator mutex groups: 20
+Translator total mutex groups size: 148
+Translator operators: 15468
+Translator axioms: 0
+Translator task size: 244293
+Translator peak memory: 222252 KB
+Writing output... [0.270s CPU, 0.268s wall-clock]
+Done! [5.120s CPU, 5.145s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /scratch/zt1/project/nau-lab/user/rli12314/downward/builds/release/bin/downward --search 'astar(blind())' --internal-plan-file intermediate_plan_0_7.plan < output.sas
+[t=0.000658035s, 21664 KB] reading input...
+[t=0.0840854s, 29584 KB] done reading input!
+[t=0.0841674s, 29584 KB] getting initial state...
+[t=0.0842681s, 29584 KB] Number of vars:56
+[t=0.0843082s, 29584 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0843431s, 29584 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0843773s, 29584 KB] Fact name:Atom clear(pallet0-0)
+[t=0.0844142s, 29584 KB] Fact name:Atom zero(index0-0-4)
+[t=0.0844491s, 29584 KB] Fact name:Atom clear(pallet0-1)
+[t=0.0844873s, 29584 KB] Fact name:Atom zero(index0-1-4)
+[t=0.0845205s, 29584 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0845577s, 29584 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0845888s, 29584 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0846209s, 29584 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0846537s, 29584 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0846853s, 29584 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0847238s, 29584 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0847562s, 29584 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0847898s, 29584 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0848245s, 29584 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0848591s, 29584 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0848901s, 29584 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0849262s, 29584 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0849596s, 29584 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0849911s, 29584 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0850247s, 29584 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0850583s, 29584 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0850936s, 29584 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0851279s, 29584 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0851587s, 29584 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.085194s, 29584 KB] Fact name:NegatedAtom zero(index0-0-2)
+[t=0.0852257s, 29584 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0852574s, 29584 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0852911s, 29584 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0853258s, 29584 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0853592s, 29584 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0853908s, 29584 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0854256s, 29584 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0854567s, 29584 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.0854928s, 29584 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0855239s, 29584 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0855553s, 29584 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0855881s, 29584 KB] Fact name:Atom in(crate0, truck0)
+[t=0.0856204s, 29584 KB] Fact name:<none of those>
+[t=0.0856556s, 29584 KB] Fact name:<none of those>
+[t=0.0856878s, 29584 KB] Fact name:Atom lifting(hoist0, crate1)
+[t=0.0857219s, 29584 KB] Fact name:<none of those>
+[t=0.0857552s, 29584 KB] Fact name:Atom in(crate2, truck0)
+[t=0.0857876s, 29584 KB] Fact name:<none of those>
+[t=0.0858232s, 29584 KB] Fact name:<none of those>
+[t=0.0858554s, 29584 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0858887s, 29584 KB] Fact name:<none of those>
+[t=0.0859219s, 29584 KB] Fact name:<none of those>
+[t=0.0859528s, 29584 KB] Fact name:NegatedAtom available(hoist0)
+[t=0.085985s, 29584 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0860174s, 29584 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0860474s, 29584 KB] Fact name:Atom available(hoist1)
+[t=0.0860817s, 29584 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0861117s, 29584 KB] Fact name:NegatedAtom clear(crate1)
+[t=0.0861445s, 29584 KB] Fact name:<none of those>
+[t=0.086801s, 29980 KB] Initializing blind search heuristic...
+[t=0.0871796s, 29980 KB] Building successor generator...done!
+[t=0.0955782s, 33500 KB] peak memory difference for successor generator creation: 3520 KB
+[t=0.0957876s, 33500 KB] time for successor generation creation: 0.00810787s
+[t=0.095821s, 33500 KB] Variables: 56
+[t=0.0958878s, 33500 KB] FactPairs: 252
+[t=0.0959239s, 33500 KB] Bytes per state: 12
+[t=0.095955s, 33500 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.0960082s, 33500 KB] New best heuristic value for blind(): 1
+[t=0.0960518s, 33500 KB] g=0, 1 evaluated, 0 expanded
+[t=0.0960878s, 33500 KB] f = 1, 1 evaluated, 0 expanded
+[t=0.0961229s, 33500 KB] Initial heuristic value for blind(): 1
+[t=0.0961582s, 33500 KB] pruning method: none
+[t=0.0961941s, 33500 KB] f = 2, 7 evaluated, 1 expanded
+[t=0.0962461s, 33500 KB] f = 3, 32 evaluated, 7 expanded
+[t=0.096418s, 33500 KB] f = 4, 132 evaluated, 32 expanded
+[t=0.0964829s, 33500 KB] f = 5, 486 evaluated, 132 expanded
+[t=0.0972291s, 33500 KB] New best heuristic value for blind(): 0
+[t=0.0979065s, 33500 KB] g=5, 1124 evaluated, 349 expanded
+[t=0.0979394s, 33500 KB] Solution found!
+[t=0.0979762s, 33500 KB] Printing and saving the current state to current_state.1
+[t=0.0980585s, 33500 KB] Fact name:Atom truck-at(truck1, place1)
+[t=0.0980983s, 33500 KB] Fact name:Atom truck-at(truck0, place0)
+[t=0.0981346s, 33500 KB] Fact name:NegatedAtom clear(pallet0-0)
+[t=0.0981712s, 33500 KB] Fact name:NegatedAtom zero(index0-0-4)
+[t=0.0982092s, 33500 KB] Fact name:Atom clear(pallet0-1)
+[t=0.098238s, 33500 KB] Fact name:Atom zero(index0-1-4)
+[t=0.0982706s, 33500 KB] Fact name:Atom clear(pallet0-2)
+[t=0.0983023s, 33500 KB] Fact name:Atom zero(index0-2-4)
+[t=0.0983335s, 33500 KB] Fact name:Atom clear(pallet1-0)
+[t=0.0983724s, 33500 KB] Fact name:Atom zero(index1-0-4)
+[t=0.0984028s, 33500 KB] Fact name:Atom clear(pallet1-1)
+[t=0.0984343s, 33500 KB] Fact name:Atom zero(index1-1-4)
+[t=0.0984651s, 33500 KB] Fact name:Atom clear(pallet1-2)
+[t=0.0984968s, 33500 KB] Fact name:Atom zero(index1-2-4)
+[t=0.0985272s, 33500 KB] Fact name:NegatedAtom zero(index0-0-3)
+[t=0.0985605s, 33500 KB] Fact name:NegatedAtom zero(index0-1-3)
+[t=0.0985919s, 33500 KB] Fact name:NegatedAtom zero(index0-2-3)
+[t=0.0986291s, 33500 KB] Fact name:NegatedAtom zero(index1-0-3)
+[t=0.0986593s, 33500 KB] Fact name:NegatedAtom zero(index1-1-3)
+[t=0.0986972s, 33500 KB] Fact name:NegatedAtom zero(index1-2-3)
+[t=0.0987257s, 33500 KB] Fact name:NegatedAtom zero(index0-0-0)
+[t=0.0987599s, 33500 KB] Fact name:NegatedAtom zero(index0-1-0)
+[t=0.0987933s, 33500 KB] Fact name:NegatedAtom zero(index0-2-0)
+[t=0.0988252s, 33500 KB] Fact name:NegatedAtom zero(index1-0-0)
+[t=0.0988627s, 33500 KB] Fact name:NegatedAtom zero(index1-1-0)
+[t=0.0988922s, 33500 KB] Fact name:NegatedAtom zero(index1-2-0)
+[t=0.0989226s, 33500 KB] Fact name:Atom zero(index0-0-2)
+[t=0.0989578s, 33500 KB] Fact name:NegatedAtom zero(index0-0-1)
+[t=0.0989946s, 33500 KB] Fact name:NegatedAtom zero(index0-1-2)
+[t=0.0990293s, 33500 KB] Fact name:NegatedAtom zero(index0-1-1)
+[t=0.0990645s, 33500 KB] Fact name:NegatedAtom zero(index0-2-2)
+[t=0.0990983s, 33500 KB] Fact name:NegatedAtom zero(index0-2-1)
+[t=0.0991327s, 33500 KB] Fact name:NegatedAtom zero(index1-0-2)
+[t=0.0991646s, 33500 KB] Fact name:NegatedAtom zero(index1-0-1)
+[t=0.0992046s, 33500 KB] Fact name:NegatedAtom zero(index1-1-2)
+[t=0.099236s, 33500 KB] Fact name:NegatedAtom zero(index1-1-1)
+[t=0.0992695s, 33500 KB] Fact name:NegatedAtom zero(index1-2-2)
+[t=0.0993056s, 33500 KB] Fact name:NegatedAtom zero(index1-2-1)
+[t=0.0993363s, 33500 KB] Fact name:Atom depth(crate0, index0-0-3)
+[t=0.0993727s, 33500 KB] Fact name:Atom on(crate0, pallet0-0)
+[t=0.0994008s, 33500 KB] Fact name:Atom surface-at(crate0, place0)
+[t=0.0994329s, 33500 KB] Fact name:Atom depth(crate1, index0-0-2)
+[t=0.099488s, 33500 KB] Fact name:Atom surface-at(crate1, place0)
+[t=0.099522s, 33500 KB] Fact name:Atom in(crate2, truck0)
+[t=0.0995521s, 33500 KB] Fact name:<none of those>
+[t=0.0995856s, 33500 KB] Fact name:<none of those>
+[t=0.0996173s, 33500 KB] Fact name:Atom in(crate3, truck0)
+[t=0.0996511s, 33500 KB] Fact name:<none of those>
+[t=0.0996846s, 33500 KB] Fact name:<none of those>
+[t=0.0997165s, 33500 KB] Fact name:Atom available(hoist0)
+[t=0.0997502s, 33500 KB] Fact name:NegatedAtom clear(crate0)
+[t=0.0997835s, 33500 KB] Fact name:NegatedAtom clear(crate2)
+[t=0.0998163s, 33500 KB] Fact name:Atom available(hoist1)
+[t=0.0998448s, 33500 KB] Fact name:NegatedAtom clear(crate3)
+[t=0.0998747s, 33500 KB] Fact name:Atom clear(crate1)
+[t=0.0999056s, 33500 KB] Fact name:Atom on(crate1, crate0)
+[t=0.0999634s, 33500 KB] Actual search time: 0.00376934s
+[t=0.1s, 33500 KB] Saving plan to intermediate_plan_0_7.plan
+!load hoist0 crate1 truck0 place0 (1)
+!unload hoist0 crate0 truck0 place0 (1)
+!drop hoist0 crate0 pallet0-0 place0 index0-0-3 index0-0-4 (1)
+!unload hoist0 crate1 truck0 place0 (1)
+!drop hoist0 crate1 crate0 place0 index0-0-2 index0-0-3 (1)
+[t=0.1s, 33500 KB] Plan length: 5 step(s).
+[t=0.1s, 33500 KB] Plan cost: 5
+[t=0.1s, 33500 KB] Expanded 350 state(s).
+[t=0.1s, 33500 KB] Reopened 0 state(s).
+[t=0.1s, 33500 KB] Evaluated 1124 state(s).
+[t=0.1s, 33500 KB] Evaluations: 1124
+[t=0.1s, 33500 KB] Generated 2446 state(s).
+[t=0.1s, 33500 KB] Dead ends: 0 state(s).
+[t=0.1s, 33500 KB] Expanded until last jump: 132 state(s).
+[t=0.1s, 33500 KB] Reopened until last jump: 0 state(s).
+[t=0.1s, 33500 KB] Evaluated until last jump: 486 state(s).
+[t=0.1s, 33500 KB] Generated until last jump: 901 state(s).
+[t=0.1s, 33500 KB] Number of registered states: 1124
+[t=0.1s, 33500 KB] Int hash set load factor: 1124/2048 = 0.548828
+[t=0.1s, 33500 KB] Int hash set resizes: 11
+[t=0.1s, 33500 KB] Search time: 0.00404547s
+[t=0.1s, 33500 KB] Total time: 0.1s
+Solution found.
+Peak memory: 33500 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 5.33s
+Start HTNMakerC
+Reading strip domain file /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl
+Reading strip problem file /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.pddl
+Reading strip solution file experiments/depots_counter/debug/complete_plan_0.plan
+Reading htn domain file /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/htn-domain-empty.pddl
+Doing curriculum learning......
+Reading curriculum file problem.curriculum
+0 1 0 
+2 3 0 
+1 3 0 
+0 3 0 
+4 5 1 
+3 5 1 
+2 5 1 
+1 5 1 
+0 5 1 
+6 7 2 
+5 7 2 
+4 7 2 
+3 7 2 
+2 7 2 
+1 7 2 
+0 7 2 
+11 12 3 
+10 12 3 
+9 12 3 
+8 12 3 
+7 12 3 
+6 12 3 
+5 12 3 
+4 12 3 
+3 12 3 
+2 12 3 
+1 12 3 
+0 12 3 
+Reading task file: /task_0.pddl
+Done reading task file/task_0.pddl
+Reading task file: /task_0.pddl
+Done reading task file/task_0.pddl
+Reading task file: /task_0.pddl
+Done reading task file/task_0.pddl
+Reading task file: /task_0.pddl
+Done reading task file/task_0.pddl
+Reading task file: /task_1.pddl
+Done reading task file/task_1.pddl
+Reading task file: /task_1.pddl
+Done reading task file/task_1.pddl
+Reading task file: /task_1.pddl
+Done reading task file/task_1.pddl
+Reading task file: /task_1.pddl
+Done reading task file/task_1.pddl
+Reading task file: /task_1.pddl
+Done reading task file/task_1.pddl
+Reading task file: /task_2.pddl
+Done reading task file/task_2.pddl
+Reading task file: /task_2.pddl
+Done reading task file/task_2.pddl
+Reading task file: /task_2.pddl
+Done reading task file/task_2.pddl
+Reading task file: /task_2.pddl
+Done reading task file/task_2.pddl
+Reading task file: /task_2.pddl
+Done reading task file/task_2.pddl
+Reading task file: /task_2.pddl
+Done reading task file/task_2.pddl
+Reading task file: /task_2.pddl
+Done reading task file/task_2.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Reading task file: /task_3.pddl
+Done reading task file/task_3.pddl
+Done reading task files
+Doing curriculum learning
+HTN-Maker-C learned 28 methods
+importing packages...
+Doing experiments for run 0
+
+Doing experiments for prob0_strips.pddl
+Parsing PDDL problem...
+Parsed parameter type from problem file:  {'place0': 'place', 'place1': 'place', 'truck0': 'truck', 'truck1': 'truck', 'hoist0': 'hoist', 'hoist1': 'hoist', 'pallet0-0': 'surface', 'pallet0-1': 'surface', 'pallet0-2': 'surface', 'pallet1-0': 'surface', 'pallet1-1': 'surface', 'pallet1-2': 'surface', 'crate0': 'surface', 'crate1': 'surface', 'crate2': 'surface', 'crate3': 'surface', 'index0-0-0': 'index', 'index0-0-1': 'index', 'index0-0-2': 'index', 'index0-0-3': 'index', 'index0-0-4': 'index', 'index0-1-0': 'index', 'index0-1-1': 'index', 'index0-1-2': 'index', 'index0-1-3': 'index', 'index0-1-4': 'index', 'index0-2-0': 'index', 'index0-2-1': 'index', 'index0-2-2': 'index', 'index0-2-3': 'index', 'index0-2-4': 'index', 'index1-0-0': 'index', 'index1-0-1': 'index', 'index1-0-2': 'index', 'index1-0-3': 'index', 'index1-0-4': 'index', 'index1-1-0': 'index', 'index1-1-1': 'index', 'index1-1-2': 'index', 'index1-1-3': 'index', 'index1-1-4': 'index', 'index1-2-0': 'index', 'index1-2-1': 'index', 'index1-2-2': 'index', 'index1-2-3': 'index', 'index1-2-4': 'index'}
+use lm_hps to get subgoals
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.pddl --search "lazy_greedy([landmark_sum(lm_reasonable_orders_hps(lm_hm(m=1, conjunctive_landmarks=true, use_orders=true), verbosity=normal                    ))])" 
+Checking landmark:  lm0 Atom on(crate1, crate0)
+  Evaluating atom:  Atom on(crate1, crate0)
+  on(crate1, crate0)
+It is False
+
+Checking landmark:  lm1 Atom zero(index0-1-3)
+  Evaluating atom:  Atom zero(index0-1-3)
+  zero(index0-1-3)
+It is False
+
+Checking landmark:  lm2 Atom zero(index0-1-0)
+  Evaluating atom:  Atom zero(index0-1-0)
+  zero(index0-1-0)
+It is True
+
+Checking landmark:  lm3 Atom zero(index0-1-2)
+  Evaluating atom:  Atom zero(index0-1-2)
+  zero(index0-1-2)
+It is False
+
+Checking landmark:  lm4 Atom zero(index0-1-1)
+  Evaluating atom:  Atom zero(index0-1-1)
+  zero(index0-1-1)
+It is False
+
+Checking landmark:  lm5 Atom depth(crate0, index0-1-2)
+  Evaluating atom:  Atom depth(crate0, index0-1-2)
+  depth(crate0, index0-1-2)
+It is True
+
+Checking landmark:  lm6 Atom on(crate0, crate1)
+  Evaluating atom:  Atom on(crate0, crate1)
+  on(crate0, crate1)
+It is True
+
+Checking landmark:  lm7 Atom surface-at(crate0, place0)
+  Evaluating atom:  Atom surface-at(crate0, place0)
+  surface-at(crate0, place0)
+It is True
+
+Checking landmark:  lm8 Atom depth(crate1, index0-1-3)
+  Evaluating atom:  Atom depth(crate1, index0-1-3)
+  depth(crate1, index0-1-3)
+It is True
+
+Checking landmark:  lm9 Atom lifting(hoist0, crate1)
+  Evaluating atom:  Atom lifting(hoist0, crate1)
+  lifting(hoist0, crate1)
+It is False
+
+Checking landmark:  lm10 Atom surface-at(crate1, place0)
+  Evaluating atom:  Atom surface-at(crate1, place0)
+  surface-at(crate1, place0)
+It is True
+
+Checking landmark:  lm11 Atom depth(crate2, index0-1-1)
+  Evaluating atom:  Atom depth(crate2, index0-1-1)
+  depth(crate2, index0-1-1)
+It is True
+
+Checking landmark:  lm12 Atom on(crate2, crate0)
+  Evaluating atom:  Atom on(crate2, crate0)
+  on(crate2, crate0)
+It is True
+
+Checking landmark:  lm13 Atom surface-at(crate2, place0)
+  Evaluating atom:  Atom surface-at(crate2, place0)
+  surface-at(crate2, place0)
+It is True
+
+Checking landmark:  lm14 Atom depth(crate3, index0-1-0)
+  Evaluating atom:  Atom depth(crate3, index0-1-0)
+  depth(crate3, index0-1-0)
+It is True
+
+Checking landmark:  lm15 Atom on(crate3, crate2)
+  Evaluating atom:  Atom on(crate3, crate2)
+  on(crate3, crate2)
+It is True
+
+Checking landmark:  lm16 Atom surface-at(crate3, place0)
+  Evaluating atom:  Atom surface-at(crate3, place0)
+  surface-at(crate3, place0)
+It is True
+
+Checking landmark:  lm17 Atom available(hoist0)
+  Evaluating atom:  Atom available(hoist0)
+  available(hoist0)
+It is True
+
+Checking landmark:  lm18 Atom clear(crate0)
+  Evaluating atom:  Atom clear(crate0)
+  clear(crate0)
+It is False
+
+Checking landmark:  lm19 Atom clear(crate2)
+  Evaluating atom:  Atom clear(crate2)
+  clear(crate2)
+It is False
+
+Checking landmark:  lm20 Atom clear(crate3)
+  Evaluating atom:  Atom clear(crate3)
+  clear(crate3)
+It is True
+
+Checking landmark:  lm21 Atom clear(crate1)
+  Evaluating atom:  Atom clear(crate1)
+  clear(crate1)
+It is False
+
+Checking landmark:  lm22 Atom on(crate1, pallet0-1)
+  Evaluating atom:  Atom on(crate1, pallet0-1)
+  on(crate1, pallet0-1)
+It is True
+
+Atom zero(index0-1-1) 2
+Atom clear(crate2) 3
+Nodes with no predecessor and its neccessary edges:  {'lm4': 2, 'lm19': 3}
+Atom zero(index0-1-1) 2
+Nodes with no predecessor and its neccessary edges:  {'lm4': 2}
+Atom zero(index0-1-2) 2
+Atom clear(crate0) 3
+Nodes with no predecessor and its neccessary edges:  {'lm3': 2, 'lm18': 3}
+Atom zero(index0-1-2) 2
+Nodes with no predecessor and its neccessary edges:  {'lm3': 2}
+Atom zero(index0-1-3) 2
+Atom clear(crate1) 2
+Nodes with no predecessor and its neccessary edges:  {'lm1': 2, 'lm21': 2}
+Atom clear(crate1) 2
+Nodes with no predecessor and its neccessary edges:  {'lm21': 2}
+Atom lifting(hoist0, crate1) 1
+Nodes with no predecessor and its neccessary edges:  {'lm9': 1}
+Atom on(crate1, crate0) 0
+Nodes with no predecessor and its neccessary edges:  {'lm0': 0}
+Un-cleaned subgoals:  ['clear(crate2)', 'zero(index0-1-1)', 'clear(crate0)', 'zero(index0-1-2)', 'zero(index0-1-3)', 'clear(crate1)', 'lifting(hoist0, crate1)', 'on(crate1, crate0)']
+Cleaned subgoals:  [['clear', 'crate2'], ['zero', 'index0-1-1'], ['clear', 'crate0'], ['zero', 'index0-1-2'], ['zero', 'index0-1-3'], ['clear', 'crate1'], ['lifting', 'hoist0', 'crate1'], ['on', 'crate1', 'crate0']]
+subgoals:  [['clear', 'crate2'], ['zero', 'index0-1-1'], ['clear', 'crate0'], ['zero', 'index0-1-2'], ['zero', 'index0-1-3'], ['clear', 'crate1'], ['lifting', 'hoist0', 'crate1'], ['on', 'crate1', 'crate0']]
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_0.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.0.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_0.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+Creating annotated task 
+writting task:  [['clear', 'crate2']] clear-surface
+parameter type:  {'place0': 'place', 'place1': 'place', 'truck0': 'truck', 'truck1': 'truck', 'hoist0': 'hoist', 'hoist1': 'hoist', 'pallet0-0': 'surface', 'pallet0-1': 'surface', 'pallet0-2': 'surface', 'pallet1-0': 'surface', 'pallet1-1': 'surface', 'pallet1-2': 'surface', 'crate0': 'surface', 'crate1': 'surface', 'crate2': 'surface', 'crate3': 'surface', 'index0-0-0': 'index', 'index0-0-1': 'index', 'index0-0-2': 'index', 'index0-0-3': 'index', 'index0-0-4': 'index', 'index0-1-0': 'index', 'index0-1-1': 'index', 'index0-1-2': 'index', 'index0-1-3': 'index', 'index0-1-4': 'index', 'index0-2-0': 'index', 'index0-2-1': 'index', 'index0-2-2': 'index', 'index0-2-3': 'index', 'index0-2-4': 'index', 'index1-0-0': 'index', 'index1-0-1': 'index', 'index1-0-2': 'index', 'index1-0-3': 'index', 'index1-0-4': 'index', 'index1-1-0': 'index', 'index1-1-1': 'index', 'index1-1-2': 'index', 'index1-1-3': 'index', 'index1-1-4': 'index', 'index1-2-0': 'index', 'index1-2-1': 'index', 'index1-2-2': 'index', 'index1-2-3': 'index', 'index1-2-4': 'index'}
+plan_length and task idx:  1 0
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_1.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.1.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_1.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+Creating annotated task 
+writting task:  [['zero', 'index0-1-1']] zero-index
+parameter type:  {'place0': 'place', 'place1': 'place', 'truck0': 'truck', 'truck1': 'truck', 'hoist0': 'hoist', 'hoist1': 'hoist', 'pallet0-0': 'surface', 'pallet0-1': 'surface', 'pallet0-2': 'surface', 'pallet1-0': 'surface', 'pallet1-1': 'surface', 'pallet1-2': 'surface', 'crate0': 'surface', 'crate1': 'surface', 'crate2': 'surface', 'crate3': 'surface', 'index0-0-0': 'index', 'index0-0-1': 'index', 'index0-0-2': 'index', 'index0-0-3': 'index', 'index0-0-4': 'index', 'index0-1-0': 'index', 'index0-1-1': 'index', 'index0-1-2': 'index', 'index0-1-3': 'index', 'index0-1-4': 'index', 'index0-2-0': 'index', 'index0-2-1': 'index', 'index0-2-2': 'index', 'index0-2-3': 'index', 'index0-2-4': 'index', 'index1-0-0': 'index', 'index1-0-1': 'index', 'index1-0-2': 'index', 'index1-0-3': 'index', 'index1-0-4': 'index', 'index1-1-0': 'index', 'index1-1-1': 'index', 'index1-1-2': 'index', 'index1-1-3': 'index', 'index1-1-4': 'index', 'index1-2-0': 'index', 'index1-2-1': 'index', 'index1-2-2': 'index', 'index1-2-3': 'index', 'index1-2-4': 'index'}
+plan_length and task idx:  0 1
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_2.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.2.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_2.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+plan_length and task idx:  2 0
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_3.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.3.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_3.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+plan_length and task idx:  0 1
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_4.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.4.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_4.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+plan_length and task idx:  2 1
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_5.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.5.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_5.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+plan_length and task idx:  0 0
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_6.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.6.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_6.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+Creating annotated task 
+writting task:  [['lifting', 'hoist0', 'crate1']] lifting-hoist-surface
+parameter type:  {'place0': 'place', 'place1': 'place', 'truck0': 'truck', 'truck1': 'truck', 'hoist0': 'hoist', 'hoist1': 'hoist', 'pallet0-0': 'surface', 'pallet0-1': 'surface', 'pallet0-2': 'surface', 'pallet1-0': 'surface', 'pallet1-1': 'surface', 'pallet1-2': 'surface', 'crate0': 'surface', 'crate1': 'surface', 'crate2': 'surface', 'crate3': 'surface', 'index0-0-0': 'index', 'index0-0-1': 'index', 'index0-0-2': 'index', 'index0-0-3': 'index', 'index0-0-4': 'index', 'index0-1-0': 'index', 'index0-1-1': 'index', 'index0-1-2': 'index', 'index0-1-3': 'index', 'index0-1-4': 'index', 'index0-2-0': 'index', 'index0-2-1': 'index', 'index0-2-2': 'index', 'index0-2-3': 'index', 'index0-2-4': 'index', 'index1-0-0': 'index', 'index1-0-1': 'index', 'index1-0-2': 'index', 'index1-0-3': 'index', 'index1-0-4': 'index', 'index1-1-0': 'index', 'index1-1-1': 'index', 'index1-1-2': 'index', 'index1-1-3': 'index', 'index1-1-4': 'index', 'index1-2-0': 'index', 'index1-2-1': 'index', 'index1-2-2': 'index', 'index1-2-3': 'index', 'index1-2-4': 'index'}
+plan_length and task idx:  2 2
+0
+run planner to get intermediate plan...
+/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py --plan-file intermediate_plan_0_7.plan /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical-domain.pddl /scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA/experiments/depots_counter/classical_probs/prob0_strips.7.pddl --search "astar(blind())" 
+reading intermediate plan:  intermediate_plan_0_7.plan
+Getting the resulting state after executing the subplan...
+Removing intermediate plan...
+Removing next problem file...
+Creating annotated task 
+writting task:  [['on', 'crate1', 'crate0']] on-surface-surface
+parameter type:  {'place0': 'place', 'place1': 'place', 'truck0': 'truck', 'truck1': 'truck', 'hoist0': 'hoist', 'hoist1': 'hoist', 'pallet0-0': 'surface', 'pallet0-1': 'surface', 'pallet0-2': 'surface', 'pallet1-0': 'surface', 'pallet1-1': 'surface', 'pallet1-2': 'surface', 'crate0': 'surface', 'crate1': 'surface', 'crate2': 'surface', 'crate3': 'surface', 'index0-0-0': 'index', 'index0-0-1': 'index', 'index0-0-2': 'index', 'index0-0-3': 'index', 'index0-0-4': 'index', 'index0-1-0': 'index', 'index0-1-1': 'index', 'index0-1-2': 'index', 'index0-1-3': 'index', 'index0-1-4': 'index', 'index0-2-0': 'index', 'index0-2-1': 'index', 'index0-2-2': 'index', 'index0-2-3': 'index', 'index0-2-4': 'index', 'index1-0-0': 'index', 'index1-0-1': 'index', 'index1-0-2': 'index', 'index1-0-3': 'index', 'index1-0-4': 'index', 'index1-1-0': 'index', 'index1-1-1': 'index', 'index1-1-2': 'index', 'index1-1-3': 'index', 'index1-1-4': 'index', 'index1-2-0': 'index', 'index1-2-1': 'index', 'index1-2-2': 'index', 'index1-2-3': 'index', 'index1-2-4': 'index'}
+plan_length and task idx:  5 3
+task_idx_and_subplan_length:  [(0, 1), (0, 2), (1, 2), (2, 2), (3, 5)]
+[1, 2, 2, 2, 5] 12
+Press Enter to continue.

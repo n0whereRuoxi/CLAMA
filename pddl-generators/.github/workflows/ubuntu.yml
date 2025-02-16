@@ -1,0 +1,37 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-20.04
+            python-version: 3.8
+          - os: ubuntu-22.04
+            python-version: 3.11
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # ocaml is needed for crewplanning
+    - run: sudo apt install ocaml ocamlbuild tox
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Show environment
+      run: |
+        python --version
+        python3 -c "import multiprocessing as m; print('CPUs:', m.cpu_count())"
+
+    - name: Run tests
+      run: |
+        tox -e py

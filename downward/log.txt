@@ -1,0 +1,67 @@
+-- Building for 64-bit.
+-- Could NOT find Cplex: Found unsuitable version "CPLEX_VERSION-NOTFOUND", but required is at least "12" (found CPLEX_INCLUDE_DIRS-NOTFOUND)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rli12314/scratch/downward/builds/release
+Copying translator module into output directory
+Consolidate compiler generated dependencies of target downward
+[  0%] Building CXX object search/CMakeFiles/downward.dir/search_algorithm.cc.o
+[  1%] Building CXX object search/CMakeFiles/downward.dir/cartesian_abstractions/utils_landmarks.cc.o
+[  3%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_cost_partitioning_algorithms.cc.o
+[  3%] Building CXX object search/CMakeFiles/downward.dir/cartesian_abstractions/subtask_generators.cc.o
+[  4%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_factory_merged.cc.o
+[  4%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_cost_partitioning_heuristic.cc.o
+[  6%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_factory_rpg_sasp.[  6%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_factory.cc.o
+[  6%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_factory_reasonable_orders_hps.cc.o
+[  6%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_factory_rpg_exhaust.cc.o
+[  8%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_factory_relaxation.cc.o
+[  8%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_graph.cc.o
+[  9%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_status_manager.cc.o
+[  9%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_s[  9%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_factory_zhu_givan.cc.o
+[  9%] Building CXX object search/CMakeFiles/downward.dir/landmarks/landmark_heuristic.cc.o
+[  9%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/merge_tree_factory.cc.o
+.cc.o
+[ 11%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/merge_tree.cc.o
+[ 11%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/merge_tree_factory_linear.cc.o
+[ 11%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/shrink_bucket_based.cc.o
+[ 12%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/shrink_bisimulation.cc.o
+[ 12%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/shrink_random.cc.o
+[ 13%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/shrink_fh.cc.o
+[ 13%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/transition_system.cc.o
+[ 13%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/utils.cc.o
+tegy.cc.o
+[ 14%] Building CXX object search/CMakeFiles/downward.dir/task_utils/variable_order_finder.cc.o
+[ 15%] Building CXX object search/CMakeFiles/downward.dir/operator_counting/delete_relaxation_constraints.cc.o
+[ 15%] Building CXX object search/CMakeFiles/downward.dir/algorithms/equivalence_relation.cc.o
+[ 16%] Building CXX object search/CMakeFiles/downward.dir/merge_and_shrink/types.cc.o
+[ 17%] Building CXX object search/CMakeFiles/downward.dir/operator_counting/constraint_generator.cc.o
+[ 18%] Building CXX object search/CMakeFiles/downward.dir/operator_counting/operator_counting_heuristic.cc.o
+[ 18%] Building CXX object search/CMakeFiles/downward.dir/operator_counting/state_equation_constraints.cc.o
+[ 19%] Building CXX object search/CMakeFiles/downward.dir/pdbs/abstract_operator.cc.o
+aints.cc.o
+[ 19%] Building CXX object search/CMakeFiles/downward.dir/pdbs/canonical_pdbs_heuristic.cc.o
+[ 20%] Building CXX object search/CMakeFiles/downward.dir/pdbs/canonical_pdbs.cc.o
+[ 21%] Building CXX object search/CMakeFiles/downward.dir/pdbs/dominance_pruning.cc.o
+[ 21%] Building CXX object search/CMakeFiles/downward.dir/pdbs/cegar.cc.o
+[ 21%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_cliques.cc.o
+[ 21%] Building CXX object search/CMakeFiles/downward.dir/pdbs/incremental_canonical_pdbs.cc.o
+[ 22%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_generator_combo.cc.o
+[ 22%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_information.cc.o
+[ 23%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_generator_disjoint_cegar.cc.o
+[ 23%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_generator_genetic.cc.o
+[ 23%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_generator_manual.cc.o
+[ 24%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_generator_hillclimbing.c[ 24%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_generator_multiple_cegar.cc.o
+[ 26%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_collection_generator_multiple_random.cc.o
+[ 26%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_database_factory.cc.o
+[ 28%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_generator_manual.cc.o
+ystematic.cc.o
+[ 28%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_generator_cegar.cc.o
+
+[ 28%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_generator_greedy.cc.o
+[ 29%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_information.cc.o
+[ 29%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_database.cc.o
+[ 29%] Building CXX object search/CMakeFiles/downward.dir/pdbs/pattern_generator.cc.o
+[ 29%] Built target translate
+Building configuration release.
+Executing command "cmake -S ./src -B ./builds/release -G Unix Makefiles -DCMAKE_BUILD_TYPE=Release"
+Executing command "cmake --build ./builds/release -j 128"

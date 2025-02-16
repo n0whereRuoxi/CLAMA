@@ -1,0 +1,1834 @@
+methods: 
+44
+Before renaming: 
+(:method MAKE-ON
+:parameters (?ab - SURFACE ?be - SURFACE )
+:vars ()
+:precondition (and ( ON ?ab ?be) )
+:subtasks ())
+After renaming: 
+(:method MAKE-ON
+:parameters (?aba0 - SURFACE ?bea0 - SURFACE )
+:vars ()
+:precondition (and ( ON ?aba0 ?bea0) )
+:subtasks ())
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_1 - SURFACE )
+:vars (?auto_2 - HOIST ?auto_3 - PLACE ?auto_4 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_2 ?auto_3) ( AVAILABLE ?auto_2) ( SURFACE-AT ?auto_4 ?auto_3) ( ON ?auto_4 ?auto_1) ( CLEAR ?auto_4) ( IS-CRATE ?auto_4) )
+:subtasks ((!LIFT ?auto_2 ?auto_4 ?auto_1 ?auto_3 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_1a1 - SURFACE )
+:vars (?auto_2a1 - HOIST ?auto_3a1 - PLACE ?auto_4a1 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_2a1 ?auto_3a1) ( AVAILABLE ?auto_2a1) ( SURFACE-AT ?auto_4a1 ?auto_3a1) ( ON ?auto_4a1 ?auto_1a1) ( CLEAR ?auto_4a1) ( IS-CRATE ?auto_4a1) )
+:subtasks ((!LIFT ?auto_2a1 ?auto_4a1 ?auto_1a1 ?auto_3a1 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_16 - SURFACE )
+:vars (?auto_18 - HOIST ?auto_17 - PLACE ?auto_19 - SURFACE ?auto_20 - TRUCK ?auto_21 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_18 ?auto_17) ( SURFACE-AT ?auto_19 ?auto_17) ( ON ?auto_19 ?auto_16) ( CLEAR ?auto_19) ( IS-CRATE ?auto_19) ( TRUCK-AT ?auto_20 ?auto_17) ( LIFTING ?auto_18 ?auto_21) ( IS-CRATE ?auto_21) )
+:subtasks ((!LOAD ?auto_18 ?auto_21 ?auto_20 ?auto_17 )(TASK-CLEAR-SURFACE ?auto_16 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_16a2 - SURFACE )
+:vars (?auto_18a2 - HOIST ?auto_17a2 - PLACE ?auto_19a2 - SURFACE ?auto_20a2 - TRUCK ?auto_21a2 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_18a2 ?auto_17a2) ( SURFACE-AT ?auto_19a2 ?auto_17a2) ( ON ?auto_19a2 ?auto_16a2) ( CLEAR ?auto_19a2) ( IS-CRATE ?auto_19a2) ( TRUCK-AT ?auto_20a2 ?auto_17a2) ( LIFTING ?auto_18a2 ?auto_21a2) ( IS-CRATE ?auto_21a2) )
+:subtasks ((!LOAD ?auto_18a2 ?auto_21a2 ?auto_20a2 ?auto_17a2 )(TASK-CLEAR-SURFACE ?auto_16a2 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_23 - SURFACE )
+:vars (?auto_25 - HOIST ?auto_24 - PLACE ?auto_26 - SURFACE ?auto_27 - TRUCK ?auto_28 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_25 ?auto_24) ( SURFACE-AT ?auto_26 ?auto_24) ( ON ?auto_26 ?auto_23) ( IS-CRATE ?auto_26) ( TRUCK-AT ?auto_27 ?auto_24) ( IS-CRATE ?auto_28) ( AVAILABLE ?auto_25) ( SURFACE-AT ?auto_28 ?auto_24) ( ON ?auto_28 ?auto_26) ( CLEAR ?auto_28) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_26 )(TASK-CLEAR-SURFACE ?auto_23 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_23a3 - SURFACE )
+:vars (?auto_25a3 - HOIST ?auto_24a3 - PLACE ?auto_26a3 - SURFACE ?auto_27a3 - TRUCK ?auto_28a3 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_25a3 ?auto_24a3) ( SURFACE-AT ?auto_26a3 ?auto_24a3) ( ON ?auto_26a3 ?auto_23a3) ( IS-CRATE ?auto_26a3) ( TRUCK-AT ?auto_27a3 ?auto_24a3) ( IS-CRATE ?auto_28a3) ( AVAILABLE ?auto_25a3) ( SURFACE-AT ?auto_28a3 ?auto_24a3) ( ON ?auto_28a3 ?auto_26a3) ( CLEAR ?auto_28a3) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_26a3 )(TASK-CLEAR-SURFACE ?auto_23a3 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_31 - HOIST ?auto_32 - SURFACE )
+:vars (?auto_33 - PLACE ?auto_34 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_31 ?auto_33) ( AVAILABLE ?auto_31) ( SURFACE-AT ?auto_32 ?auto_33) ( ON ?auto_32 ?auto_34) ( CLEAR ?auto_32) ( IS-CRATE ?auto_32) )
+:subtasks ((!LIFT ?auto_31 ?auto_32 ?auto_34 ?auto_33 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_31a4 - HOIST ?auto_32a4 - SURFACE )
+:vars (?auto_33a4 - PLACE ?auto_34a4 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_31a4 ?auto_33a4) ( AVAILABLE ?auto_31a4) ( SURFACE-AT ?auto_32a4 ?auto_33a4) ( ON ?auto_32a4 ?auto_34a4) ( CLEAR ?auto_32a4) ( IS-CRATE ?auto_32a4) )
+:subtasks ((!LIFT ?auto_31a4 ?auto_32a4 ?auto_34a4 ?auto_33a4 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_37 - HOIST ?auto_38 - SURFACE )
+:vars (?auto_39 - PLACE ?auto_40 - SURFACE ?auto_41 - TRUCK ?auto_42 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_37 ?auto_39) ( SURFACE-AT ?auto_38 ?auto_39) ( ON ?auto_38 ?auto_40) ( CLEAR ?auto_38) ( IS-CRATE ?auto_38) ( TRUCK-AT ?auto_41 ?auto_39) ( LIFTING ?auto_37 ?auto_42) ( IS-CRATE ?auto_42) )
+:subtasks ((!LOAD ?auto_37 ?auto_42 ?auto_41 ?auto_39 )(TASK-LIFTING-HOIST-SURFACE ?auto_37 ?auto_38 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_37a5 - HOIST ?auto_38a5 - SURFACE )
+:vars (?auto_39a5 - PLACE ?auto_40a5 - SURFACE ?auto_41a5 - TRUCK ?auto_42a5 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_37a5 ?auto_39a5) ( SURFACE-AT ?auto_38a5 ?auto_39a5) ( ON ?auto_38a5 ?auto_40a5) ( CLEAR ?auto_38a5) ( IS-CRATE ?auto_38a5) ( TRUCK-AT ?auto_41a5 ?auto_39a5) ( LIFTING ?auto_37a5 ?auto_42a5) ( IS-CRATE ?auto_42a5) )
+:subtasks ((!LOAD ?auto_37a5 ?auto_42a5 ?auto_41a5 ?auto_39a5 )(TASK-LIFTING-HOIST-SURFACE ?auto_37a5 ?auto_38a5 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_45 - HOIST ?auto_46 - SURFACE )
+:vars (?auto_47 - PLACE ?auto_48 - SURFACE ?auto_49 - TRUCK ?auto_50 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_45 ?auto_47) ( SURFACE-AT ?auto_46 ?auto_47) ( ON ?auto_46 ?auto_48) ( IS-CRATE ?auto_46) ( TRUCK-AT ?auto_49 ?auto_47) ( IS-CRATE ?auto_50) ( AVAILABLE ?auto_45) ( SURFACE-AT ?auto_50 ?auto_47) ( ON ?auto_50 ?auto_46) ( CLEAR ?auto_50) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_46 )(TASK-LIFTING-HOIST-SURFACE ?auto_45 ?auto_46 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_45a6 - HOIST ?auto_46a6 - SURFACE )
+:vars (?auto_47a6 - PLACE ?auto_48a6 - SURFACE ?auto_49a6 - TRUCK ?auto_50a6 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_45a6 ?auto_47a6) ( SURFACE-AT ?auto_46a6 ?auto_47a6) ( ON ?auto_46a6 ?auto_48a6) ( IS-CRATE ?auto_46a6) ( TRUCK-AT ?auto_49a6 ?auto_47a6) ( IS-CRATE ?auto_50a6) ( AVAILABLE ?auto_45a6) ( SURFACE-AT ?auto_50a6 ?auto_47a6) ( ON ?auto_50a6 ?auto_46a6) ( CLEAR ?auto_50a6) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_46a6 )(TASK-LIFTING-HOIST-SURFACE ?auto_45a6 ?auto_46a6 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_53 - HOIST ?auto_54 - SURFACE )
+:vars (?auto_55 - PLACE ?auto_57 - SURFACE ?auto_58 - TRUCK ?auto_56 - SURFACE ?auto_59 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_53 ?auto_55) ( SURFACE-AT ?auto_54 ?auto_55) ( ON ?auto_54 ?auto_57) ( IS-CRATE ?auto_54) ( TRUCK-AT ?auto_58 ?auto_55) ( IS-CRATE ?auto_56) ( SURFACE-AT ?auto_56 ?auto_55) ( ON ?auto_56 ?auto_54) ( CLEAR ?auto_56) ( LIFTING ?auto_53 ?auto_59) ( IS-CRATE ?auto_59) )
+:subtasks ((!LOAD ?auto_53 ?auto_59 ?auto_58 ?auto_55 )(TASK-LIFTING-HOIST-SURFACE ?auto_53 ?auto_54 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_53a7 - HOIST ?auto_54a7 - SURFACE )
+:vars (?auto_55a7 - PLACE ?auto_57a7 - SURFACE ?auto_58a7 - TRUCK ?auto_56a7 - SURFACE ?auto_59a7 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_53a7 ?auto_55a7) ( SURFACE-AT ?auto_54a7 ?auto_55a7) ( ON ?auto_54a7 ?auto_57a7) ( IS-CRATE ?auto_54a7) ( TRUCK-AT ?auto_58a7 ?auto_55a7) ( IS-CRATE ?auto_56a7) ( SURFACE-AT ?auto_56a7 ?auto_55a7) ( ON ?auto_56a7 ?auto_54a7) ( CLEAR ?auto_56a7) ( LIFTING ?auto_53a7 ?auto_59a7) ( IS-CRATE ?auto_59a7) )
+:subtasks ((!LOAD ?auto_53a7 ?auto_59a7 ?auto_58a7 ?auto_55a7 )(TASK-LIFTING-HOIST-SURFACE ?auto_53a7 ?auto_54a7 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_62 - HOIST ?auto_63 - SURFACE )
+:vars (?auto_64 - PLACE ?auto_66 - SURFACE ?auto_65 - TRUCK ?auto_67 - SURFACE ?auto_68 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_62 ?auto_64) ( SURFACE-AT ?auto_63 ?auto_64) ( ON ?auto_63 ?auto_66) ( IS-CRATE ?auto_63) ( TRUCK-AT ?auto_65 ?auto_64) ( IS-CRATE ?auto_67) ( SURFACE-AT ?auto_67 ?auto_64) ( ON ?auto_67 ?auto_63) ( IS-CRATE ?auto_68) ( AVAILABLE ?auto_62) ( SURFACE-AT ?auto_68 ?auto_64) ( ON ?auto_68 ?auto_67) ( CLEAR ?auto_68) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_67 )(TASK-LIFTING-HOIST-SURFACE ?auto_62 ?auto_63 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_62a8 - HOIST ?auto_63a8 - SURFACE )
+:vars (?auto_64a8 - PLACE ?auto_66a8 - SURFACE ?auto_65a8 - TRUCK ?auto_67a8 - SURFACE ?auto_68a8 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_62a8 ?auto_64a8) ( SURFACE-AT ?auto_63a8 ?auto_64a8) ( ON ?auto_63a8 ?auto_66a8) ( IS-CRATE ?auto_63a8) ( TRUCK-AT ?auto_65a8 ?auto_64a8) ( IS-CRATE ?auto_67a8) ( SURFACE-AT ?auto_67a8 ?auto_64a8) ( ON ?auto_67a8 ?auto_63a8) ( IS-CRATE ?auto_68a8) ( AVAILABLE ?auto_62a8) ( SURFACE-AT ?auto_68a8 ?auto_64a8) ( ON ?auto_68a8 ?auto_67a8) ( CLEAR ?auto_68a8) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_67a8 )(TASK-LIFTING-HOIST-SURFACE ?auto_62a8 ?auto_63a8 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_71 - HOIST ?auto_72 - SURFACE )
+:vars (?auto_74 - PLACE ?auto_73 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_71 ?auto_74) ( TRUCK-AT ?auto_73 ?auto_74) ( AVAILABLE ?auto_71) ( IN ?auto_72 ?auto_73) ( IS-CRATE ?auto_72) )
+:subtasks ((!UNLOAD ?auto_71 ?auto_72 ?auto_73 ?auto_74 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_71a9 - HOIST ?auto_72a9 - SURFACE )
+:vars (?auto_74a9 - PLACE ?auto_73a9 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_71a9 ?auto_74a9) ( TRUCK-AT ?auto_73a9 ?auto_74a9) ( AVAILABLE ?auto_71a9) ( IN ?auto_72a9 ?auto_73a9) ( IS-CRATE ?auto_72a9) )
+:subtasks ((!UNLOAD ?auto_71a9 ?auto_72a9 ?auto_73a9 ?auto_74a9 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_77 - HOIST ?auto_78 - SURFACE )
+:vars (?auto_80 - PLACE ?auto_79 - TRUCK ?auto_81 - PLACE )
+:precondition (and ( HOIST-AT ?auto_77 ?auto_80) ( AVAILABLE ?auto_77) ( IN ?auto_78 ?auto_79) ( IS-CRATE ?auto_78) ( TRUCK-AT ?auto_79 ?auto_81) )
+:subtasks ((!DRIVE ?auto_79 ?auto_81 ?auto_80 )(TASK-LIFTING-HOIST-SURFACE ?auto_77 ?auto_78 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_77a10 - HOIST ?auto_78a10 - SURFACE )
+:vars (?auto_80a10 - PLACE ?auto_79a10 - TRUCK ?auto_81a10 - PLACE )
+:precondition (and ( HOIST-AT ?auto_77a10 ?auto_80a10) ( AVAILABLE ?auto_77a10) ( IN ?auto_78a10 ?auto_79a10) ( IS-CRATE ?auto_78a10) ( TRUCK-AT ?auto_79a10 ?auto_81a10) )
+:subtasks ((!DRIVE ?auto_79a10 ?auto_81a10 ?auto_80a10 )(TASK-LIFTING-HOIST-SURFACE ?auto_77a10 ?auto_78a10 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_84 - HOIST ?auto_85 - SURFACE )
+:vars (?auto_87 - PLACE ?auto_86 - TRUCK ?auto_88 - PLACE ?auto_89 - HOIST )
+:precondition (and ( HOIST-AT ?auto_84 ?auto_87) ( AVAILABLE ?auto_84) ( IS-CRATE ?auto_85) ( TRUCK-AT ?auto_86 ?auto_88) ( HOIST-AT ?auto_89 ?auto_88) ( LIFTING ?auto_89 ?auto_85) )
+:subtasks ((!LOAD ?auto_89 ?auto_85 ?auto_86 ?auto_88 )(TASK-LIFTING-HOIST-SURFACE ?auto_84 ?auto_85 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_84a11 - HOIST ?auto_85a11 - SURFACE )
+:vars (?auto_87a11 - PLACE ?auto_86a11 - TRUCK ?auto_88a11 - PLACE ?auto_89a11 - HOIST )
+:precondition (and ( HOIST-AT ?auto_84a11 ?auto_87a11) ( AVAILABLE ?auto_84a11) ( IS-CRATE ?auto_85a11) ( TRUCK-AT ?auto_86a11 ?auto_88a11) ( HOIST-AT ?auto_89a11 ?auto_88a11) ( LIFTING ?auto_89a11 ?auto_85a11) )
+:subtasks ((!LOAD ?auto_89a11 ?auto_85a11 ?auto_86a11 ?auto_88a11 )(TASK-LIFTING-HOIST-SURFACE ?auto_84a11 ?auto_85a11 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_92 - HOIST ?auto_93 - SURFACE )
+:vars (?auto_94 - PLACE ?auto_97 - TRUCK ?auto_95 - PLACE ?auto_96 - HOIST ?auto_98 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_92 ?auto_94) ( AVAILABLE ?auto_92) ( IS-CRATE ?auto_93) ( TRUCK-AT ?auto_97 ?auto_95) ( HOIST-AT ?auto_96 ?auto_95) ( AVAILABLE ?auto_96) ( SURFACE-AT ?auto_93 ?auto_95) ( ON ?auto_93 ?auto_98) ( CLEAR ?auto_93) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_96 ?auto_93 )(TASK-LIFTING-HOIST-SURFACE ?auto_92 ?auto_93 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_92a12 - HOIST ?auto_93a12 - SURFACE )
+:vars (?auto_94a12 - PLACE ?auto_97a12 - TRUCK ?auto_95a12 - PLACE ?auto_96a12 - HOIST ?auto_98a12 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_92a12 ?auto_94a12) ( AVAILABLE ?auto_92a12) ( IS-CRATE ?auto_93a12) ( TRUCK-AT ?auto_97a12 ?auto_95a12) ( HOIST-AT ?auto_96a12 ?auto_95a12) ( AVAILABLE ?auto_96a12) ( SURFACE-AT ?auto_93a12 ?auto_95a12) ( ON ?auto_93a12 ?auto_98a12) ( CLEAR ?auto_93a12) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_96a12 ?auto_93a12 )(TASK-LIFTING-HOIST-SURFACE ?auto_92a12 ?auto_93a12 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_101 - HOIST ?auto_102 - SURFACE )
+:vars (?auto_106 - PLACE ?auto_105 - TRUCK ?auto_104 - PLACE ?auto_103 - HOIST ?auto_107 - SURFACE ?auto_108 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_101 ?auto_106) ( AVAILABLE ?auto_101) ( IS-CRATE ?auto_102) ( TRUCK-AT ?auto_105 ?auto_104) ( HOIST-AT ?auto_103 ?auto_104) ( SURFACE-AT ?auto_102 ?auto_104) ( ON ?auto_102 ?auto_107) ( CLEAR ?auto_102) ( LIFTING ?auto_103 ?auto_108) ( IS-CRATE ?auto_108) )
+:subtasks ((!LOAD ?auto_103 ?auto_108 ?auto_105 ?auto_104 )(TASK-LIFTING-HOIST-SURFACE ?auto_101 ?auto_102 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_101a13 - HOIST ?auto_102a13 - SURFACE )
+:vars (?auto_106a13 - PLACE ?auto_105a13 - TRUCK ?auto_104a13 - PLACE ?auto_103a13 - HOIST ?auto_107a13 - SURFACE ?auto_108a13 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_101a13 ?auto_106a13) ( AVAILABLE ?auto_101a13) ( IS-CRATE ?auto_102a13) ( TRUCK-AT ?auto_105a13 ?auto_104a13) ( HOIST-AT ?auto_103a13 ?auto_104a13) ( SURFACE-AT ?auto_102a13 ?auto_104a13) ( ON ?auto_102a13 ?auto_107a13) ( CLEAR ?auto_102a13) ( LIFTING ?auto_103a13 ?auto_108a13) ( IS-CRATE ?auto_108a13) )
+:subtasks ((!LOAD ?auto_103a13 ?auto_108a13 ?auto_105a13 ?auto_104a13 )(TASK-LIFTING-HOIST-SURFACE ?auto_101a13 ?auto_102a13 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_111 - HOIST ?auto_112 - SURFACE )
+:vars (?auto_118 - PLACE ?auto_113 - TRUCK ?auto_114 - PLACE ?auto_116 - HOIST ?auto_117 - SURFACE ?auto_115 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_111 ?auto_118) ( AVAILABLE ?auto_111) ( IS-CRATE ?auto_112) ( TRUCK-AT ?auto_113 ?auto_114) ( HOIST-AT ?auto_116 ?auto_114) ( SURFACE-AT ?auto_112 ?auto_114) ( ON ?auto_112 ?auto_117) ( IS-CRATE ?auto_115) ( AVAILABLE ?auto_116) ( SURFACE-AT ?auto_115 ?auto_114) ( ON ?auto_115 ?auto_112) ( CLEAR ?auto_115) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_112 )(TASK-LIFTING-HOIST-SURFACE ?auto_111 ?auto_112 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_111a14 - HOIST ?auto_112a14 - SURFACE )
+:vars (?auto_118a14 - PLACE ?auto_113a14 - TRUCK ?auto_114a14 - PLACE ?auto_116a14 - HOIST ?auto_117a14 - SURFACE ?auto_115a14 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_111a14 ?auto_118a14) ( AVAILABLE ?auto_111a14) ( IS-CRATE ?auto_112a14) ( TRUCK-AT ?auto_113a14 ?auto_114a14) ( HOIST-AT ?auto_116a14 ?auto_114a14) ( SURFACE-AT ?auto_112a14 ?auto_114a14) ( ON ?auto_112a14 ?auto_117a14) ( IS-CRATE ?auto_115a14) ( AVAILABLE ?auto_116a14) ( SURFACE-AT ?auto_115a14 ?auto_114a14) ( ON ?auto_115a14 ?auto_112a14) ( CLEAR ?auto_115a14) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_112a14 )(TASK-LIFTING-HOIST-SURFACE ?auto_111a14 ?auto_112a14 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_121 - HOIST ?auto_122 - SURFACE )
+:vars (?auto_123 - PLACE ?auto_128 - TRUCK ?auto_127 - PLACE ?auto_126 - HOIST ?auto_125 - SURFACE ?auto_124 - SURFACE ?auto_129 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_121 ?auto_123) ( AVAILABLE ?auto_121) ( IS-CRATE ?auto_122) ( TRUCK-AT ?auto_128 ?auto_127) ( HOIST-AT ?auto_126 ?auto_127) ( SURFACE-AT ?auto_122 ?auto_127) ( ON ?auto_122 ?auto_125) ( IS-CRATE ?auto_124) ( SURFACE-AT ?auto_124 ?auto_127) ( ON ?auto_124 ?auto_122) ( CLEAR ?auto_124) ( LIFTING ?auto_126 ?auto_129) ( IS-CRATE ?auto_129) )
+:subtasks ((!LOAD ?auto_126 ?auto_129 ?auto_128 ?auto_127 )(TASK-LIFTING-HOIST-SURFACE ?auto_121 ?auto_122 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_121a15 - HOIST ?auto_122a15 - SURFACE )
+:vars (?auto_123a15 - PLACE ?auto_128a15 - TRUCK ?auto_127a15 - PLACE ?auto_126a15 - HOIST ?auto_125a15 - SURFACE ?auto_124a15 - SURFACE ?auto_129a15 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_121a15 ?auto_123a15) ( AVAILABLE ?auto_121a15) ( IS-CRATE ?auto_122a15) ( TRUCK-AT ?auto_128a15 ?auto_127a15) ( HOIST-AT ?auto_126a15 ?auto_127a15) ( SURFACE-AT ?auto_122a15 ?auto_127a15) ( ON ?auto_122a15 ?auto_125a15) ( IS-CRATE ?auto_124a15) ( SURFACE-AT ?auto_124a15 ?auto_127a15) ( ON ?auto_124a15 ?auto_122a15) ( CLEAR ?auto_124a15) ( LIFTING ?auto_126a15 ?auto_129a15) ( IS-CRATE ?auto_129a15) )
+:subtasks ((!LOAD ?auto_126a15 ?auto_129a15 ?auto_128a15 ?auto_127a15 )(TASK-LIFTING-HOIST-SURFACE ?auto_121a15 ?auto_122a15 )))
+
+
+Before renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_132 - HOIST ?auto_133 - SURFACE )
+:vars (?auto_134 - PLACE ?auto_140 - TRUCK ?auto_135 - PLACE ?auto_139 - HOIST ?auto_136 - SURFACE ?auto_138 - SURFACE ?auto_137 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_132 ?auto_134) ( AVAILABLE ?auto_132) ( IS-CRATE ?auto_133) ( TRUCK-AT ?auto_140 ?auto_135) ( HOIST-AT ?auto_139 ?auto_135) ( SURFACE-AT ?auto_133 ?auto_135) ( ON ?auto_133 ?auto_136) ( IS-CRATE ?auto_138) ( SURFACE-AT ?auto_138 ?auto_135) ( ON ?auto_138 ?auto_133) ( IS-CRATE ?auto_137) ( AVAILABLE ?auto_139) ( SURFACE-AT ?auto_137 ?auto_135) ( ON ?auto_137 ?auto_138) ( CLEAR ?auto_137) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_138 )(TASK-LIFTING-HOIST-SURFACE ?auto_132 ?auto_133 )))
+After renaming: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_132a16 - HOIST ?auto_133a16 - SURFACE )
+:vars (?auto_134a16 - PLACE ?auto_140a16 - TRUCK ?auto_135a16 - PLACE ?auto_139a16 - HOIST ?auto_136a16 - SURFACE ?auto_138a16 - SURFACE ?auto_137a16 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_132a16 ?auto_134a16) ( AVAILABLE ?auto_132a16) ( IS-CRATE ?auto_133a16) ( TRUCK-AT ?auto_140a16 ?auto_135a16) ( HOIST-AT ?auto_139a16 ?auto_135a16) ( SURFACE-AT ?auto_133a16 ?auto_135a16) ( ON ?auto_133a16 ?auto_136a16) ( IS-CRATE ?auto_138a16) ( SURFACE-AT ?auto_138a16 ?auto_135a16) ( ON ?auto_138a16 ?auto_133a16) ( IS-CRATE ?auto_137a16) ( AVAILABLE ?auto_139a16) ( SURFACE-AT ?auto_137a16 ?auto_135a16) ( ON ?auto_137a16 ?auto_138a16) ( CLEAR ?auto_137a16) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_138a16 )(TASK-LIFTING-HOIST-SURFACE ?auto_132a16 ?auto_133a16 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_143 - SURFACE ?auto_144 - SURFACE )
+:vars (?auto_145 - HOIST ?auto_146 - PLACE )
+:precondition (and ( HOIST-AT ?auto_145 ?auto_146) ( SURFACE-AT ?auto_144 ?auto_146) ( CLEAR ?auto_144) ( LIFTING ?auto_145 ?auto_143) ( IS-CRATE ?auto_143) )
+:subtasks ((!DROP ?auto_145 ?auto_143 ?auto_144 ?auto_146 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_143a17 - SURFACE ?auto_144a17 - SURFACE )
+:vars (?auto_145a17 - HOIST ?auto_146a17 - PLACE )
+:precondition (and ( HOIST-AT ?auto_145a17 ?auto_146a17) ( SURFACE-AT ?auto_144a17 ?auto_146a17) ( CLEAR ?auto_144a17) ( LIFTING ?auto_145a17 ?auto_143a17) ( IS-CRATE ?auto_143a17) )
+:subtasks ((!DROP ?auto_145a17 ?auto_143a17 ?auto_144a17 ?auto_146a17 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_149 - SURFACE ?auto_150 - SURFACE )
+:vars (?auto_151 - HOIST ?auto_152 - PLACE ?auto_153 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_151 ?auto_152) ( SURFACE-AT ?auto_150 ?auto_152) ( CLEAR ?auto_150) ( IS-CRATE ?auto_149) ( TRUCK-AT ?auto_153 ?auto_152) ( AVAILABLE ?auto_151) ( IN ?auto_149 ?auto_153) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_151 ?auto_149 )(TASK-ON-SURFACE-SURFACE ?auto_149 ?auto_150 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_149a18 - SURFACE ?auto_150a18 - SURFACE )
+:vars (?auto_151a18 - HOIST ?auto_152a18 - PLACE ?auto_153a18 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_151a18 ?auto_152a18) ( SURFACE-AT ?auto_150a18 ?auto_152a18) ( CLEAR ?auto_150a18) ( IS-CRATE ?auto_149a18) ( TRUCK-AT ?auto_153a18 ?auto_152a18) ( AVAILABLE ?auto_151a18) ( IN ?auto_149a18 ?auto_153a18) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_151a18 ?auto_149a18 )(TASK-ON-SURFACE-SURFACE ?auto_149a18 ?auto_150a18 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_156 - SURFACE ?auto_157 - SURFACE )
+:vars (?auto_159 - HOIST ?auto_158 - PLACE ?auto_160 - TRUCK ?auto_161 - PLACE )
+:precondition (and ( HOIST-AT ?auto_159 ?auto_158) ( SURFACE-AT ?auto_157 ?auto_158) ( CLEAR ?auto_157) ( IS-CRATE ?auto_156) ( AVAILABLE ?auto_159) ( IN ?auto_156 ?auto_160) ( TRUCK-AT ?auto_160 ?auto_161) )
+:subtasks ((!DRIVE ?auto_160 ?auto_161 ?auto_158 )(TASK-ON-SURFACE-SURFACE ?auto_156 ?auto_157 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_156a19 - SURFACE ?auto_157a19 - SURFACE )
+:vars (?auto_159a19 - HOIST ?auto_158a19 - PLACE ?auto_160a19 - TRUCK ?auto_161a19 - PLACE )
+:precondition (and ( HOIST-AT ?auto_159a19 ?auto_158a19) ( SURFACE-AT ?auto_157a19 ?auto_158a19) ( CLEAR ?auto_157a19) ( IS-CRATE ?auto_156a19) ( AVAILABLE ?auto_159a19) ( IN ?auto_156a19 ?auto_160a19) ( TRUCK-AT ?auto_160a19 ?auto_161a19) )
+:subtasks ((!DRIVE ?auto_160a19 ?auto_161a19 ?auto_158a19 )(TASK-ON-SURFACE-SURFACE ?auto_156a19 ?auto_157a19 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_164 - SURFACE ?auto_165 - SURFACE )
+:vars (?auto_168 - HOIST ?auto_166 - PLACE ?auto_169 - TRUCK ?auto_167 - PLACE ?auto_170 - HOIST )
+:precondition (and ( HOIST-AT ?auto_168 ?auto_166) ( SURFACE-AT ?auto_165 ?auto_166) ( CLEAR ?auto_165) ( IS-CRATE ?auto_164) ( AVAILABLE ?auto_168) ( TRUCK-AT ?auto_169 ?auto_167) ( HOIST-AT ?auto_170 ?auto_167) ( LIFTING ?auto_170 ?auto_164) )
+:subtasks ((!LOAD ?auto_170 ?auto_164 ?auto_169 ?auto_167 )(TASK-ON-SURFACE-SURFACE ?auto_164 ?auto_165 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_164a20 - SURFACE ?auto_165a20 - SURFACE )
+:vars (?auto_168a20 - HOIST ?auto_166a20 - PLACE ?auto_169a20 - TRUCK ?auto_167a20 - PLACE ?auto_170a20 - HOIST )
+:precondition (and ( HOIST-AT ?auto_168a20 ?auto_166a20) ( SURFACE-AT ?auto_165a20 ?auto_166a20) ( CLEAR ?auto_165a20) ( IS-CRATE ?auto_164a20) ( AVAILABLE ?auto_168a20) ( TRUCK-AT ?auto_169a20 ?auto_167a20) ( HOIST-AT ?auto_170a20 ?auto_167a20) ( LIFTING ?auto_170a20 ?auto_164a20) )
+:subtasks ((!LOAD ?auto_170a20 ?auto_164a20 ?auto_169a20 ?auto_167a20 )(TASK-ON-SURFACE-SURFACE ?auto_164a20 ?auto_165a20 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_173 - SURFACE ?auto_174 - SURFACE )
+:vars (?auto_176 - HOIST ?auto_179 - PLACE ?auto_178 - TRUCK ?auto_177 - PLACE ?auto_175 - HOIST ?auto_180 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_176 ?auto_179) ( SURFACE-AT ?auto_174 ?auto_179) ( CLEAR ?auto_174) ( IS-CRATE ?auto_173) ( AVAILABLE ?auto_176) ( TRUCK-AT ?auto_178 ?auto_177) ( HOIST-AT ?auto_175 ?auto_177) ( AVAILABLE ?auto_175) ( SURFACE-AT ?auto_173 ?auto_177) ( ON ?auto_173 ?auto_180) ( CLEAR ?auto_173) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_175 ?auto_173 )(TASK-ON-SURFACE-SURFACE ?auto_173 ?auto_174 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_173a21 - SURFACE ?auto_174a21 - SURFACE )
+:vars (?auto_176a21 - HOIST ?auto_179a21 - PLACE ?auto_178a21 - TRUCK ?auto_177a21 - PLACE ?auto_175a21 - HOIST ?auto_180a21 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_176a21 ?auto_179a21) ( SURFACE-AT ?auto_174a21 ?auto_179a21) ( CLEAR ?auto_174a21) ( IS-CRATE ?auto_173a21) ( AVAILABLE ?auto_176a21) ( TRUCK-AT ?auto_178a21 ?auto_177a21) ( HOIST-AT ?auto_175a21 ?auto_177a21) ( AVAILABLE ?auto_175a21) ( SURFACE-AT ?auto_173a21 ?auto_177a21) ( ON ?auto_173a21 ?auto_180a21) ( CLEAR ?auto_173a21) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_175a21 ?auto_173a21 )(TASK-ON-SURFACE-SURFACE ?auto_173a21 ?auto_174a21 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_183 - SURFACE ?auto_184 - SURFACE )
+:vars (?auto_185 - HOIST ?auto_187 - PLACE ?auto_188 - TRUCK ?auto_189 - PLACE ?auto_186 - HOIST ?auto_190 - SURFACE ?auto_191 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_185 ?auto_187) ( SURFACE-AT ?auto_184 ?auto_187) ( CLEAR ?auto_184) ( IS-CRATE ?auto_183) ( AVAILABLE ?auto_185) ( TRUCK-AT ?auto_188 ?auto_189) ( HOIST-AT ?auto_186 ?auto_189) ( SURFACE-AT ?auto_183 ?auto_189) ( ON ?auto_183 ?auto_190) ( CLEAR ?auto_183) ( LIFTING ?auto_186 ?auto_191) ( IS-CRATE ?auto_191) )
+:subtasks ((!LOAD ?auto_186 ?auto_191 ?auto_188 ?auto_189 )(TASK-ON-SURFACE-SURFACE ?auto_183 ?auto_184 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_183a22 - SURFACE ?auto_184a22 - SURFACE )
+:vars (?auto_185a22 - HOIST ?auto_187a22 - PLACE ?auto_188a22 - TRUCK ?auto_189a22 - PLACE ?auto_186a22 - HOIST ?auto_190a22 - SURFACE ?auto_191a22 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_185a22 ?auto_187a22) ( SURFACE-AT ?auto_184a22 ?auto_187a22) ( CLEAR ?auto_184a22) ( IS-CRATE ?auto_183a22) ( AVAILABLE ?auto_185a22) ( TRUCK-AT ?auto_188a22 ?auto_189a22) ( HOIST-AT ?auto_186a22 ?auto_189a22) ( SURFACE-AT ?auto_183a22 ?auto_189a22) ( ON ?auto_183a22 ?auto_190a22) ( CLEAR ?auto_183a22) ( LIFTING ?auto_186a22 ?auto_191a22) ( IS-CRATE ?auto_191a22) )
+:subtasks ((!LOAD ?auto_186a22 ?auto_191a22 ?auto_188a22 ?auto_189a22 )(TASK-ON-SURFACE-SURFACE ?auto_183a22 ?auto_184a22 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_194 - SURFACE ?auto_195 - SURFACE )
+:vars (?auto_196 - HOIST ?auto_198 - PLACE ?auto_197 - TRUCK ?auto_199 - PLACE ?auto_202 - HOIST ?auto_201 - SURFACE ?auto_200 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_196 ?auto_198) ( SURFACE-AT ?auto_195 ?auto_198) ( CLEAR ?auto_195) ( IS-CRATE ?auto_194) ( AVAILABLE ?auto_196) ( TRUCK-AT ?auto_197 ?auto_199) ( HOIST-AT ?auto_202 ?auto_199) ( SURFACE-AT ?auto_194 ?auto_199) ( ON ?auto_194 ?auto_201) ( IS-CRATE ?auto_200) ( AVAILABLE ?auto_202) ( SURFACE-AT ?auto_200 ?auto_199) ( ON ?auto_200 ?auto_194) ( CLEAR ?auto_200) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_194 )(TASK-ON-SURFACE-SURFACE ?auto_194 ?auto_195 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_194a23 - SURFACE ?auto_195a23 - SURFACE )
+:vars (?auto_196a23 - HOIST ?auto_198a23 - PLACE ?auto_197a23 - TRUCK ?auto_199a23 - PLACE ?auto_202a23 - HOIST ?auto_201a23 - SURFACE ?auto_200a23 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_196a23 ?auto_198a23) ( SURFACE-AT ?auto_195a23 ?auto_198a23) ( CLEAR ?auto_195a23) ( IS-CRATE ?auto_194a23) ( AVAILABLE ?auto_196a23) ( TRUCK-AT ?auto_197a23 ?auto_199a23) ( HOIST-AT ?auto_202a23 ?auto_199a23) ( SURFACE-AT ?auto_194a23 ?auto_199a23) ( ON ?auto_194a23 ?auto_201a23) ( IS-CRATE ?auto_200a23) ( AVAILABLE ?auto_202a23) ( SURFACE-AT ?auto_200a23 ?auto_199a23) ( ON ?auto_200a23 ?auto_194a23) ( CLEAR ?auto_200a23) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_194a23 )(TASK-ON-SURFACE-SURFACE ?auto_194a23 ?auto_195a23 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_205 - SURFACE ?auto_206 - SURFACE )
+:vars (?auto_207 - HOIST ?auto_213 - PLACE ?auto_211 - TRUCK ?auto_208 - PLACE ?auto_210 - HOIST ?auto_212 - SURFACE ?auto_209 - SURFACE ?auto_214 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_207 ?auto_213) ( SURFACE-AT ?auto_206 ?auto_213) ( CLEAR ?auto_206) ( IS-CRATE ?auto_205) ( AVAILABLE ?auto_207) ( TRUCK-AT ?auto_211 ?auto_208) ( HOIST-AT ?auto_210 ?auto_208) ( SURFACE-AT ?auto_205 ?auto_208) ( ON ?auto_205 ?auto_212) ( IS-CRATE ?auto_209) ( SURFACE-AT ?auto_209 ?auto_208) ( ON ?auto_209 ?auto_205) ( CLEAR ?auto_209) ( LIFTING ?auto_210 ?auto_214) ( IS-CRATE ?auto_214) )
+:subtasks ((!LOAD ?auto_210 ?auto_214 ?auto_211 ?auto_208 )(TASK-ON-SURFACE-SURFACE ?auto_205 ?auto_206 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_205a24 - SURFACE ?auto_206a24 - SURFACE )
+:vars (?auto_207a24 - HOIST ?auto_213a24 - PLACE ?auto_211a24 - TRUCK ?auto_208a24 - PLACE ?auto_210a24 - HOIST ?auto_212a24 - SURFACE ?auto_209a24 - SURFACE ?auto_214a24 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_207a24 ?auto_213a24) ( SURFACE-AT ?auto_206a24 ?auto_213a24) ( CLEAR ?auto_206a24) ( IS-CRATE ?auto_205a24) ( AVAILABLE ?auto_207a24) ( TRUCK-AT ?auto_211a24 ?auto_208a24) ( HOIST-AT ?auto_210a24 ?auto_208a24) ( SURFACE-AT ?auto_205a24 ?auto_208a24) ( ON ?auto_205a24 ?auto_212a24) ( IS-CRATE ?auto_209a24) ( SURFACE-AT ?auto_209a24 ?auto_208a24) ( ON ?auto_209a24 ?auto_205a24) ( CLEAR ?auto_209a24) ( LIFTING ?auto_210a24 ?auto_214a24) ( IS-CRATE ?auto_214a24) )
+:subtasks ((!LOAD ?auto_210a24 ?auto_214a24 ?auto_211a24 ?auto_208a24 )(TASK-ON-SURFACE-SURFACE ?auto_205a24 ?auto_206a24 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_217 - SURFACE ?auto_218 - SURFACE )
+:vars (?auto_219 - HOIST ?auto_224 - PLACE ?auto_222 - TRUCK ?auto_220 - PLACE ?auto_226 - HOIST ?auto_221 - SURFACE ?auto_223 - SURFACE ?auto_225 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_219 ?auto_224) ( SURFACE-AT ?auto_218 ?auto_224) ( CLEAR ?auto_218) ( IS-CRATE ?auto_217) ( AVAILABLE ?auto_219) ( TRUCK-AT ?auto_222 ?auto_220) ( HOIST-AT ?auto_226 ?auto_220) ( SURFACE-AT ?auto_217 ?auto_220) ( ON ?auto_217 ?auto_221) ( IS-CRATE ?auto_223) ( SURFACE-AT ?auto_223 ?auto_220) ( ON ?auto_223 ?auto_217) ( IS-CRATE ?auto_225) ( AVAILABLE ?auto_226) ( SURFACE-AT ?auto_225 ?auto_220) ( ON ?auto_225 ?auto_223) ( CLEAR ?auto_225) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_223 )(TASK-ON-SURFACE-SURFACE ?auto_217 ?auto_218 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_217a25 - SURFACE ?auto_218a25 - SURFACE )
+:vars (?auto_219a25 - HOIST ?auto_224a25 - PLACE ?auto_222a25 - TRUCK ?auto_220a25 - PLACE ?auto_226a25 - HOIST ?auto_221a25 - SURFACE ?auto_223a25 - SURFACE ?auto_225a25 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_219a25 ?auto_224a25) ( SURFACE-AT ?auto_218a25 ?auto_224a25) ( CLEAR ?auto_218a25) ( IS-CRATE ?auto_217a25) ( AVAILABLE ?auto_219a25) ( TRUCK-AT ?auto_222a25 ?auto_220a25) ( HOIST-AT ?auto_226a25 ?auto_220a25) ( SURFACE-AT ?auto_217a25 ?auto_220a25) ( ON ?auto_217a25 ?auto_221a25) ( IS-CRATE ?auto_223a25) ( SURFACE-AT ?auto_223a25 ?auto_220a25) ( ON ?auto_223a25 ?auto_217a25) ( IS-CRATE ?auto_225a25) ( AVAILABLE ?auto_226a25) ( SURFACE-AT ?auto_225a25 ?auto_220a25) ( ON ?auto_225a25 ?auto_223a25) ( CLEAR ?auto_225a25) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_223a25 )(TASK-ON-SURFACE-SURFACE ?auto_217a25 ?auto_218a25 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_259 - SURFACE ?auto_260 - SURFACE )
+:vars (?auto_262 - HOIST ?auto_261 - PLACE ?auto_263 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_262 ?auto_261) ( SURFACE-AT ?auto_260 ?auto_261) ( CLEAR ?auto_260) ( IS-CRATE ?auto_259) ( TRUCK-AT ?auto_263 ?auto_261) ( AVAILABLE ?auto_262) ( IN ?auto_259 ?auto_263) )
+:subtasks ((!UNLOAD ?auto_262 ?auto_259 ?auto_263 ?auto_261 )(TASK-ON-SURFACE-SURFACE ?auto_259 ?auto_260 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_259a26 - SURFACE ?auto_260a26 - SURFACE )
+:vars (?auto_262a26 - HOIST ?auto_261a26 - PLACE ?auto_263a26 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_262a26 ?auto_261a26) ( SURFACE-AT ?auto_260a26 ?auto_261a26) ( CLEAR ?auto_260a26) ( IS-CRATE ?auto_259a26) ( TRUCK-AT ?auto_263a26 ?auto_261a26) ( AVAILABLE ?auto_262a26) ( IN ?auto_259a26 ?auto_263a26) )
+:subtasks ((!UNLOAD ?auto_262a26 ?auto_259a26 ?auto_263a26 ?auto_261a26 )(TASK-ON-SURFACE-SURFACE ?auto_259a26 ?auto_260a26 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_283 - SURFACE ?auto_284 - SURFACE )
+:vars (?auto_289 - HOIST ?auto_286 - PLACE ?auto_287 - TRUCK ?auto_288 - PLACE ?auto_285 - HOIST ?auto_290 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_289 ?auto_286) ( SURFACE-AT ?auto_284 ?auto_286) ( CLEAR ?auto_284) ( IS-CRATE ?auto_283) ( AVAILABLE ?auto_289) ( TRUCK-AT ?auto_287 ?auto_288) ( HOIST-AT ?auto_285 ?auto_288) ( AVAILABLE ?auto_285) ( SURFACE-AT ?auto_283 ?auto_288) ( ON ?auto_283 ?auto_290) ( CLEAR ?auto_283) )
+:subtasks ((!LIFT ?auto_285 ?auto_283 ?auto_290 ?auto_288 )(TASK-ON-SURFACE-SURFACE ?auto_283 ?auto_284 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_283a27 - SURFACE ?auto_284a27 - SURFACE )
+:vars (?auto_289a27 - HOIST ?auto_286a27 - PLACE ?auto_287a27 - TRUCK ?auto_288a27 - PLACE ?auto_285a27 - HOIST ?auto_290a27 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_289a27 ?auto_286a27) ( SURFACE-AT ?auto_284a27 ?auto_286a27) ( CLEAR ?auto_284a27) ( IS-CRATE ?auto_283a27) ( AVAILABLE ?auto_289a27) ( TRUCK-AT ?auto_287a27 ?auto_288a27) ( HOIST-AT ?auto_285a27 ?auto_288a27) ( AVAILABLE ?auto_285a27) ( SURFACE-AT ?auto_283a27 ?auto_288a27) ( ON ?auto_283a27 ?auto_290a27) ( CLEAR ?auto_283a27) )
+:subtasks ((!LIFT ?auto_285a27 ?auto_283a27 ?auto_290a27 ?auto_288a27 )(TASK-ON-SURFACE-SURFACE ?auto_283a27 ?auto_284a27 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_304 - SURFACE ?auto_305 - SURFACE )
+:vars (?auto_311 - HOIST ?auto_309 - PLACE ?auto_308 - TRUCK ?auto_307 - PLACE ?auto_312 - HOIST ?auto_310 - SURFACE ?auto_306 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_311 ?auto_309) ( SURFACE-AT ?auto_305 ?auto_309) ( CLEAR ?auto_305) ( IS-CRATE ?auto_304) ( AVAILABLE ?auto_311) ( TRUCK-AT ?auto_308 ?auto_307) ( HOIST-AT ?auto_312 ?auto_307) ( SURFACE-AT ?auto_304 ?auto_307) ( ON ?auto_304 ?auto_310) ( IS-CRATE ?auto_306) ( AVAILABLE ?auto_312) ( SURFACE-AT ?auto_306 ?auto_307) ( ON ?auto_306 ?auto_304) ( CLEAR ?auto_306) )
+:subtasks ((!LIFT ?auto_312 ?auto_306 ?auto_304 ?auto_307 )(TASK-ON-SURFACE-SURFACE ?auto_304 ?auto_305 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_304a28 - SURFACE ?auto_305a28 - SURFACE )
+:vars (?auto_311a28 - HOIST ?auto_309a28 - PLACE ?auto_308a28 - TRUCK ?auto_307a28 - PLACE ?auto_312a28 - HOIST ?auto_310a28 - SURFACE ?auto_306a28 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_311a28 ?auto_309a28) ( SURFACE-AT ?auto_305a28 ?auto_309a28) ( CLEAR ?auto_305a28) ( IS-CRATE ?auto_304a28) ( AVAILABLE ?auto_311a28) ( TRUCK-AT ?auto_308a28 ?auto_307a28) ( HOIST-AT ?auto_312a28 ?auto_307a28) ( SURFACE-AT ?auto_304a28 ?auto_307a28) ( ON ?auto_304a28 ?auto_310a28) ( IS-CRATE ?auto_306a28) ( AVAILABLE ?auto_312a28) ( SURFACE-AT ?auto_306a28 ?auto_307a28) ( ON ?auto_306a28 ?auto_304a28) ( CLEAR ?auto_306a28) )
+:subtasks ((!LIFT ?auto_312a28 ?auto_306a28 ?auto_304a28 ?auto_307a28 )(TASK-ON-SURFACE-SURFACE ?auto_304a28 ?auto_305a28 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_315 - SURFACE ?auto_316 - SURFACE )
+:vars (?auto_320 - HOIST ?auto_317 - PLACE ?auto_322 - TRUCK ?auto_318 - PLACE ?auto_323 - HOIST ?auto_321 - SURFACE ?auto_319 - SURFACE ?auto_324 - TRUCK ?auto_325 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_320 ?auto_317) ( SURFACE-AT ?auto_316 ?auto_317) ( CLEAR ?auto_316) ( IS-CRATE ?auto_315) ( TRUCK-AT ?auto_322 ?auto_318) ( HOIST-AT ?auto_323 ?auto_318) ( SURFACE-AT ?auto_315 ?auto_318) ( ON ?auto_315 ?auto_321) ( IS-CRATE ?auto_319) ( AVAILABLE ?auto_323) ( SURFACE-AT ?auto_319 ?auto_318) ( ON ?auto_319 ?auto_315) ( CLEAR ?auto_319) ( TRUCK-AT ?auto_324 ?auto_317) ( LIFTING ?auto_320 ?auto_325) ( IS-CRATE ?auto_325) )
+:subtasks ((!LOAD ?auto_320 ?auto_325 ?auto_324 ?auto_317 )(TASK-ON-SURFACE-SURFACE ?auto_315 ?auto_316 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_315a29 - SURFACE ?auto_316a29 - SURFACE )
+:vars (?auto_320a29 - HOIST ?auto_317a29 - PLACE ?auto_322a29 - TRUCK ?auto_318a29 - PLACE ?auto_323a29 - HOIST ?auto_321a29 - SURFACE ?auto_319a29 - SURFACE ?auto_324a29 - TRUCK ?auto_325a29 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_320a29 ?auto_317a29) ( SURFACE-AT ?auto_316a29 ?auto_317a29) ( CLEAR ?auto_316a29) ( IS-CRATE ?auto_315a29) ( TRUCK-AT ?auto_322a29 ?auto_318a29) ( HOIST-AT ?auto_323a29 ?auto_318a29) ( SURFACE-AT ?auto_315a29 ?auto_318a29) ( ON ?auto_315a29 ?auto_321a29) ( IS-CRATE ?auto_319a29) ( AVAILABLE ?auto_323a29) ( SURFACE-AT ?auto_319a29 ?auto_318a29) ( ON ?auto_319a29 ?auto_315a29) ( CLEAR ?auto_319a29) ( TRUCK-AT ?auto_324a29 ?auto_317a29) ( LIFTING ?auto_320a29 ?auto_325a29) ( IS-CRATE ?auto_325a29) )
+:subtasks ((!LOAD ?auto_320a29 ?auto_325a29 ?auto_324a29 ?auto_317a29 )(TASK-ON-SURFACE-SURFACE ?auto_315a29 ?auto_316a29 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_328 - SURFACE ?auto_329 - SURFACE )
+:vars (?auto_338 - HOIST ?auto_335 - PLACE ?auto_334 - PLACE ?auto_333 - HOIST ?auto_331 - SURFACE ?auto_332 - SURFACE ?auto_337 - TRUCK ?auto_336 - SURFACE ?auto_330 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_338 ?auto_335) ( SURFACE-AT ?auto_329 ?auto_335) ( CLEAR ?auto_329) ( IS-CRATE ?auto_328) ( HOIST-AT ?auto_333 ?auto_334) ( SURFACE-AT ?auto_328 ?auto_334) ( ON ?auto_328 ?auto_331) ( IS-CRATE ?auto_332) ( AVAILABLE ?auto_333) ( SURFACE-AT ?auto_332 ?auto_334) ( ON ?auto_332 ?auto_328) ( CLEAR ?auto_332) ( TRUCK-AT ?auto_337 ?auto_335) ( LIFTING ?auto_338 ?auto_336) ( IS-CRATE ?auto_336) ( TRUCK-AT ?auto_330 ?auto_335) )
+:subtasks ((!DRIVE ?auto_330 ?auto_335 ?auto_334 )(TASK-ON-SURFACE-SURFACE ?auto_328 ?auto_329 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_328a30 - SURFACE ?auto_329a30 - SURFACE )
+:vars (?auto_338a30 - HOIST ?auto_335a30 - PLACE ?auto_334a30 - PLACE ?auto_333a30 - HOIST ?auto_331a30 - SURFACE ?auto_332a30 - SURFACE ?auto_337a30 - TRUCK ?auto_336a30 - SURFACE ?auto_330a30 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_338a30 ?auto_335a30) ( SURFACE-AT ?auto_329a30 ?auto_335a30) ( CLEAR ?auto_329a30) ( IS-CRATE ?auto_328a30) ( HOIST-AT ?auto_333a30 ?auto_334a30) ( SURFACE-AT ?auto_328a30 ?auto_334a30) ( ON ?auto_328a30 ?auto_331a30) ( IS-CRATE ?auto_332a30) ( AVAILABLE ?auto_333a30) ( SURFACE-AT ?auto_332a30 ?auto_334a30) ( ON ?auto_332a30 ?auto_328a30) ( CLEAR ?auto_332a30) ( TRUCK-AT ?auto_337a30 ?auto_335a30) ( LIFTING ?auto_338a30 ?auto_336a30) ( IS-CRATE ?auto_336a30) ( TRUCK-AT ?auto_330a30 ?auto_335a30) )
+:subtasks ((!DRIVE ?auto_330a30 ?auto_335a30 ?auto_334a30 )(TASK-ON-SURFACE-SURFACE ?auto_328a30 ?auto_329a30 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_341 - SURFACE ?auto_342 - SURFACE )
+:vars (?auto_349 - HOIST ?auto_344 - PLACE ?auto_345 - PLACE ?auto_346 - HOIST ?auto_351 - SURFACE ?auto_348 - SURFACE ?auto_347 - TRUCK ?auto_350 - SURFACE ?auto_343 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_349 ?auto_344) ( SURFACE-AT ?auto_342 ?auto_344) ( IS-CRATE ?auto_341) ( HOIST-AT ?auto_346 ?auto_345) ( SURFACE-AT ?auto_341 ?auto_345) ( ON ?auto_341 ?auto_351) ( IS-CRATE ?auto_348) ( AVAILABLE ?auto_346) ( SURFACE-AT ?auto_348 ?auto_345) ( ON ?auto_348 ?auto_341) ( CLEAR ?auto_348) ( TRUCK-AT ?auto_347 ?auto_344) ( IS-CRATE ?auto_350) ( TRUCK-AT ?auto_343 ?auto_344) ( AVAILABLE ?auto_349) ( SURFACE-AT ?auto_350 ?auto_344) ( ON ?auto_350 ?auto_342) ( CLEAR ?auto_350) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_342 )(TASK-ON-SURFACE-SURFACE ?auto_341 ?auto_342 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_341a31 - SURFACE ?auto_342a31 - SURFACE )
+:vars (?auto_349a31 - HOIST ?auto_344a31 - PLACE ?auto_345a31 - PLACE ?auto_346a31 - HOIST ?auto_351a31 - SURFACE ?auto_348a31 - SURFACE ?auto_347a31 - TRUCK ?auto_350a31 - SURFACE ?auto_343a31 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_349a31 ?auto_344a31) ( SURFACE-AT ?auto_342a31 ?auto_344a31) ( IS-CRATE ?auto_341a31) ( HOIST-AT ?auto_346a31 ?auto_345a31) ( SURFACE-AT ?auto_341a31 ?auto_345a31) ( ON ?auto_341a31 ?auto_351a31) ( IS-CRATE ?auto_348a31) ( AVAILABLE ?auto_346a31) ( SURFACE-AT ?auto_348a31 ?auto_345a31) ( ON ?auto_348a31 ?auto_341a31) ( CLEAR ?auto_348a31) ( TRUCK-AT ?auto_347a31 ?auto_344a31) ( IS-CRATE ?auto_350a31) ( TRUCK-AT ?auto_343a31 ?auto_344a31) ( AVAILABLE ?auto_349a31) ( SURFACE-AT ?auto_350a31 ?auto_344a31) ( ON ?auto_350a31 ?auto_342a31) ( CLEAR ?auto_350a31) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_342a31 )(TASK-ON-SURFACE-SURFACE ?auto_341a31 ?auto_342a31 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_354 - SURFACE ?auto_355 - SURFACE )
+:vars (?auto_359 - HOIST ?auto_362 - PLACE ?auto_363 - PLACE ?auto_360 - HOIST ?auto_358 - SURFACE ?auto_364 - SURFACE ?auto_361 - TRUCK ?auto_356 - SURFACE ?auto_357 - TRUCK ?auto_365 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_359 ?auto_362) ( SURFACE-AT ?auto_355 ?auto_362) ( IS-CRATE ?auto_354) ( HOIST-AT ?auto_360 ?auto_363) ( SURFACE-AT ?auto_354 ?auto_363) ( ON ?auto_354 ?auto_358) ( IS-CRATE ?auto_364) ( AVAILABLE ?auto_360) ( SURFACE-AT ?auto_364 ?auto_363) ( ON ?auto_364 ?auto_354) ( CLEAR ?auto_364) ( TRUCK-AT ?auto_361 ?auto_362) ( IS-CRATE ?auto_356) ( TRUCK-AT ?auto_357 ?auto_362) ( SURFACE-AT ?auto_356 ?auto_362) ( ON ?auto_356 ?auto_355) ( CLEAR ?auto_356) ( LIFTING ?auto_359 ?auto_365) ( IS-CRATE ?auto_365) )
+:subtasks ((!LOAD ?auto_359 ?auto_365 ?auto_357 ?auto_362 )(TASK-ON-SURFACE-SURFACE ?auto_354 ?auto_355 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_354a32 - SURFACE ?auto_355a32 - SURFACE )
+:vars (?auto_359a32 - HOIST ?auto_362a32 - PLACE ?auto_363a32 - PLACE ?auto_360a32 - HOIST ?auto_358a32 - SURFACE ?auto_364a32 - SURFACE ?auto_361a32 - TRUCK ?auto_356a32 - SURFACE ?auto_357a32 - TRUCK ?auto_365a32 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_359a32 ?auto_362a32) ( SURFACE-AT ?auto_355a32 ?auto_362a32) ( IS-CRATE ?auto_354a32) ( HOIST-AT ?auto_360a32 ?auto_363a32) ( SURFACE-AT ?auto_354a32 ?auto_363a32) ( ON ?auto_354a32 ?auto_358a32) ( IS-CRATE ?auto_364a32) ( AVAILABLE ?auto_360a32) ( SURFACE-AT ?auto_364a32 ?auto_363a32) ( ON ?auto_364a32 ?auto_354a32) ( CLEAR ?auto_364a32) ( TRUCK-AT ?auto_361a32 ?auto_362a32) ( IS-CRATE ?auto_356a32) ( TRUCK-AT ?auto_357a32 ?auto_362a32) ( SURFACE-AT ?auto_356a32 ?auto_362a32) ( ON ?auto_356a32 ?auto_355a32) ( CLEAR ?auto_356a32) ( LIFTING ?auto_359a32 ?auto_365a32) ( IS-CRATE ?auto_365a32) )
+:subtasks ((!LOAD ?auto_359a32 ?auto_365a32 ?auto_357a32 ?auto_362a32 )(TASK-ON-SURFACE-SURFACE ?auto_354a32 ?auto_355a32 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_368 - SURFACE ?auto_369 - SURFACE )
+:vars (?auto_374 - HOIST ?auto_379 - PLACE ?auto_372 - PLACE ?auto_376 - HOIST ?auto_373 - SURFACE ?auto_378 - SURFACE ?auto_371 - TRUCK ?auto_370 - SURFACE ?auto_375 - TRUCK ?auto_377 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_374 ?auto_379) ( SURFACE-AT ?auto_369 ?auto_379) ( IS-CRATE ?auto_368) ( HOIST-AT ?auto_376 ?auto_372) ( SURFACE-AT ?auto_368 ?auto_372) ( ON ?auto_368 ?auto_373) ( IS-CRATE ?auto_378) ( AVAILABLE ?auto_376) ( SURFACE-AT ?auto_378 ?auto_372) ( ON ?auto_378 ?auto_368) ( CLEAR ?auto_378) ( TRUCK-AT ?auto_371 ?auto_379) ( IS-CRATE ?auto_370) ( TRUCK-AT ?auto_375 ?auto_379) ( SURFACE-AT ?auto_370 ?auto_379) ( ON ?auto_370 ?auto_369) ( IS-CRATE ?auto_377) ( AVAILABLE ?auto_374) ( SURFACE-AT ?auto_377 ?auto_379) ( ON ?auto_377 ?auto_370) ( CLEAR ?auto_377) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_370 )(TASK-ON-SURFACE-SURFACE ?auto_368 ?auto_369 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_368a33 - SURFACE ?auto_369a33 - SURFACE )
+:vars (?auto_374a33 - HOIST ?auto_379a33 - PLACE ?auto_372a33 - PLACE ?auto_376a33 - HOIST ?auto_373a33 - SURFACE ?auto_378a33 - SURFACE ?auto_371a33 - TRUCK ?auto_370a33 - SURFACE ?auto_375a33 - TRUCK ?auto_377a33 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_374a33 ?auto_379a33) ( SURFACE-AT ?auto_369a33 ?auto_379a33) ( IS-CRATE ?auto_368a33) ( HOIST-AT ?auto_376a33 ?auto_372a33) ( SURFACE-AT ?auto_368a33 ?auto_372a33) ( ON ?auto_368a33 ?auto_373a33) ( IS-CRATE ?auto_378a33) ( AVAILABLE ?auto_376a33) ( SURFACE-AT ?auto_378a33 ?auto_372a33) ( ON ?auto_378a33 ?auto_368a33) ( CLEAR ?auto_378a33) ( TRUCK-AT ?auto_371a33 ?auto_379a33) ( IS-CRATE ?auto_370a33) ( TRUCK-AT ?auto_375a33 ?auto_379a33) ( SURFACE-AT ?auto_370a33 ?auto_379a33) ( ON ?auto_370a33 ?auto_369a33) ( IS-CRATE ?auto_377a33) ( AVAILABLE ?auto_374a33) ( SURFACE-AT ?auto_377a33 ?auto_379a33) ( ON ?auto_377a33 ?auto_370a33) ( CLEAR ?auto_377a33) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_370a33 )(TASK-ON-SURFACE-SURFACE ?auto_368a33 ?auto_369a33 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_424 - SURFACE )
+:vars (?auto_428 - HOIST ?auto_426 - PLACE ?auto_425 - SURFACE ?auto_429 - TRUCK ?auto_427 - SURFACE ?auto_430 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_428 ?auto_426) ( SURFACE-AT ?auto_425 ?auto_426) ( ON ?auto_425 ?auto_424) ( IS-CRATE ?auto_425) ( TRUCK-AT ?auto_429 ?auto_426) ( IS-CRATE ?auto_427) ( SURFACE-AT ?auto_427 ?auto_426) ( ON ?auto_427 ?auto_425) ( CLEAR ?auto_427) ( LIFTING ?auto_428 ?auto_430) ( IS-CRATE ?auto_430) )
+:subtasks ((!LOAD ?auto_428 ?auto_430 ?auto_429 ?auto_426 )(TASK-CLEAR-SURFACE ?auto_424 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_424a34 - SURFACE )
+:vars (?auto_428a34 - HOIST ?auto_426a34 - PLACE ?auto_425a34 - SURFACE ?auto_429a34 - TRUCK ?auto_427a34 - SURFACE ?auto_430a34 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_428a34 ?auto_426a34) ( SURFACE-AT ?auto_425a34 ?auto_426a34) ( ON ?auto_425a34 ?auto_424a34) ( IS-CRATE ?auto_425a34) ( TRUCK-AT ?auto_429a34 ?auto_426a34) ( IS-CRATE ?auto_427a34) ( SURFACE-AT ?auto_427a34 ?auto_426a34) ( ON ?auto_427a34 ?auto_425a34) ( CLEAR ?auto_427a34) ( LIFTING ?auto_428a34 ?auto_430a34) ( IS-CRATE ?auto_430a34) )
+:subtasks ((!LOAD ?auto_428a34 ?auto_430a34 ?auto_429a34 ?auto_426a34 )(TASK-CLEAR-SURFACE ?auto_424a34 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_432 - SURFACE )
+:vars (?auto_436 - HOIST ?auto_435 - PLACE ?auto_434 - SURFACE ?auto_438 - TRUCK ?auto_433 - SURFACE ?auto_437 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_436 ?auto_435) ( SURFACE-AT ?auto_434 ?auto_435) ( ON ?auto_434 ?auto_432) ( IS-CRATE ?auto_434) ( TRUCK-AT ?auto_438 ?auto_435) ( IS-CRATE ?auto_433) ( SURFACE-AT ?auto_433 ?auto_435) ( ON ?auto_433 ?auto_434) ( IS-CRATE ?auto_437) ( AVAILABLE ?auto_436) ( SURFACE-AT ?auto_437 ?auto_435) ( ON ?auto_437 ?auto_433) ( CLEAR ?auto_437) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_433 )(TASK-CLEAR-SURFACE ?auto_432 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_432a35 - SURFACE )
+:vars (?auto_436a35 - HOIST ?auto_435a35 - PLACE ?auto_434a35 - SURFACE ?auto_438a35 - TRUCK ?auto_433a35 - SURFACE ?auto_437a35 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_436a35 ?auto_435a35) ( SURFACE-AT ?auto_434a35 ?auto_435a35) ( ON ?auto_434a35 ?auto_432a35) ( IS-CRATE ?auto_434a35) ( TRUCK-AT ?auto_438a35 ?auto_435a35) ( IS-CRATE ?auto_433a35) ( SURFACE-AT ?auto_433a35 ?auto_435a35) ( ON ?auto_433a35 ?auto_434a35) ( IS-CRATE ?auto_437a35) ( AVAILABLE ?auto_436a35) ( SURFACE-AT ?auto_437a35 ?auto_435a35) ( ON ?auto_437a35 ?auto_433a35) ( CLEAR ?auto_437a35) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_433a35 )(TASK-CLEAR-SURFACE ?auto_432a35 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_475 - SURFACE )
+:vars (?auto_476 - HOIST ?auto_479 - PLACE ?auto_480 - SURFACE ?auto_481 - TRUCK ?auto_478 - SURFACE ?auto_477 - SURFACE ?auto_482 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_476 ?auto_479) ( SURFACE-AT ?auto_480 ?auto_479) ( ON ?auto_480 ?auto_475) ( IS-CRATE ?auto_480) ( TRUCK-AT ?auto_481 ?auto_479) ( IS-CRATE ?auto_478) ( SURFACE-AT ?auto_478 ?auto_479) ( ON ?auto_478 ?auto_480) ( IS-CRATE ?auto_477) ( SURFACE-AT ?auto_477 ?auto_479) ( ON ?auto_477 ?auto_478) ( CLEAR ?auto_477) ( LIFTING ?auto_476 ?auto_482) ( IS-CRATE ?auto_482) )
+:subtasks ((!LOAD ?auto_476 ?auto_482 ?auto_481 ?auto_479 )(TASK-CLEAR-SURFACE ?auto_475 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_475a36 - SURFACE )
+:vars (?auto_476a36 - HOIST ?auto_479a36 - PLACE ?auto_480a36 - SURFACE ?auto_481a36 - TRUCK ?auto_478a36 - SURFACE ?auto_477a36 - SURFACE ?auto_482a36 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_476a36 ?auto_479a36) ( SURFACE-AT ?auto_480a36 ?auto_479a36) ( ON ?auto_480a36 ?auto_475a36) ( IS-CRATE ?auto_480a36) ( TRUCK-AT ?auto_481a36 ?auto_479a36) ( IS-CRATE ?auto_478a36) ( SURFACE-AT ?auto_478a36 ?auto_479a36) ( ON ?auto_478a36 ?auto_480a36) ( IS-CRATE ?auto_477a36) ( SURFACE-AT ?auto_477a36 ?auto_479a36) ( ON ?auto_477a36 ?auto_478a36) ( CLEAR ?auto_477a36) ( LIFTING ?auto_476a36 ?auto_482a36) ( IS-CRATE ?auto_482a36) )
+:subtasks ((!LOAD ?auto_476a36 ?auto_482a36 ?auto_481a36 ?auto_479a36 )(TASK-CLEAR-SURFACE ?auto_475a36 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_484 - SURFACE )
+:vars (?auto_491 - HOIST ?auto_486 - PLACE ?auto_489 - SURFACE ?auto_488 - TRUCK ?auto_490 - SURFACE ?auto_487 - SURFACE ?auto_485 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_491 ?auto_486) ( SURFACE-AT ?auto_489 ?auto_486) ( ON ?auto_489 ?auto_484) ( IS-CRATE ?auto_489) ( TRUCK-AT ?auto_488 ?auto_486) ( IS-CRATE ?auto_490) ( SURFACE-AT ?auto_490 ?auto_486) ( ON ?auto_490 ?auto_489) ( IS-CRATE ?auto_487) ( SURFACE-AT ?auto_487 ?auto_486) ( ON ?auto_487 ?auto_490) ( IS-CRATE ?auto_485) ( AVAILABLE ?auto_491) ( SURFACE-AT ?auto_485 ?auto_486) ( ON ?auto_485 ?auto_487) ( CLEAR ?auto_485) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_487 )(TASK-CLEAR-SURFACE ?auto_484 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_484a37 - SURFACE )
+:vars (?auto_491a37 - HOIST ?auto_486a37 - PLACE ?auto_489a37 - SURFACE ?auto_488a37 - TRUCK ?auto_490a37 - SURFACE ?auto_487a37 - SURFACE ?auto_485a37 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_491a37 ?auto_486a37) ( SURFACE-AT ?auto_489a37 ?auto_486a37) ( ON ?auto_489a37 ?auto_484a37) ( IS-CRATE ?auto_489a37) ( TRUCK-AT ?auto_488a37 ?auto_486a37) ( IS-CRATE ?auto_490a37) ( SURFACE-AT ?auto_490a37 ?auto_486a37) ( ON ?auto_490a37 ?auto_489a37) ( IS-CRATE ?auto_487a37) ( SURFACE-AT ?auto_487a37 ?auto_486a37) ( ON ?auto_487a37 ?auto_490a37) ( IS-CRATE ?auto_485a37) ( AVAILABLE ?auto_491a37) ( SURFACE-AT ?auto_485a37 ?auto_486a37) ( ON ?auto_485a37 ?auto_487a37) ( CLEAR ?auto_485a37) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_487a37 )(TASK-CLEAR-SURFACE ?auto_484a37 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_546 - SURFACE )
+:vars (?auto_549 - HOIST ?auto_552 - PLACE ?auto_548 - SURFACE ?auto_551 - TRUCK ?auto_550 - SURFACE ?auto_553 - SURFACE ?auto_547 - SURFACE ?auto_554 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_549 ?auto_552) ( SURFACE-AT ?auto_548 ?auto_552) ( ON ?auto_548 ?auto_546) ( IS-CRATE ?auto_548) ( TRUCK-AT ?auto_551 ?auto_552) ( IS-CRATE ?auto_550) ( SURFACE-AT ?auto_550 ?auto_552) ( ON ?auto_550 ?auto_548) ( IS-CRATE ?auto_553) ( SURFACE-AT ?auto_553 ?auto_552) ( ON ?auto_553 ?auto_550) ( IS-CRATE ?auto_547) ( SURFACE-AT ?auto_547 ?auto_552) ( ON ?auto_547 ?auto_553) ( CLEAR ?auto_547) ( LIFTING ?auto_549 ?auto_554) ( IS-CRATE ?auto_554) )
+:subtasks ((!LOAD ?auto_549 ?auto_554 ?auto_551 ?auto_552 )(TASK-CLEAR-SURFACE ?auto_546 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_546a38 - SURFACE )
+:vars (?auto_549a38 - HOIST ?auto_552a38 - PLACE ?auto_548a38 - SURFACE ?auto_551a38 - TRUCK ?auto_550a38 - SURFACE ?auto_553a38 - SURFACE ?auto_547a38 - SURFACE ?auto_554a38 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_549a38 ?auto_552a38) ( SURFACE-AT ?auto_548a38 ?auto_552a38) ( ON ?auto_548a38 ?auto_546a38) ( IS-CRATE ?auto_548a38) ( TRUCK-AT ?auto_551a38 ?auto_552a38) ( IS-CRATE ?auto_550a38) ( SURFACE-AT ?auto_550a38 ?auto_552a38) ( ON ?auto_550a38 ?auto_548a38) ( IS-CRATE ?auto_553a38) ( SURFACE-AT ?auto_553a38 ?auto_552a38) ( ON ?auto_553a38 ?auto_550a38) ( IS-CRATE ?auto_547a38) ( SURFACE-AT ?auto_547a38 ?auto_552a38) ( ON ?auto_547a38 ?auto_553a38) ( CLEAR ?auto_547a38) ( LIFTING ?auto_549a38 ?auto_554a38) ( IS-CRATE ?auto_554a38) )
+:subtasks ((!LOAD ?auto_549a38 ?auto_554a38 ?auto_551a38 ?auto_552a38 )(TASK-CLEAR-SURFACE ?auto_546a38 )))
+
+
+Before renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_556 - SURFACE )
+:vars (?auto_564 - HOIST ?auto_557 - PLACE ?auto_560 - SURFACE ?auto_558 - TRUCK ?auto_562 - SURFACE ?auto_561 - SURFACE ?auto_563 - SURFACE ?auto_559 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_564 ?auto_557) ( SURFACE-AT ?auto_560 ?auto_557) ( ON ?auto_560 ?auto_556) ( IS-CRATE ?auto_560) ( TRUCK-AT ?auto_558 ?auto_557) ( IS-CRATE ?auto_562) ( SURFACE-AT ?auto_562 ?auto_557) ( ON ?auto_562 ?auto_560) ( IS-CRATE ?auto_561) ( SURFACE-AT ?auto_561 ?auto_557) ( ON ?auto_561 ?auto_562) ( IS-CRATE ?auto_563) ( SURFACE-AT ?auto_563 ?auto_557) ( ON ?auto_563 ?auto_561) ( IS-CRATE ?auto_559) ( AVAILABLE ?auto_564) ( SURFACE-AT ?auto_559 ?auto_557) ( ON ?auto_559 ?auto_563) ( CLEAR ?auto_559) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_563 )(TASK-CLEAR-SURFACE ?auto_556 )))
+After renaming: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_556a39 - SURFACE )
+:vars (?auto_564a39 - HOIST ?auto_557a39 - PLACE ?auto_560a39 - SURFACE ?auto_558a39 - TRUCK ?auto_562a39 - SURFACE ?auto_561a39 - SURFACE ?auto_563a39 - SURFACE ?auto_559a39 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_564a39 ?auto_557a39) ( SURFACE-AT ?auto_560a39 ?auto_557a39) ( ON ?auto_560a39 ?auto_556a39) ( IS-CRATE ?auto_560a39) ( TRUCK-AT ?auto_558a39 ?auto_557a39) ( IS-CRATE ?auto_562a39) ( SURFACE-AT ?auto_562a39 ?auto_557a39) ( ON ?auto_562a39 ?auto_560a39) ( IS-CRATE ?auto_561a39) ( SURFACE-AT ?auto_561a39 ?auto_557a39) ( ON ?auto_561a39 ?auto_562a39) ( IS-CRATE ?auto_563a39) ( SURFACE-AT ?auto_563a39 ?auto_557a39) ( ON ?auto_563a39 ?auto_561a39) ( IS-CRATE ?auto_559a39) ( AVAILABLE ?auto_564a39) ( SURFACE-AT ?auto_559a39 ?auto_557a39) ( ON ?auto_559a39 ?auto_563a39) ( CLEAR ?auto_559a39) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_563a39 )(TASK-CLEAR-SURFACE ?auto_556a39 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_600 - SURFACE ?auto_601 - SURFACE )
+:vars (?auto_604 - HOIST ?auto_602 - PLACE ?auto_603 - TRUCK ?auto_605 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_604 ?auto_602) ( SURFACE-AT ?auto_601 ?auto_602) ( CLEAR ?auto_601) ( IS-CRATE ?auto_600) ( TRUCK-AT ?auto_603 ?auto_602) ( IN ?auto_600 ?auto_603) ( LIFTING ?auto_604 ?auto_605) ( IS-CRATE ?auto_605) )
+:subtasks ((!LOAD ?auto_604 ?auto_605 ?auto_603 ?auto_602 )(TASK-ON-SURFACE-SURFACE ?auto_600 ?auto_601 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_600a40 - SURFACE ?auto_601a40 - SURFACE )
+:vars (?auto_604a40 - HOIST ?auto_602a40 - PLACE ?auto_603a40 - TRUCK ?auto_605a40 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_604a40 ?auto_602a40) ( SURFACE-AT ?auto_601a40 ?auto_602a40) ( CLEAR ?auto_601a40) ( IS-CRATE ?auto_600a40) ( TRUCK-AT ?auto_603a40 ?auto_602a40) ( IN ?auto_600a40 ?auto_603a40) ( LIFTING ?auto_604a40 ?auto_605a40) ( IS-CRATE ?auto_605a40) )
+:subtasks ((!LOAD ?auto_604a40 ?auto_605a40 ?auto_603a40 ?auto_602a40 )(TASK-ON-SURFACE-SURFACE ?auto_600a40 ?auto_601a40 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_608 - SURFACE ?auto_609 - SURFACE )
+:vars (?auto_610 - HOIST ?auto_612 - PLACE ?auto_611 - TRUCK ?auto_613 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_610 ?auto_612) ( SURFACE-AT ?auto_609 ?auto_612) ( IS-CRATE ?auto_608) ( TRUCK-AT ?auto_611 ?auto_612) ( IN ?auto_608 ?auto_611) ( IS-CRATE ?auto_613) ( AVAILABLE ?auto_610) ( SURFACE-AT ?auto_613 ?auto_612) ( ON ?auto_613 ?auto_609) ( CLEAR ?auto_613) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_609 )(TASK-ON-SURFACE-SURFACE ?auto_608 ?auto_609 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_608a41 - SURFACE ?auto_609a41 - SURFACE )
+:vars (?auto_610a41 - HOIST ?auto_612a41 - PLACE ?auto_611a41 - TRUCK ?auto_613a41 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_610a41 ?auto_612a41) ( SURFACE-AT ?auto_609a41 ?auto_612a41) ( IS-CRATE ?auto_608a41) ( TRUCK-AT ?auto_611a41 ?auto_612a41) ( IN ?auto_608a41 ?auto_611a41) ( IS-CRATE ?auto_613a41) ( AVAILABLE ?auto_610a41) ( SURFACE-AT ?auto_613a41 ?auto_612a41) ( ON ?auto_613a41 ?auto_609a41) ( CLEAR ?auto_613a41) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_609a41 )(TASK-ON-SURFACE-SURFACE ?auto_608a41 ?auto_609a41 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_616 - SURFACE ?auto_617 - SURFACE )
+:vars (?auto_618 - HOIST ?auto_619 - PLACE ?auto_620 - TRUCK ?auto_621 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_618 ?auto_619) ( SURFACE-AT ?auto_617 ?auto_619) ( IS-CRATE ?auto_616) ( TRUCK-AT ?auto_620 ?auto_619) ( IS-CRATE ?auto_621) ( SURFACE-AT ?auto_621 ?auto_619) ( ON ?auto_621 ?auto_617) ( CLEAR ?auto_621) ( LIFTING ?auto_618 ?auto_616) )
+:subtasks ((!LOAD ?auto_618 ?auto_616 ?auto_620 ?auto_619 )(TASK-ON-SURFACE-SURFACE ?auto_616 ?auto_617 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_616a42 - SURFACE ?auto_617a42 - SURFACE )
+:vars (?auto_618a42 - HOIST ?auto_619a42 - PLACE ?auto_620a42 - TRUCK ?auto_621a42 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_618a42 ?auto_619a42) ( SURFACE-AT ?auto_617a42 ?auto_619a42) ( IS-CRATE ?auto_616a42) ( TRUCK-AT ?auto_620a42 ?auto_619a42) ( IS-CRATE ?auto_621a42) ( SURFACE-AT ?auto_621a42 ?auto_619a42) ( ON ?auto_621a42 ?auto_617a42) ( CLEAR ?auto_621a42) ( LIFTING ?auto_618a42 ?auto_616a42) )
+:subtasks ((!LOAD ?auto_618a42 ?auto_616a42 ?auto_620a42 ?auto_619a42 )(TASK-ON-SURFACE-SURFACE ?auto_616a42 ?auto_617a42 )))
+
+
+Before renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_624 - SURFACE ?auto_625 - SURFACE )
+:vars (?auto_627 - HOIST ?auto_629 - PLACE ?auto_628 - TRUCK ?auto_626 - SURFACE ?auto_630 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_627 ?auto_629) ( SURFACE-AT ?auto_625 ?auto_629) ( IS-CRATE ?auto_624) ( TRUCK-AT ?auto_628 ?auto_629) ( IS-CRATE ?auto_626) ( SURFACE-AT ?auto_626 ?auto_629) ( ON ?auto_626 ?auto_625) ( CLEAR ?auto_626) ( AVAILABLE ?auto_627) ( SURFACE-AT ?auto_624 ?auto_629) ( ON ?auto_624 ?auto_630) ( CLEAR ?auto_624) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_627 ?auto_624 )(TASK-ON-SURFACE-SURFACE ?auto_624 ?auto_625 )))
+After renaming: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_624a43 - SURFACE ?auto_625a43 - SURFACE )
+:vars (?auto_627a43 - HOIST ?auto_629a43 - PLACE ?auto_628a43 - TRUCK ?auto_626a43 - SURFACE ?auto_630a43 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_627a43 ?auto_629a43) ( SURFACE-AT ?auto_625a43 ?auto_629a43) ( IS-CRATE ?auto_624a43) ( TRUCK-AT ?auto_628a43 ?auto_629a43) ( IS-CRATE ?auto_626a43) ( SURFACE-AT ?auto_626a43 ?auto_629a43) ( ON ?auto_626a43 ?auto_625a43) ( CLEAR ?auto_626a43) ( AVAILABLE ?auto_627a43) ( SURFACE-AT ?auto_624a43 ?auto_629a43) ( ON ?auto_624a43 ?auto_630a43) ( CLEAR ?auto_624a43) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_627a43 ?auto_624a43 )(TASK-ON-SURFACE-SURFACE ?auto_624a43 ?auto_625a43 )))
+
+
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_18a2', '?auto_21a2', '?auto_20a2', '?auto_17a2', '?auto_16a2'] [['!LOAD', '?auto_18a2', '?auto_21a2', '?auto_20a2', '?auto_17a2'], ['TASK-CLEAR-SURFACE', '?auto_16a2']]
+['?auto_428a34', '?auto_430a34', '?auto_429a34', '?auto_426a34', '?auto_424a34'] [['!LOAD', '?auto_428a34', '?auto_430a34', '?auto_429a34', '?auto_426a34'], ['TASK-CLEAR-SURFACE', '?auto_424a34']]
+Found a match: 
+HOIST-AT ?auto_428a34 ?auto_426a34
+Found a match: 
+TRUCK-AT ?auto_429a34 ?auto_426a34
+Found a match: 
+LIFTING ?auto_428a34 ?auto_430a34
+Found a match: 
+IS-CRATE ?auto_430a34
+Found two methods with the same subtasks: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_16a2 - SURFACE )
+:vars (?auto_18a2 - HOIST ?auto_17a2 - PLACE ?auto_19a2 - SURFACE ?auto_20a2 - TRUCK ?auto_21a2 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_18a2 ?auto_17a2) ( SURFACE-AT ?auto_19a2 ?auto_17a2) ( ON ?auto_19a2 ?auto_16a2) ( CLEAR ?auto_19a2) ( IS-CRATE ?auto_19a2) ( TRUCK-AT ?auto_20a2 ?auto_17a2) ( LIFTING ?auto_18a2 ?auto_21a2) ( IS-CRATE ?auto_21a2) )
+:subtasks ((!LOAD ?auto_18a2 ?auto_21a2 ?auto_20a2 ?auto_17a2 )(TASK-CLEAR-SURFACE ?auto_16a2 )))
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_424a34 - SURFACE )
+:vars (?auto_428a34 - HOIST ?auto_426a34 - PLACE ?auto_425a34 - SURFACE ?auto_429a34 - TRUCK ?auto_427a34 - SURFACE ?auto_430a34 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_428a34 ?auto_426a34) ( SURFACE-AT ?auto_425a34 ?auto_426a34) ( ON ?auto_425a34 ?auto_424a34) ( IS-CRATE ?auto_425a34) ( TRUCK-AT ?auto_429a34 ?auto_426a34) ( IS-CRATE ?auto_427a34) ( SURFACE-AT ?auto_427a34 ?auto_426a34) ( ON ?auto_427a34 ?auto_425a34) ( CLEAR ?auto_427a34) ( LIFTING ?auto_428a34 ?auto_430a34) ( IS-CRATE ?auto_430a34) )
+:subtasks ((!LOAD ?auto_428a34 ?auto_430a34 ?auto_429a34 ?auto_426a34 )(TASK-CLEAR-SURFACE ?auto_424a34 )))
+Merging two methods: 
+{'head': 'TASK-CLEAR-SURFACE', 'parameters': [{'name': '?auto_16a2', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_18a2', 'type': 'HOIST'}, {'name': '?auto_17a2', 'type': 'PLACE'}, {'name': '?auto_19a2', 'type': 'SURFACE'}, {'name': '?auto_20a2', 'type': 'TRUCK'}, {'name': '?auto_21a2', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_18a2 ?auto_17a2', 'SURFACE-AT ?auto_19a2 ?auto_17a2', 'ON ?auto_19a2 ?auto_16a2', 'CLEAR ?auto_19a2', 'IS-CRATE ?auto_19a2', 'TRUCK-AT ?auto_20a2 ?auto_17a2', 'LIFTING ?auto_18a2 ?auto_21a2', 'IS-CRATE ?auto_21a2'], 'subtasks': [['!LOAD', '?auto_18a2', '?auto_21a2', '?auto_20a2', '?auto_17a2'], ['TASK-CLEAR-SURFACE', '?auto_16a2']]}
+{'head': 'TASK-CLEAR-SURFACE', 'parameters': [{'name': '?auto_424a34', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_428a34', 'type': 'HOIST'}, {'name': '?auto_426a34', 'type': 'PLACE'}, {'name': '?auto_425a34', 'type': 'SURFACE'}, {'name': '?auto_429a34', 'type': 'TRUCK'}, {'name': '?auto_427a34', 'type': 'SURFACE'}, {'name': '?auto_430a34', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_428a34 ?auto_426a34', 'SURFACE-AT ?auto_425a34 ?auto_426a34', 'ON ?auto_425a34 ?auto_424a34', 'IS-CRATE ?auto_425a34', 'TRUCK-AT ?auto_429a34 ?auto_426a34', 'IS-CRATE ?auto_427a34', 'SURFACE-AT ?auto_427a34 ?auto_426a34', 'ON ?auto_427a34 ?auto_425a34', 'CLEAR ?auto_427a34', 'LIFTING ?auto_428a34 ?auto_430a34', 'IS-CRATE ?auto_430a34'], 'subtasks': [['!LOAD', '?auto_428a34', '?auto_430a34', '?auto_429a34', '?auto_426a34'], ['TASK-CLEAR-SURFACE', '?auto_424a34']]}
+After aligning: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_16a2 - SURFACE )
+:vars (?auto_18a2 - HOIST ?auto_17a2 - PLACE ?auto_425a34 - SURFACE ?auto_20a2 - TRUCK ?auto_427a34 - SURFACE ?auto_21a2 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_18a2 ?auto_17a2) ( SURFACE-AT ?auto_425a34 ?auto_17a2) ( ON ?auto_425a34 ?auto_16a2) ( IS-CRATE ?auto_425a34) ( TRUCK-AT ?auto_20a2 ?auto_17a2) ( IS-CRATE ?auto_427a34) ( SURFACE-AT ?auto_427a34 ?auto_17a2) ( ON ?auto_427a34 ?auto_425a34) ( CLEAR ?auto_427a34) ( LIFTING ?auto_18a2 ?auto_21a2) ( IS-CRATE ?auto_21a2) )
+:subtasks ((!LOAD ?auto_18a2 ?auto_21a2 ?auto_20a2 ?auto_17a2 )(TASK-CLEAR-SURFACE ?auto_16a2 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_18a2', 'type': 'HOIST'}, {'name': '?auto_17a2', 'type': 'PLACE'}, {'name': '?auto_425a34', 'type': 'SURFACE'}, {'name': '?auto_20a2', 'type': 'TRUCK'}, {'name': '?auto_427a34', 'type': 'SURFACE'}, {'name': '?auto_21a2', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 [{'name': '?auto_18a2', 'type': 'HOIST'}, {'name': '?auto_17a2', 'type': 'PLACE'}, {'name': '?auto_20a2', 'type': 'TRUCK'}, {'name': '?auto_21a2', 'type': 'SURFACE'}]
+Adding the new method to self.generalized_methods
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_16a2 - SURFACE )
+:vars (?auto_18a2 - HOIST ?auto_17a2 - PLACE ?auto_20a2 - TRUCK ?auto_21a2 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_18a2 ?auto_17a2) ( TRUCK-AT ?auto_20a2 ?auto_17a2) ( LIFTING ?auto_18a2 ?auto_21a2) ( IS-CRATE ?auto_21a2) )
+:subtasks ((!LOAD ?auto_18a2 ?auto_21a2 ?auto_20a2 ?auto_17a2 )(TASK-CLEAR-SURFACE ?auto_16a2 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_26a3', '?auto_23a3'] [['TASK-CLEAR-SURFACE', '?auto_26a3'], ['TASK-CLEAR-SURFACE', '?auto_23a3']]
+['?auto_433a35', '?auto_432a35'] [['TASK-CLEAR-SURFACE', '?auto_433a35'], ['TASK-CLEAR-SURFACE', '?auto_432a35']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_26a3', '?auto_23a3'] [['TASK-CLEAR-SURFACE', '?auto_26a3'], ['TASK-CLEAR-SURFACE', '?auto_23a3']]
+['?auto_487a37', '?auto_484a37'] [['TASK-CLEAR-SURFACE', '?auto_487a37'], ['TASK-CLEAR-SURFACE', '?auto_484a37']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_26a3', '?auto_23a3'] [['TASK-CLEAR-SURFACE', '?auto_26a3'], ['TASK-CLEAR-SURFACE', '?auto_23a3']]
+['?auto_563a39', '?auto_556a39'] [['TASK-CLEAR-SURFACE', '?auto_563a39'], ['TASK-CLEAR-SURFACE', '?auto_556a39']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5', '?auto_37a5', '?auto_38a5'] [['!LOAD', '?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_37a5', '?auto_38a5']]
+['?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7', '?auto_53a7', '?auto_54a7'] [['!LOAD', '?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_53a7', '?auto_54a7']]
+Found a match: 
+HOIST-AT ?auto_53a7 ?auto_55a7
+Found a match: 
+SURFACE-AT ?auto_54a7 ?auto_55a7
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5', '?auto_37a5', '?auto_38a5'] [['!LOAD', '?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_37a5', '?auto_38a5']]
+['?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11', '?auto_84a11', '?auto_85a11'] [['!LOAD', '?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_84a11', '?auto_85a11']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5', '?auto_37a5', '?auto_38a5'] [['!LOAD', '?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_37a5', '?auto_38a5']]
+['?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13', '?auto_101a13', '?auto_102a13'] [['!LOAD', '?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_101a13', '?auto_102a13']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5', '?auto_37a5', '?auto_38a5'] [['!LOAD', '?auto_37a5', '?auto_42a5', '?auto_41a5', '?auto_39a5'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_37a5', '?auto_38a5']]
+['?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15', '?auto_121a15', '?auto_122a15'] [['!LOAD', '?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_121a15', '?auto_122a15']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_46a6', '?auto_45a6', '?auto_46a6'] [['TASK-CLEAR-SURFACE', '?auto_46a6'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_45a6', '?auto_46a6']]
+['?auto_67a8', '?auto_62a8', '?auto_63a8'] [['TASK-CLEAR-SURFACE', '?auto_67a8'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_62a8', '?auto_63a8']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_46a6', '?auto_45a6', '?auto_46a6'] [['TASK-CLEAR-SURFACE', '?auto_46a6'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_45a6', '?auto_46a6']]
+['?auto_112a14', '?auto_111a14', '?auto_112a14'] [['TASK-CLEAR-SURFACE', '?auto_112a14'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_111a14', '?auto_112a14']]
+Found a match: 
+IS-CRATE ?auto_112a14
+Found a match: 
+AVAILABLE ?auto_111a14
+Found two methods with the same subtasks: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_45a6 - HOIST ?auto_46a6 - SURFACE )
+:vars (?auto_47a6 - PLACE ?auto_48a6 - SURFACE ?auto_49a6 - TRUCK ?auto_50a6 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_45a6 ?auto_47a6) ( SURFACE-AT ?auto_46a6 ?auto_47a6) ( ON ?auto_46a6 ?auto_48a6) ( IS-CRATE ?auto_46a6) ( TRUCK-AT ?auto_49a6 ?auto_47a6) ( IS-CRATE ?auto_50a6) ( AVAILABLE ?auto_45a6) ( SURFACE-AT ?auto_50a6 ?auto_47a6) ( ON ?auto_50a6 ?auto_46a6) ( CLEAR ?auto_50a6) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_46a6 )(TASK-LIFTING-HOIST-SURFACE ?auto_45a6 ?auto_46a6 )))
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_111a14 - HOIST ?auto_112a14 - SURFACE )
+:vars (?auto_118a14 - PLACE ?auto_113a14 - TRUCK ?auto_114a14 - PLACE ?auto_116a14 - HOIST ?auto_117a14 - SURFACE ?auto_115a14 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_111a14 ?auto_118a14) ( AVAILABLE ?auto_111a14) ( IS-CRATE ?auto_112a14) ( TRUCK-AT ?auto_113a14 ?auto_114a14) ( HOIST-AT ?auto_116a14 ?auto_114a14) ( SURFACE-AT ?auto_112a14 ?auto_114a14) ( ON ?auto_112a14 ?auto_117a14) ( IS-CRATE ?auto_115a14) ( AVAILABLE ?auto_116a14) ( SURFACE-AT ?auto_115a14 ?auto_114a14) ( ON ?auto_115a14 ?auto_112a14) ( CLEAR ?auto_115a14) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_112a14 )(TASK-LIFTING-HOIST-SURFACE ?auto_111a14 ?auto_112a14 )))
+Merging two methods: 
+{'head': 'TASK-LIFTING-HOIST-SURFACE', 'parameters': [{'name': '?auto_45a6', 'type': 'HOIST'}, {'name': '?auto_46a6', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_47a6', 'type': 'PLACE'}, {'name': '?auto_48a6', 'type': 'SURFACE'}, {'name': '?auto_49a6', 'type': 'TRUCK'}, {'name': '?auto_50a6', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_45a6 ?auto_47a6', 'SURFACE-AT ?auto_46a6 ?auto_47a6', 'ON ?auto_46a6 ?auto_48a6', 'IS-CRATE ?auto_46a6', 'TRUCK-AT ?auto_49a6 ?auto_47a6', 'IS-CRATE ?auto_50a6', 'AVAILABLE ?auto_45a6', 'SURFACE-AT ?auto_50a6 ?auto_47a6', 'ON ?auto_50a6 ?auto_46a6', 'CLEAR ?auto_50a6'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_46a6'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_45a6', '?auto_46a6']]}
+{'head': 'TASK-LIFTING-HOIST-SURFACE', 'parameters': [{'name': '?auto_111a14', 'type': 'HOIST'}, {'name': '?auto_112a14', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_118a14', 'type': 'PLACE'}, {'name': '?auto_113a14', 'type': 'TRUCK'}, {'name': '?auto_114a14', 'type': 'PLACE'}, {'name': '?auto_116a14', 'type': 'HOIST'}, {'name': '?auto_117a14', 'type': 'SURFACE'}, {'name': '?auto_115a14', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_111a14 ?auto_118a14', 'AVAILABLE ?auto_111a14', 'IS-CRATE ?auto_112a14', 'TRUCK-AT ?auto_113a14 ?auto_114a14', 'HOIST-AT ?auto_116a14 ?auto_114a14', 'SURFACE-AT ?auto_112a14 ?auto_114a14', 'ON ?auto_112a14 ?auto_117a14', 'IS-CRATE ?auto_115a14', 'AVAILABLE ?auto_116a14', 'SURFACE-AT ?auto_115a14 ?auto_114a14', 'ON ?auto_115a14 ?auto_112a14', 'CLEAR ?auto_115a14'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_112a14'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_111a14', '?auto_112a14']]}
+After aligning: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_45a6 - HOIST ?auto_46a6 - SURFACE )
+:vars (?auto_118a14 - PLACE ?auto_113a14 - TRUCK ?auto_114a14 - PLACE ?auto_116a14 - HOIST ?auto_117a14 - SURFACE ?auto_115a14 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_45a6 ?auto_118a14) ( AVAILABLE ?auto_45a6) ( IS-CRATE ?auto_46a6) ( TRUCK-AT ?auto_113a14 ?auto_114a14) ( HOIST-AT ?auto_116a14 ?auto_114a14) ( SURFACE-AT ?auto_46a6 ?auto_114a14) ( ON ?auto_46a6 ?auto_117a14) ( IS-CRATE ?auto_115a14) ( AVAILABLE ?auto_116a14) ( SURFACE-AT ?auto_115a14 ?auto_114a14) ( ON ?auto_115a14 ?auto_46a6) ( CLEAR ?auto_115a14) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_46a6 )(TASK-LIFTING-HOIST-SURFACE ?auto_45a6 ?auto_46a6 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_118a14', 'type': 'PLACE'}, {'name': '?auto_113a14', 'type': 'TRUCK'}, {'name': '?auto_114a14', 'type': 'PLACE'}, {'name': '?auto_116a14', 'type': 'HOIST'}, {'name': '?auto_117a14', 'type': 'SURFACE'}, {'name': '?auto_115a14', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 []
+Adding the new method to self.generalized_methods
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_45a6 - HOIST ?auto_46a6 - SURFACE )
+:vars ()
+:precondition (and ( IS-CRATE ?auto_46a6) ( AVAILABLE ?auto_45a6) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_46a6 )(TASK-LIFTING-HOIST-SURFACE ?auto_45a6 ?auto_46a6 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7', '?auto_53a7', '?auto_54a7'] [['!LOAD', '?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_53a7', '?auto_54a7']]
+['?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11', '?auto_84a11', '?auto_85a11'] [['!LOAD', '?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_84a11', '?auto_85a11']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7', '?auto_53a7', '?auto_54a7'] [['!LOAD', '?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_53a7', '?auto_54a7']]
+['?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13', '?auto_101a13', '?auto_102a13'] [['!LOAD', '?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_101a13', '?auto_102a13']]
+Checking if two methods have the same subtasks: 
+['?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7', '?auto_53a7', '?auto_54a7'] [['!LOAD', '?auto_53a7', '?auto_59a7', '?auto_58a7', '?auto_55a7'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_53a7', '?auto_54a7']]
+['?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15', '?auto_121a15', '?auto_122a15'] [['!LOAD', '?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_121a15', '?auto_122a15']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_67a8', '?auto_62a8', '?auto_63a8'] [['TASK-CLEAR-SURFACE', '?auto_67a8'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_62a8', '?auto_63a8']]
+['?auto_138a16', '?auto_132a16', '?auto_133a16'] [['TASK-CLEAR-SURFACE', '?auto_138a16'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_132a16', '?auto_133a16']]
+Found a match: 
+IS-CRATE ?auto_133a16
+Found a match: 
+IS-CRATE ?auto_138a16
+Found a match: 
+ON ?auto_138a16 ?auto_133a16
+Found a match: 
+AVAILABLE ?auto_132a16
+Found two methods with the same subtasks: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_62a8 - HOIST ?auto_63a8 - SURFACE )
+:vars (?auto_64a8 - PLACE ?auto_66a8 - SURFACE ?auto_65a8 - TRUCK ?auto_67a8 - SURFACE ?auto_68a8 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_62a8 ?auto_64a8) ( SURFACE-AT ?auto_63a8 ?auto_64a8) ( ON ?auto_63a8 ?auto_66a8) ( IS-CRATE ?auto_63a8) ( TRUCK-AT ?auto_65a8 ?auto_64a8) ( IS-CRATE ?auto_67a8) ( SURFACE-AT ?auto_67a8 ?auto_64a8) ( ON ?auto_67a8 ?auto_63a8) ( IS-CRATE ?auto_68a8) ( AVAILABLE ?auto_62a8) ( SURFACE-AT ?auto_68a8 ?auto_64a8) ( ON ?auto_68a8 ?auto_67a8) ( CLEAR ?auto_68a8) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_67a8 )(TASK-LIFTING-HOIST-SURFACE ?auto_62a8 ?auto_63a8 )))
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_132a16 - HOIST ?auto_133a16 - SURFACE )
+:vars (?auto_134a16 - PLACE ?auto_140a16 - TRUCK ?auto_135a16 - PLACE ?auto_139a16 - HOIST ?auto_136a16 - SURFACE ?auto_138a16 - SURFACE ?auto_137a16 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_132a16 ?auto_134a16) ( AVAILABLE ?auto_132a16) ( IS-CRATE ?auto_133a16) ( TRUCK-AT ?auto_140a16 ?auto_135a16) ( HOIST-AT ?auto_139a16 ?auto_135a16) ( SURFACE-AT ?auto_133a16 ?auto_135a16) ( ON ?auto_133a16 ?auto_136a16) ( IS-CRATE ?auto_138a16) ( SURFACE-AT ?auto_138a16 ?auto_135a16) ( ON ?auto_138a16 ?auto_133a16) ( IS-CRATE ?auto_137a16) ( AVAILABLE ?auto_139a16) ( SURFACE-AT ?auto_137a16 ?auto_135a16) ( ON ?auto_137a16 ?auto_138a16) ( CLEAR ?auto_137a16) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_138a16 )(TASK-LIFTING-HOIST-SURFACE ?auto_132a16 ?auto_133a16 )))
+Merging two methods: 
+{'head': 'TASK-LIFTING-HOIST-SURFACE', 'parameters': [{'name': '?auto_62a8', 'type': 'HOIST'}, {'name': '?auto_63a8', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_64a8', 'type': 'PLACE'}, {'name': '?auto_66a8', 'type': 'SURFACE'}, {'name': '?auto_65a8', 'type': 'TRUCK'}, {'name': '?auto_67a8', 'type': 'SURFACE'}, {'name': '?auto_68a8', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_62a8 ?auto_64a8', 'SURFACE-AT ?auto_63a8 ?auto_64a8', 'ON ?auto_63a8 ?auto_66a8', 'IS-CRATE ?auto_63a8', 'TRUCK-AT ?auto_65a8 ?auto_64a8', 'IS-CRATE ?auto_67a8', 'SURFACE-AT ?auto_67a8 ?auto_64a8', 'ON ?auto_67a8 ?auto_63a8', 'IS-CRATE ?auto_68a8', 'AVAILABLE ?auto_62a8', 'SURFACE-AT ?auto_68a8 ?auto_64a8', 'ON ?auto_68a8 ?auto_67a8', 'CLEAR ?auto_68a8'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_67a8'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_62a8', '?auto_63a8']]}
+{'head': 'TASK-LIFTING-HOIST-SURFACE', 'parameters': [{'name': '?auto_132a16', 'type': 'HOIST'}, {'name': '?auto_133a16', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_134a16', 'type': 'PLACE'}, {'name': '?auto_140a16', 'type': 'TRUCK'}, {'name': '?auto_135a16', 'type': 'PLACE'}, {'name': '?auto_139a16', 'type': 'HOIST'}, {'name': '?auto_136a16', 'type': 'SURFACE'}, {'name': '?auto_138a16', 'type': 'SURFACE'}, {'name': '?auto_137a16', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_132a16 ?auto_134a16', 'AVAILABLE ?auto_132a16', 'IS-CRATE ?auto_133a16', 'TRUCK-AT ?auto_140a16 ?auto_135a16', 'HOIST-AT ?auto_139a16 ?auto_135a16', 'SURFACE-AT ?auto_133a16 ?auto_135a16', 'ON ?auto_133a16 ?auto_136a16', 'IS-CRATE ?auto_138a16', 'SURFACE-AT ?auto_138a16 ?auto_135a16', 'ON ?auto_138a16 ?auto_133a16', 'IS-CRATE ?auto_137a16', 'AVAILABLE ?auto_139a16', 'SURFACE-AT ?auto_137a16 ?auto_135a16', 'ON ?auto_137a16 ?auto_138a16', 'CLEAR ?auto_137a16'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_138a16'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_132a16', '?auto_133a16']]}
+After aligning: 
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_62a8 - HOIST ?auto_63a8 - SURFACE )
+:vars (?auto_134a16 - PLACE ?auto_140a16 - TRUCK ?auto_135a16 - PLACE ?auto_139a16 - HOIST ?auto_136a16 - SURFACE ?auto_67a8 - SURFACE ?auto_137a16 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_62a8 ?auto_134a16) ( AVAILABLE ?auto_62a8) ( IS-CRATE ?auto_63a8) ( TRUCK-AT ?auto_140a16 ?auto_135a16) ( HOIST-AT ?auto_139a16 ?auto_135a16) ( SURFACE-AT ?auto_63a8 ?auto_135a16) ( ON ?auto_63a8 ?auto_136a16) ( IS-CRATE ?auto_67a8) ( SURFACE-AT ?auto_67a8 ?auto_135a16) ( ON ?auto_67a8 ?auto_63a8) ( IS-CRATE ?auto_137a16) ( AVAILABLE ?auto_139a16) ( SURFACE-AT ?auto_137a16 ?auto_135a16) ( ON ?auto_137a16 ?auto_67a8) ( CLEAR ?auto_137a16) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_67a8 )(TASK-LIFTING-HOIST-SURFACE ?auto_62a8 ?auto_63a8 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_134a16', 'type': 'PLACE'}, {'name': '?auto_140a16', 'type': 'TRUCK'}, {'name': '?auto_135a16', 'type': 'PLACE'}, {'name': '?auto_139a16', 'type': 'HOIST'}, {'name': '?auto_136a16', 'type': 'SURFACE'}, {'name': '?auto_67a8', 'type': 'SURFACE'}, {'name': '?auto_137a16', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 [{'name': '?auto_67a8', 'type': 'SURFACE'}]
+['?auto_46a6', '?auto_45a6', '?auto_46a6'] [['TASK-CLEAR-SURFACE', '?auto_46a6'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_45a6', '?auto_46a6']]
+['?auto_67a8', '?auto_62a8', '?auto_63a8'] [['TASK-CLEAR-SURFACE', '?auto_67a8'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_62a8', '?auto_63a8']]
+Adding the new method to self.generalized_methods
+(:method TASK-LIFTING-HOIST-SURFACE
+:parameters (?auto_62a8 - HOIST ?auto_63a8 - SURFACE )
+:vars (?auto_67a8 - SURFACE )
+:precondition (and ( IS-CRATE ?auto_63a8) ( IS-CRATE ?auto_67a8) ( ON ?auto_67a8 ?auto_63a8) ( AVAILABLE ?auto_62a8) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_67a8 )(TASK-LIFTING-HOIST-SURFACE ?auto_62a8 ?auto_63a8 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11', '?auto_84a11', '?auto_85a11'] [['!LOAD', '?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_84a11', '?auto_85a11']]
+['?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13', '?auto_101a13', '?auto_102a13'] [['!LOAD', '?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_101a13', '?auto_102a13']]
+Checking if two methods have the same subtasks: 
+['?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11', '?auto_84a11', '?auto_85a11'] [['!LOAD', '?auto_89a11', '?auto_85a11', '?auto_86a11', '?auto_88a11'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_84a11', '?auto_85a11']]
+['?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15', '?auto_121a15', '?auto_122a15'] [['!LOAD', '?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_121a15', '?auto_122a15']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13', '?auto_101a13', '?auto_102a13'] [['!LOAD', '?auto_103a13', '?auto_108a13', '?auto_105a13', '?auto_104a13'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_101a13', '?auto_102a13']]
+['?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15', '?auto_121a15', '?auto_122a15'] [['!LOAD', '?auto_126a15', '?auto_129a15', '?auto_128a15', '?auto_127a15'], ['TASK-LIFTING-HOIST-SURFACE', '?auto_121a15', '?auto_122a15']]
+Found a match: 
+AVAILABLE ?auto_121a15
+Found a match: 
+IS-CRATE ?auto_122a15
+Found a match: 
+TRUCK-AT ?auto_128a15 ?auto_127a15
+Found a match: 
+HOIST-AT ?auto_126a15 ?auto_127a15
+Found a match: 
+SURFACE-AT ?auto_122a15 ?auto_127a15
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_151a18', '?auto_149a18', '?auto_149a18', '?auto_150a18'] [['TASK-LIFTING-HOIST-SURFACE', '?auto_151a18', '?auto_149a18'], ['TASK-ON-SURFACE-SURFACE', '?auto_149a18', '?auto_150a18']]
+['?auto_175a21', '?auto_173a21', '?auto_173a21', '?auto_174a21'] [['TASK-LIFTING-HOIST-SURFACE', '?auto_175a21', '?auto_173a21'], ['TASK-ON-SURFACE-SURFACE', '?auto_173a21', '?auto_174a21']]
+Found a match: 
+CLEAR ?auto_174a21
+Found a match: 
+IS-CRATE ?auto_173a21
+Found a match: 
+AVAILABLE ?auto_175a21
+Found two methods with the same subtasks: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_149a18 - SURFACE ?auto_150a18 - SURFACE )
+:vars (?auto_151a18 - HOIST ?auto_152a18 - PLACE ?auto_153a18 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_151a18 ?auto_152a18) ( SURFACE-AT ?auto_150a18 ?auto_152a18) ( CLEAR ?auto_150a18) ( IS-CRATE ?auto_149a18) ( TRUCK-AT ?auto_153a18 ?auto_152a18) ( AVAILABLE ?auto_151a18) ( IN ?auto_149a18 ?auto_153a18) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_151a18 ?auto_149a18 )(TASK-ON-SURFACE-SURFACE ?auto_149a18 ?auto_150a18 )))
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_173a21 - SURFACE ?auto_174a21 - SURFACE )
+:vars (?auto_176a21 - HOIST ?auto_179a21 - PLACE ?auto_178a21 - TRUCK ?auto_177a21 - PLACE ?auto_175a21 - HOIST ?auto_180a21 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_176a21 ?auto_179a21) ( SURFACE-AT ?auto_174a21 ?auto_179a21) ( CLEAR ?auto_174a21) ( IS-CRATE ?auto_173a21) ( AVAILABLE ?auto_176a21) ( TRUCK-AT ?auto_178a21 ?auto_177a21) ( HOIST-AT ?auto_175a21 ?auto_177a21) ( AVAILABLE ?auto_175a21) ( SURFACE-AT ?auto_173a21 ?auto_177a21) ( ON ?auto_173a21 ?auto_180a21) ( CLEAR ?auto_173a21) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_175a21 ?auto_173a21 )(TASK-ON-SURFACE-SURFACE ?auto_173a21 ?auto_174a21 )))
+Merging two methods: 
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_149a18', 'type': 'SURFACE'}, {'name': '?auto_150a18', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_151a18', 'type': 'HOIST'}, {'name': '?auto_152a18', 'type': 'PLACE'}, {'name': '?auto_153a18', 'type': 'TRUCK'}], 'precondition': ['HOIST-AT ?auto_151a18 ?auto_152a18', 'SURFACE-AT ?auto_150a18 ?auto_152a18', 'CLEAR ?auto_150a18', 'IS-CRATE ?auto_149a18', 'TRUCK-AT ?auto_153a18 ?auto_152a18', 'AVAILABLE ?auto_151a18', 'IN ?auto_149a18 ?auto_153a18'], 'subtasks': [['TASK-LIFTING-HOIST-SURFACE', '?auto_151a18', '?auto_149a18'], ['TASK-ON-SURFACE-SURFACE', '?auto_149a18', '?auto_150a18']]}
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_173a21', 'type': 'SURFACE'}, {'name': '?auto_174a21', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_176a21', 'type': 'HOIST'}, {'name': '?auto_179a21', 'type': 'PLACE'}, {'name': '?auto_178a21', 'type': 'TRUCK'}, {'name': '?auto_177a21', 'type': 'PLACE'}, {'name': '?auto_175a21', 'type': 'HOIST'}, {'name': '?auto_180a21', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_176a21 ?auto_179a21', 'SURFACE-AT ?auto_174a21 ?auto_179a21', 'CLEAR ?auto_174a21', 'IS-CRATE ?auto_173a21', 'AVAILABLE ?auto_176a21', 'TRUCK-AT ?auto_178a21 ?auto_177a21', 'HOIST-AT ?auto_175a21 ?auto_177a21', 'AVAILABLE ?auto_175a21', 'SURFACE-AT ?auto_173a21 ?auto_177a21', 'ON ?auto_173a21 ?auto_180a21', 'CLEAR ?auto_173a21'], 'subtasks': [['TASK-LIFTING-HOIST-SURFACE', '?auto_175a21', '?auto_173a21'], ['TASK-ON-SURFACE-SURFACE', '?auto_173a21', '?auto_174a21']]}
+After aligning: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_149a18 - SURFACE ?auto_150a18 - SURFACE )
+:vars (?auto_176a21 - HOIST ?auto_179a21 - PLACE ?auto_178a21 - TRUCK ?auto_177a21 - PLACE ?auto_151a18 - HOIST ?auto_180a21 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_176a21 ?auto_179a21) ( SURFACE-AT ?auto_150a18 ?auto_179a21) ( CLEAR ?auto_150a18) ( IS-CRATE ?auto_149a18) ( AVAILABLE ?auto_176a21) ( TRUCK-AT ?auto_178a21 ?auto_177a21) ( HOIST-AT ?auto_151a18 ?auto_177a21) ( AVAILABLE ?auto_151a18) ( SURFACE-AT ?auto_149a18 ?auto_177a21) ( ON ?auto_149a18 ?auto_180a21) ( CLEAR ?auto_149a18) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_151a18 ?auto_149a18 )(TASK-ON-SURFACE-SURFACE ?auto_149a18 ?auto_150a18 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_176a21', 'type': 'HOIST'}, {'name': '?auto_179a21', 'type': 'PLACE'}, {'name': '?auto_178a21', 'type': 'TRUCK'}, {'name': '?auto_177a21', 'type': 'PLACE'}, {'name': '?auto_151a18', 'type': 'HOIST'}, {'name': '?auto_180a21', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 [{'name': '?auto_151a18', 'type': 'HOIST'}]
+Adding the new method to self.generalized_methods
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_149a18 - SURFACE ?auto_150a18 - SURFACE )
+:vars (?auto_151a18 - HOIST )
+:precondition (and ( CLEAR ?auto_150a18) ( IS-CRATE ?auto_149a18) ( AVAILABLE ?auto_151a18) )
+:subtasks ((TASK-LIFTING-HOIST-SURFACE ?auto_151a18 ?auto_149a18 )(TASK-ON-SURFACE-SURFACE ?auto_149a18 ?auto_150a18 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_160a19', '?auto_161a19', '?auto_158a19', '?auto_156a19', '?auto_157a19'] [['!DRIVE', '?auto_160a19', '?auto_161a19', '?auto_158a19'], ['TASK-ON-SURFACE-SURFACE', '?auto_156a19', '?auto_157a19']]
+['?auto_330a30', '?auto_335a30', '?auto_334a30', '?auto_328a30', '?auto_329a30'] [['!DRIVE', '?auto_330a30', '?auto_335a30', '?auto_334a30'], ['TASK-ON-SURFACE-SURFACE', '?auto_328a30', '?auto_329a30']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20', '?auto_164a20', '?auto_165a20'] [['!LOAD', '?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20'], ['TASK-ON-SURFACE-SURFACE', '?auto_164a20', '?auto_165a20']]
+['?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22', '?auto_183a22', '?auto_184a22'] [['!LOAD', '?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22'], ['TASK-ON-SURFACE-SURFACE', '?auto_183a22', '?auto_184a22']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20', '?auto_164a20', '?auto_165a20'] [['!LOAD', '?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20'], ['TASK-ON-SURFACE-SURFACE', '?auto_164a20', '?auto_165a20']]
+['?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24', '?auto_205a24', '?auto_206a24'] [['!LOAD', '?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24'], ['TASK-ON-SURFACE-SURFACE', '?auto_205a24', '?auto_206a24']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20', '?auto_164a20', '?auto_165a20'] [['!LOAD', '?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20'], ['TASK-ON-SURFACE-SURFACE', '?auto_164a20', '?auto_165a20']]
+['?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29', '?auto_315a29', '?auto_316a29'] [['!LOAD', '?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29'], ['TASK-ON-SURFACE-SURFACE', '?auto_315a29', '?auto_316a29']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20', '?auto_164a20', '?auto_165a20'] [['!LOAD', '?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20'], ['TASK-ON-SURFACE-SURFACE', '?auto_164a20', '?auto_165a20']]
+['?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32', '?auto_354a32', '?auto_355a32'] [['!LOAD', '?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32'], ['TASK-ON-SURFACE-SURFACE', '?auto_354a32', '?auto_355a32']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20', '?auto_164a20', '?auto_165a20'] [['!LOAD', '?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20'], ['TASK-ON-SURFACE-SURFACE', '?auto_164a20', '?auto_165a20']]
+['?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40', '?auto_600a40', '?auto_601a40'] [['!LOAD', '?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40'], ['TASK-ON-SURFACE-SURFACE', '?auto_600a40', '?auto_601a40']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20', '?auto_164a20', '?auto_165a20'] [['!LOAD', '?auto_170a20', '?auto_164a20', '?auto_169a20', '?auto_167a20'], ['TASK-ON-SURFACE-SURFACE', '?auto_164a20', '?auto_165a20']]
+['?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42', '?auto_616a42', '?auto_617a42'] [['!LOAD', '?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42'], ['TASK-ON-SURFACE-SURFACE', '?auto_616a42', '?auto_617a42']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22', '?auto_183a22', '?auto_184a22'] [['!LOAD', '?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22'], ['TASK-ON-SURFACE-SURFACE', '?auto_183a22', '?auto_184a22']]
+['?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24', '?auto_205a24', '?auto_206a24'] [['!LOAD', '?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24'], ['TASK-ON-SURFACE-SURFACE', '?auto_205a24', '?auto_206a24']]
+Found a match: 
+CLEAR ?auto_206a24
+Found a match: 
+IS-CRATE ?auto_205a24
+Found a match: 
+TRUCK-AT ?auto_211a24 ?auto_208a24
+Found a match: 
+HOIST-AT ?auto_210a24 ?auto_208a24
+Found a match: 
+SURFACE-AT ?auto_205a24 ?auto_208a24
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22', '?auto_183a22', '?auto_184a22'] [['!LOAD', '?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22'], ['TASK-ON-SURFACE-SURFACE', '?auto_183a22', '?auto_184a22']]
+['?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29', '?auto_315a29', '?auto_316a29'] [['!LOAD', '?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29'], ['TASK-ON-SURFACE-SURFACE', '?auto_315a29', '?auto_316a29']]
+Found a match: 
+CLEAR ?auto_316a29
+Found a match: 
+IS-CRATE ?auto_315a29
+Found a match: 
+TRUCK-AT ?auto_324a29 ?auto_317a29
+Found a match: 
+HOIST-AT ?auto_320a29 ?auto_317a29
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22', '?auto_183a22', '?auto_184a22'] [['!LOAD', '?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22'], ['TASK-ON-SURFACE-SURFACE', '?auto_183a22', '?auto_184a22']]
+['?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32', '?auto_354a32', '?auto_355a32'] [['!LOAD', '?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32'], ['TASK-ON-SURFACE-SURFACE', '?auto_354a32', '?auto_355a32']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22', '?auto_183a22', '?auto_184a22'] [['!LOAD', '?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22'], ['TASK-ON-SURFACE-SURFACE', '?auto_183a22', '?auto_184a22']]
+['?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40', '?auto_600a40', '?auto_601a40'] [['!LOAD', '?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40'], ['TASK-ON-SURFACE-SURFACE', '?auto_600a40', '?auto_601a40']]
+Found a match: 
+CLEAR ?auto_601a40
+Found a match: 
+IS-CRATE ?auto_600a40
+Found a match: 
+TRUCK-AT ?auto_603a40 ?auto_602a40
+Found a match: 
+HOIST-AT ?auto_604a40 ?auto_602a40
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22', '?auto_183a22', '?auto_184a22'] [['!LOAD', '?auto_186a22', '?auto_191a22', '?auto_188a22', '?auto_189a22'], ['TASK-ON-SURFACE-SURFACE', '?auto_183a22', '?auto_184a22']]
+['?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42', '?auto_616a42', '?auto_617a42'] [['!LOAD', '?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42'], ['TASK-ON-SURFACE-SURFACE', '?auto_616a42', '?auto_617a42']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_194a23', '?auto_194a23', '?auto_195a23'] [['TASK-CLEAR-SURFACE', '?auto_194a23'], ['TASK-ON-SURFACE-SURFACE', '?auto_194a23', '?auto_195a23']]
+['?auto_223a25', '?auto_217a25', '?auto_218a25'] [['TASK-CLEAR-SURFACE', '?auto_223a25'], ['TASK-ON-SURFACE-SURFACE', '?auto_217a25', '?auto_218a25']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_194a23', '?auto_194a23', '?auto_195a23'] [['TASK-CLEAR-SURFACE', '?auto_194a23'], ['TASK-ON-SURFACE-SURFACE', '?auto_194a23', '?auto_195a23']]
+['?auto_342a31', '?auto_341a31', '?auto_342a31'] [['TASK-CLEAR-SURFACE', '?auto_342a31'], ['TASK-ON-SURFACE-SURFACE', '?auto_341a31', '?auto_342a31']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_194a23', '?auto_194a23', '?auto_195a23'] [['TASK-CLEAR-SURFACE', '?auto_194a23'], ['TASK-ON-SURFACE-SURFACE', '?auto_194a23', '?auto_195a23']]
+['?auto_370a33', '?auto_368a33', '?auto_369a33'] [['TASK-CLEAR-SURFACE', '?auto_370a33'], ['TASK-ON-SURFACE-SURFACE', '?auto_368a33', '?auto_369a33']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_194a23', '?auto_194a23', '?auto_195a23'] [['TASK-CLEAR-SURFACE', '?auto_194a23'], ['TASK-ON-SURFACE-SURFACE', '?auto_194a23', '?auto_195a23']]
+['?auto_609a41', '?auto_608a41', '?auto_609a41'] [['TASK-CLEAR-SURFACE', '?auto_609a41'], ['TASK-ON-SURFACE-SURFACE', '?auto_608a41', '?auto_609a41']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24', '?auto_205a24', '?auto_206a24'] [['!LOAD', '?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24'], ['TASK-ON-SURFACE-SURFACE', '?auto_205a24', '?auto_206a24']]
+['?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29', '?auto_315a29', '?auto_316a29'] [['!LOAD', '?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29'], ['TASK-ON-SURFACE-SURFACE', '?auto_315a29', '?auto_316a29']]
+Found a match: 
+CLEAR ?auto_316a29
+Found a match: 
+IS-CRATE ?auto_315a29
+Found a match: 
+TRUCK-AT ?auto_324a29 ?auto_317a29
+Found a match: 
+HOIST-AT ?auto_320a29 ?auto_317a29
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24', '?auto_205a24', '?auto_206a24'] [['!LOAD', '?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24'], ['TASK-ON-SURFACE-SURFACE', '?auto_205a24', '?auto_206a24']]
+['?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32', '?auto_354a32', '?auto_355a32'] [['!LOAD', '?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32'], ['TASK-ON-SURFACE-SURFACE', '?auto_354a32', '?auto_355a32']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24', '?auto_205a24', '?auto_206a24'] [['!LOAD', '?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24'], ['TASK-ON-SURFACE-SURFACE', '?auto_205a24', '?auto_206a24']]
+['?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40', '?auto_600a40', '?auto_601a40'] [['!LOAD', '?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40'], ['TASK-ON-SURFACE-SURFACE', '?auto_600a40', '?auto_601a40']]
+Found a match: 
+CLEAR ?auto_601a40
+Found a match: 
+IS-CRATE ?auto_600a40
+Found a match: 
+TRUCK-AT ?auto_603a40 ?auto_602a40
+Found a match: 
+HOIST-AT ?auto_604a40 ?auto_602a40
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24', '?auto_205a24', '?auto_206a24'] [['!LOAD', '?auto_210a24', '?auto_214a24', '?auto_211a24', '?auto_208a24'], ['TASK-ON-SURFACE-SURFACE', '?auto_205a24', '?auto_206a24']]
+['?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42', '?auto_616a42', '?auto_617a42'] [['!LOAD', '?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42'], ['TASK-ON-SURFACE-SURFACE', '?auto_616a42', '?auto_617a42']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_223a25', '?auto_217a25', '?auto_218a25'] [['TASK-CLEAR-SURFACE', '?auto_223a25'], ['TASK-ON-SURFACE-SURFACE', '?auto_217a25', '?auto_218a25']]
+['?auto_342a31', '?auto_341a31', '?auto_342a31'] [['TASK-CLEAR-SURFACE', '?auto_342a31'], ['TASK-ON-SURFACE-SURFACE', '?auto_341a31', '?auto_342a31']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_223a25', '?auto_217a25', '?auto_218a25'] [['TASK-CLEAR-SURFACE', '?auto_223a25'], ['TASK-ON-SURFACE-SURFACE', '?auto_217a25', '?auto_218a25']]
+['?auto_370a33', '?auto_368a33', '?auto_369a33'] [['TASK-CLEAR-SURFACE', '?auto_370a33'], ['TASK-ON-SURFACE-SURFACE', '?auto_368a33', '?auto_369a33']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_223a25', '?auto_217a25', '?auto_218a25'] [['TASK-CLEAR-SURFACE', '?auto_223a25'], ['TASK-ON-SURFACE-SURFACE', '?auto_217a25', '?auto_218a25']]
+['?auto_609a41', '?auto_608a41', '?auto_609a41'] [['TASK-CLEAR-SURFACE', '?auto_609a41'], ['TASK-ON-SURFACE-SURFACE', '?auto_608a41', '?auto_609a41']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_285a27', '?auto_283a27', '?auto_290a27', '?auto_288a27', '?auto_283a27', '?auto_284a27'] [['!LIFT', '?auto_285a27', '?auto_283a27', '?auto_290a27', '?auto_288a27'], ['TASK-ON-SURFACE-SURFACE', '?auto_283a27', '?auto_284a27']]
+['?auto_312a28', '?auto_306a28', '?auto_304a28', '?auto_307a28', '?auto_304a28', '?auto_305a28'] [['!LIFT', '?auto_312a28', '?auto_306a28', '?auto_304a28', '?auto_307a28'], ['TASK-ON-SURFACE-SURFACE', '?auto_304a28', '?auto_305a28']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29', '?auto_315a29', '?auto_316a29'] [['!LOAD', '?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29'], ['TASK-ON-SURFACE-SURFACE', '?auto_315a29', '?auto_316a29']]
+['?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32', '?auto_354a32', '?auto_355a32'] [['!LOAD', '?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32'], ['TASK-ON-SURFACE-SURFACE', '?auto_354a32', '?auto_355a32']]
+Found a match: 
+HOIST-AT ?auto_359a32 ?auto_362a32
+Found a match: 
+SURFACE-AT ?auto_355a32 ?auto_362a32
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29', '?auto_315a29', '?auto_316a29'] [['!LOAD', '?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29'], ['TASK-ON-SURFACE-SURFACE', '?auto_315a29', '?auto_316a29']]
+['?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40', '?auto_600a40', '?auto_601a40'] [['!LOAD', '?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40'], ['TASK-ON-SURFACE-SURFACE', '?auto_600a40', '?auto_601a40']]
+Found a match: 
+HOIST-AT ?auto_604a40 ?auto_602a40
+Found a match: 
+SURFACE-AT ?auto_601a40 ?auto_602a40
+Found a match: 
+CLEAR ?auto_601a40
+Found a match: 
+IS-CRATE ?auto_600a40
+Found a match: 
+TRUCK-AT ?auto_603a40 ?auto_602a40
+Found a match: 
+LIFTING ?auto_604a40 ?auto_605a40
+Found a match: 
+IS-CRATE ?auto_605a40
+Found two methods with the same subtasks: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_315a29 - SURFACE ?auto_316a29 - SURFACE )
+:vars (?auto_320a29 - HOIST ?auto_317a29 - PLACE ?auto_322a29 - TRUCK ?auto_318a29 - PLACE ?auto_323a29 - HOIST ?auto_321a29 - SURFACE ?auto_319a29 - SURFACE ?auto_324a29 - TRUCK ?auto_325a29 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_320a29 ?auto_317a29) ( SURFACE-AT ?auto_316a29 ?auto_317a29) ( CLEAR ?auto_316a29) ( IS-CRATE ?auto_315a29) ( TRUCK-AT ?auto_322a29 ?auto_318a29) ( HOIST-AT ?auto_323a29 ?auto_318a29) ( SURFACE-AT ?auto_315a29 ?auto_318a29) ( ON ?auto_315a29 ?auto_321a29) ( IS-CRATE ?auto_319a29) ( AVAILABLE ?auto_323a29) ( SURFACE-AT ?auto_319a29 ?auto_318a29) ( ON ?auto_319a29 ?auto_315a29) ( CLEAR ?auto_319a29) ( TRUCK-AT ?auto_324a29 ?auto_317a29) ( LIFTING ?auto_320a29 ?auto_325a29) ( IS-CRATE ?auto_325a29) )
+:subtasks ((!LOAD ?auto_320a29 ?auto_325a29 ?auto_324a29 ?auto_317a29 )(TASK-ON-SURFACE-SURFACE ?auto_315a29 ?auto_316a29 )))
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_600a40 - SURFACE ?auto_601a40 - SURFACE )
+:vars (?auto_604a40 - HOIST ?auto_602a40 - PLACE ?auto_603a40 - TRUCK ?auto_605a40 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_604a40 ?auto_602a40) ( SURFACE-AT ?auto_601a40 ?auto_602a40) ( CLEAR ?auto_601a40) ( IS-CRATE ?auto_600a40) ( TRUCK-AT ?auto_603a40 ?auto_602a40) ( IN ?auto_600a40 ?auto_603a40) ( LIFTING ?auto_604a40 ?auto_605a40) ( IS-CRATE ?auto_605a40) )
+:subtasks ((!LOAD ?auto_604a40 ?auto_605a40 ?auto_603a40 ?auto_602a40 )(TASK-ON-SURFACE-SURFACE ?auto_600a40 ?auto_601a40 )))
+Merging two methods: 
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_315a29', 'type': 'SURFACE'}, {'name': '?auto_316a29', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_320a29', 'type': 'HOIST'}, {'name': '?auto_317a29', 'type': 'PLACE'}, {'name': '?auto_322a29', 'type': 'TRUCK'}, {'name': '?auto_318a29', 'type': 'PLACE'}, {'name': '?auto_323a29', 'type': 'HOIST'}, {'name': '?auto_321a29', 'type': 'SURFACE'}, {'name': '?auto_319a29', 'type': 'SURFACE'}, {'name': '?auto_324a29', 'type': 'TRUCK'}, {'name': '?auto_325a29', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_320a29 ?auto_317a29', 'SURFACE-AT ?auto_316a29 ?auto_317a29', 'CLEAR ?auto_316a29', 'IS-CRATE ?auto_315a29', 'TRUCK-AT ?auto_322a29 ?auto_318a29', 'HOIST-AT ?auto_323a29 ?auto_318a29', 'SURFACE-AT ?auto_315a29 ?auto_318a29', 'ON ?auto_315a29 ?auto_321a29', 'IS-CRATE ?auto_319a29', 'AVAILABLE ?auto_323a29', 'SURFACE-AT ?auto_319a29 ?auto_318a29', 'ON ?auto_319a29 ?auto_315a29', 'CLEAR ?auto_319a29', 'TRUCK-AT ?auto_324a29 ?auto_317a29', 'LIFTING ?auto_320a29 ?auto_325a29', 'IS-CRATE ?auto_325a29'], 'subtasks': [['!LOAD', '?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29'], ['TASK-ON-SURFACE-SURFACE', '?auto_315a29', '?auto_316a29']]}
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_600a40', 'type': 'SURFACE'}, {'name': '?auto_601a40', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_604a40', 'type': 'HOIST'}, {'name': '?auto_602a40', 'type': 'PLACE'}, {'name': '?auto_603a40', 'type': 'TRUCK'}, {'name': '?auto_605a40', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_604a40 ?auto_602a40', 'SURFACE-AT ?auto_601a40 ?auto_602a40', 'CLEAR ?auto_601a40', 'IS-CRATE ?auto_600a40', 'TRUCK-AT ?auto_603a40 ?auto_602a40', 'IN ?auto_600a40 ?auto_603a40', 'LIFTING ?auto_604a40 ?auto_605a40', 'IS-CRATE ?auto_605a40'], 'subtasks': [['!LOAD', '?auto_604a40', '?auto_605a40', '?auto_603a40', '?auto_602a40'], ['TASK-ON-SURFACE-SURFACE', '?auto_600a40', '?auto_601a40']]}
+After aligning: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_315a29 - SURFACE ?auto_316a29 - SURFACE )
+:vars (?auto_320a29 - HOIST ?auto_317a29 - PLACE ?auto_324a29 - TRUCK ?auto_325a29 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_320a29 ?auto_317a29) ( SURFACE-AT ?auto_316a29 ?auto_317a29) ( CLEAR ?auto_316a29) ( IS-CRATE ?auto_315a29) ( TRUCK-AT ?auto_324a29 ?auto_317a29) ( IN ?auto_315a29 ?auto_324a29) ( LIFTING ?auto_320a29 ?auto_325a29) ( IS-CRATE ?auto_325a29) )
+:subtasks ((!LOAD ?auto_320a29 ?auto_325a29 ?auto_324a29 ?auto_317a29 )(TASK-ON-SURFACE-SURFACE ?auto_315a29 ?auto_316a29 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_320a29', 'type': 'HOIST'}, {'name': '?auto_317a29', 'type': 'PLACE'}, {'name': '?auto_324a29', 'type': 'TRUCK'}, {'name': '?auto_325a29', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 [{'name': '?auto_320a29', 'type': 'HOIST'}, {'name': '?auto_317a29', 'type': 'PLACE'}, {'name': '?auto_324a29', 'type': 'TRUCK'}, {'name': '?auto_325a29', 'type': 'SURFACE'}]
+Adding the new method to self.generalized_methods
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_315a29 - SURFACE ?auto_316a29 - SURFACE )
+:vars (?auto_320a29 - HOIST ?auto_317a29 - PLACE ?auto_324a29 - TRUCK ?auto_325a29 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_320a29 ?auto_317a29) ( SURFACE-AT ?auto_316a29 ?auto_317a29) ( CLEAR ?auto_316a29) ( IS-CRATE ?auto_315a29) ( TRUCK-AT ?auto_324a29 ?auto_317a29) ( LIFTING ?auto_320a29 ?auto_325a29) ( IS-CRATE ?auto_325a29) )
+:subtasks ((!LOAD ?auto_320a29 ?auto_325a29 ?auto_324a29 ?auto_317a29 )(TASK-ON-SURFACE-SURFACE ?auto_315a29 ?auto_316a29 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_342a31', '?auto_341a31', '?auto_342a31'] [['TASK-CLEAR-SURFACE', '?auto_342a31'], ['TASK-ON-SURFACE-SURFACE', '?auto_341a31', '?auto_342a31']]
+['?auto_370a33', '?auto_368a33', '?auto_369a33'] [['TASK-CLEAR-SURFACE', '?auto_370a33'], ['TASK-ON-SURFACE-SURFACE', '?auto_368a33', '?auto_369a33']]
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_342a31', '?auto_341a31', '?auto_342a31'] [['TASK-CLEAR-SURFACE', '?auto_342a31'], ['TASK-ON-SURFACE-SURFACE', '?auto_341a31', '?auto_342a31']]
+['?auto_609a41', '?auto_608a41', '?auto_609a41'] [['TASK-CLEAR-SURFACE', '?auto_609a41'], ['TASK-ON-SURFACE-SURFACE', '?auto_608a41', '?auto_609a41']]
+Found a match: 
+IS-CRATE ?auto_608a41
+Found two methods with the same subtasks: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_341a31 - SURFACE ?auto_342a31 - SURFACE )
+:vars (?auto_349a31 - HOIST ?auto_344a31 - PLACE ?auto_345a31 - PLACE ?auto_346a31 - HOIST ?auto_351a31 - SURFACE ?auto_348a31 - SURFACE ?auto_347a31 - TRUCK ?auto_350a31 - SURFACE ?auto_343a31 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_349a31 ?auto_344a31) ( SURFACE-AT ?auto_342a31 ?auto_344a31) ( IS-CRATE ?auto_341a31) ( HOIST-AT ?auto_346a31 ?auto_345a31) ( SURFACE-AT ?auto_341a31 ?auto_345a31) ( ON ?auto_341a31 ?auto_351a31) ( IS-CRATE ?auto_348a31) ( AVAILABLE ?auto_346a31) ( SURFACE-AT ?auto_348a31 ?auto_345a31) ( ON ?auto_348a31 ?auto_341a31) ( CLEAR ?auto_348a31) ( TRUCK-AT ?auto_347a31 ?auto_344a31) ( IS-CRATE ?auto_350a31) ( TRUCK-AT ?auto_343a31 ?auto_344a31) ( AVAILABLE ?auto_349a31) ( SURFACE-AT ?auto_350a31 ?auto_344a31) ( ON ?auto_350a31 ?auto_342a31) ( CLEAR ?auto_350a31) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_342a31 )(TASK-ON-SURFACE-SURFACE ?auto_341a31 ?auto_342a31 )))
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_608a41 - SURFACE ?auto_609a41 - SURFACE )
+:vars (?auto_610a41 - HOIST ?auto_612a41 - PLACE ?auto_611a41 - TRUCK ?auto_613a41 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_610a41 ?auto_612a41) ( SURFACE-AT ?auto_609a41 ?auto_612a41) ( IS-CRATE ?auto_608a41) ( TRUCK-AT ?auto_611a41 ?auto_612a41) ( IN ?auto_608a41 ?auto_611a41) ( IS-CRATE ?auto_613a41) ( AVAILABLE ?auto_610a41) ( SURFACE-AT ?auto_613a41 ?auto_612a41) ( ON ?auto_613a41 ?auto_609a41) ( CLEAR ?auto_613a41) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_609a41 )(TASK-ON-SURFACE-SURFACE ?auto_608a41 ?auto_609a41 )))
+Merging two methods: 
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_341a31', 'type': 'SURFACE'}, {'name': '?auto_342a31', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_349a31', 'type': 'HOIST'}, {'name': '?auto_344a31', 'type': 'PLACE'}, {'name': '?auto_345a31', 'type': 'PLACE'}, {'name': '?auto_346a31', 'type': 'HOIST'}, {'name': '?auto_351a31', 'type': 'SURFACE'}, {'name': '?auto_348a31', 'type': 'SURFACE'}, {'name': '?auto_347a31', 'type': 'TRUCK'}, {'name': '?auto_350a31', 'type': 'SURFACE'}, {'name': '?auto_343a31', 'type': 'TRUCK'}], 'precondition': ['HOIST-AT ?auto_349a31 ?auto_344a31', 'SURFACE-AT ?auto_342a31 ?auto_344a31', 'IS-CRATE ?auto_341a31', 'HOIST-AT ?auto_346a31 ?auto_345a31', 'SURFACE-AT ?auto_341a31 ?auto_345a31', 'ON ?auto_341a31 ?auto_351a31', 'IS-CRATE ?auto_348a31', 'AVAILABLE ?auto_346a31', 'SURFACE-AT ?auto_348a31 ?auto_345a31', 'ON ?auto_348a31 ?auto_341a31', 'CLEAR ?auto_348a31', 'TRUCK-AT ?auto_347a31 ?auto_344a31', 'IS-CRATE ?auto_350a31', 'TRUCK-AT ?auto_343a31 ?auto_344a31', 'AVAILABLE ?auto_349a31', 'SURFACE-AT ?auto_350a31 ?auto_344a31', 'ON ?auto_350a31 ?auto_342a31', 'CLEAR ?auto_350a31'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_342a31'], ['TASK-ON-SURFACE-SURFACE', '?auto_341a31', '?auto_342a31']]}
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_608a41', 'type': 'SURFACE'}, {'name': '?auto_609a41', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_610a41', 'type': 'HOIST'}, {'name': '?auto_612a41', 'type': 'PLACE'}, {'name': '?auto_611a41', 'type': 'TRUCK'}, {'name': '?auto_613a41', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_610a41 ?auto_612a41', 'SURFACE-AT ?auto_609a41 ?auto_612a41', 'IS-CRATE ?auto_608a41', 'TRUCK-AT ?auto_611a41 ?auto_612a41', 'IN ?auto_608a41 ?auto_611a41', 'IS-CRATE ?auto_613a41', 'AVAILABLE ?auto_610a41', 'SURFACE-AT ?auto_613a41 ?auto_612a41', 'ON ?auto_613a41 ?auto_609a41', 'CLEAR ?auto_613a41'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_609a41'], ['TASK-ON-SURFACE-SURFACE', '?auto_608a41', '?auto_609a41']]}
+After aligning: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_341a31 - SURFACE ?auto_342a31 - SURFACE )
+:vars (?auto_610a41 - HOIST ?auto_612a41 - PLACE ?auto_611a41 - TRUCK ?auto_613a41 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_610a41 ?auto_612a41) ( SURFACE-AT ?auto_342a31 ?auto_612a41) ( IS-CRATE ?auto_341a31) ( TRUCK-AT ?auto_611a41 ?auto_612a41) ( IN ?auto_341a31 ?auto_611a41) ( IS-CRATE ?auto_613a41) ( AVAILABLE ?auto_610a41) ( SURFACE-AT ?auto_613a41 ?auto_612a41) ( ON ?auto_613a41 ?auto_342a31) ( CLEAR ?auto_613a41) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_342a31 )(TASK-ON-SURFACE-SURFACE ?auto_341a31 ?auto_342a31 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_610a41', 'type': 'HOIST'}, {'name': '?auto_612a41', 'type': 'PLACE'}, {'name': '?auto_611a41', 'type': 'TRUCK'}, {'name': '?auto_613a41', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 []
+Adding the new method to self.generalized_methods
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_341a31 - SURFACE ?auto_342a31 - SURFACE )
+:vars ()
+:precondition (and ( IS-CRATE ?auto_341a31) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_342a31 )(TASK-ON-SURFACE-SURFACE ?auto_341a31 ?auto_342a31 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32', '?auto_354a32', '?auto_355a32'] [['!LOAD', '?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32'], ['TASK-ON-SURFACE-SURFACE', '?auto_354a32', '?auto_355a32']]
+['?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42', '?auto_616a42', '?auto_617a42'] [['!LOAD', '?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42'], ['TASK-ON-SURFACE-SURFACE', '?auto_616a42', '?auto_617a42']]
+Found a match: 
+HOIST-AT ?auto_618a42 ?auto_619a42
+Found a match: 
+SURFACE-AT ?auto_617a42 ?auto_619a42
+Found a match: 
+IS-CRATE ?auto_616a42
+Found a match: 
+TRUCK-AT ?auto_620a42 ?auto_619a42
+Found a match: 
+LIFTING ?auto_618a42 ?auto_616a42
+Found a match: 
+IS-CRATE ?auto_616a42
+Found two methods with the same subtasks: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_354a32 - SURFACE ?auto_355a32 - SURFACE )
+:vars (?auto_359a32 - HOIST ?auto_362a32 - PLACE ?auto_363a32 - PLACE ?auto_360a32 - HOIST ?auto_358a32 - SURFACE ?auto_364a32 - SURFACE ?auto_361a32 - TRUCK ?auto_356a32 - SURFACE ?auto_357a32 - TRUCK ?auto_365a32 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_359a32 ?auto_362a32) ( SURFACE-AT ?auto_355a32 ?auto_362a32) ( IS-CRATE ?auto_354a32) ( HOIST-AT ?auto_360a32 ?auto_363a32) ( SURFACE-AT ?auto_354a32 ?auto_363a32) ( ON ?auto_354a32 ?auto_358a32) ( IS-CRATE ?auto_364a32) ( AVAILABLE ?auto_360a32) ( SURFACE-AT ?auto_364a32 ?auto_363a32) ( ON ?auto_364a32 ?auto_354a32) ( CLEAR ?auto_364a32) ( TRUCK-AT ?auto_361a32 ?auto_362a32) ( IS-CRATE ?auto_356a32) ( TRUCK-AT ?auto_357a32 ?auto_362a32) ( SURFACE-AT ?auto_356a32 ?auto_362a32) ( ON ?auto_356a32 ?auto_355a32) ( CLEAR ?auto_356a32) ( LIFTING ?auto_359a32 ?auto_365a32) ( IS-CRATE ?auto_365a32) )
+:subtasks ((!LOAD ?auto_359a32 ?auto_365a32 ?auto_357a32 ?auto_362a32 )(TASK-ON-SURFACE-SURFACE ?auto_354a32 ?auto_355a32 )))
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_616a42 - SURFACE ?auto_617a42 - SURFACE )
+:vars (?auto_618a42 - HOIST ?auto_619a42 - PLACE ?auto_620a42 - TRUCK ?auto_621a42 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_618a42 ?auto_619a42) ( SURFACE-AT ?auto_617a42 ?auto_619a42) ( IS-CRATE ?auto_616a42) ( TRUCK-AT ?auto_620a42 ?auto_619a42) ( IS-CRATE ?auto_621a42) ( SURFACE-AT ?auto_621a42 ?auto_619a42) ( ON ?auto_621a42 ?auto_617a42) ( CLEAR ?auto_621a42) ( LIFTING ?auto_618a42 ?auto_616a42) )
+:subtasks ((!LOAD ?auto_618a42 ?auto_616a42 ?auto_620a42 ?auto_619a42 )(TASK-ON-SURFACE-SURFACE ?auto_616a42 ?auto_617a42 )))
+Merging two methods: 
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_354a32', 'type': 'SURFACE'}, {'name': '?auto_355a32', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_359a32', 'type': 'HOIST'}, {'name': '?auto_362a32', 'type': 'PLACE'}, {'name': '?auto_363a32', 'type': 'PLACE'}, {'name': '?auto_360a32', 'type': 'HOIST'}, {'name': '?auto_358a32', 'type': 'SURFACE'}, {'name': '?auto_364a32', 'type': 'SURFACE'}, {'name': '?auto_361a32', 'type': 'TRUCK'}, {'name': '?auto_356a32', 'type': 'SURFACE'}, {'name': '?auto_357a32', 'type': 'TRUCK'}, {'name': '?auto_365a32', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_359a32 ?auto_362a32', 'SURFACE-AT ?auto_355a32 ?auto_362a32', 'IS-CRATE ?auto_354a32', 'HOIST-AT ?auto_360a32 ?auto_363a32', 'SURFACE-AT ?auto_354a32 ?auto_363a32', 'ON ?auto_354a32 ?auto_358a32', 'IS-CRATE ?auto_364a32', 'AVAILABLE ?auto_360a32', 'SURFACE-AT ?auto_364a32 ?auto_363a32', 'ON ?auto_364a32 ?auto_354a32', 'CLEAR ?auto_364a32', 'TRUCK-AT ?auto_361a32 ?auto_362a32', 'IS-CRATE ?auto_356a32', 'TRUCK-AT ?auto_357a32 ?auto_362a32', 'SURFACE-AT ?auto_356a32 ?auto_362a32', 'ON ?auto_356a32 ?auto_355a32', 'CLEAR ?auto_356a32', 'LIFTING ?auto_359a32 ?auto_365a32', 'IS-CRATE ?auto_365a32'], 'subtasks': [['!LOAD', '?auto_359a32', '?auto_365a32', '?auto_357a32', '?auto_362a32'], ['TASK-ON-SURFACE-SURFACE', '?auto_354a32', '?auto_355a32']]}
+{'head': 'TASK-ON-SURFACE-SURFACE', 'parameters': [{'name': '?auto_616a42', 'type': 'SURFACE'}, {'name': '?auto_617a42', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_618a42', 'type': 'HOIST'}, {'name': '?auto_619a42', 'type': 'PLACE'}, {'name': '?auto_620a42', 'type': 'TRUCK'}, {'name': '?auto_621a42', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_618a42 ?auto_619a42', 'SURFACE-AT ?auto_617a42 ?auto_619a42', 'IS-CRATE ?auto_616a42', 'TRUCK-AT ?auto_620a42 ?auto_619a42', 'IS-CRATE ?auto_621a42', 'SURFACE-AT ?auto_621a42 ?auto_619a42', 'ON ?auto_621a42 ?auto_617a42', 'CLEAR ?auto_621a42', 'LIFTING ?auto_618a42 ?auto_616a42'], 'subtasks': [['!LOAD', '?auto_618a42', '?auto_616a42', '?auto_620a42', '?auto_619a42'], ['TASK-ON-SURFACE-SURFACE', '?auto_616a42', '?auto_617a42']]}
+After aligning: 
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_354a32 - SURFACE ?auto_355a32 - SURFACE )
+:vars (?auto_359a32 - HOIST ?auto_362a32 - PLACE ?auto_357a32 - TRUCK ?auto_621a42 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_359a32 ?auto_362a32) ( SURFACE-AT ?auto_355a32 ?auto_362a32) ( IS-CRATE ?auto_354a32) ( TRUCK-AT ?auto_357a32 ?auto_362a32) ( IS-CRATE ?auto_621a42) ( SURFACE-AT ?auto_621a42 ?auto_362a32) ( ON ?auto_621a42 ?auto_355a32) ( CLEAR ?auto_621a42) ( LIFTING ?auto_359a32 ?auto_354a32) )
+:subtasks ((!LOAD ?auto_359a32 ?auto_354a32 ?auto_357a32 ?auto_362a32 )(TASK-ON-SURFACE-SURFACE ?auto_354a32 ?auto_355a32 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_359a32', 'type': 'HOIST'}, {'name': '?auto_362a32', 'type': 'PLACE'}, {'name': '?auto_357a32', 'type': 'TRUCK'}, {'name': '?auto_621a42', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 [{'name': '?auto_359a32', 'type': 'HOIST'}, {'name': '?auto_362a32', 'type': 'PLACE'}, {'name': '?auto_357a32', 'type': 'TRUCK'}]
+['?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29', '?auto_315a29', '?auto_316a29'] [['!LOAD', '?auto_320a29', '?auto_325a29', '?auto_324a29', '?auto_317a29'], ['TASK-ON-SURFACE-SURFACE', '?auto_315a29', '?auto_316a29']]
+['?auto_359a32', '?auto_354a32', '?auto_357a32', '?auto_362a32', '?auto_354a32', '?auto_355a32'] [['!LOAD', '?auto_359a32', '?auto_354a32', '?auto_357a32', '?auto_362a32'], ['TASK-ON-SURFACE-SURFACE', '?auto_354a32', '?auto_355a32']]
+Found a match: 
+HOIST-AT ?auto_359a32 ?auto_362a32
+Found a match: 
+SURFACE-AT ?auto_355a32 ?auto_362a32
+Adding the new method to self.generalized_methods
+(:method TASK-ON-SURFACE-SURFACE
+:parameters (?auto_354a32 - SURFACE ?auto_355a32 - SURFACE )
+:vars (?auto_359a32 - HOIST ?auto_362a32 - PLACE ?auto_357a32 - TRUCK )
+:precondition (and ( HOIST-AT ?auto_359a32 ?auto_362a32) ( SURFACE-AT ?auto_355a32 ?auto_362a32) ( IS-CRATE ?auto_354a32) ( TRUCK-AT ?auto_357a32 ?auto_362a32) )
+:subtasks ((!LOAD ?auto_359a32 ?auto_354a32 ?auto_357a32 ?auto_362a32 )(TASK-ON-SURFACE-SURFACE ?auto_354a32 ?auto_355a32 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+Checking if two methods have the same subtasks: 
+['?auto_433a35', '?auto_432a35'] [['TASK-CLEAR-SURFACE', '?auto_433a35'], ['TASK-CLEAR-SURFACE', '?auto_432a35']]
+['?auto_487a37', '?auto_484a37'] [['TASK-CLEAR-SURFACE', '?auto_487a37'], ['TASK-CLEAR-SURFACE', '?auto_484a37']]
+Found a match: 
+IS-CRATE ?auto_487a37
+Found two methods with the same subtasks: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_432a35 - SURFACE )
+:vars (?auto_436a35 - HOIST ?auto_435a35 - PLACE ?auto_434a35 - SURFACE ?auto_438a35 - TRUCK ?auto_433a35 - SURFACE ?auto_437a35 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_436a35 ?auto_435a35) ( SURFACE-AT ?auto_434a35 ?auto_435a35) ( ON ?auto_434a35 ?auto_432a35) ( IS-CRATE ?auto_434a35) ( TRUCK-AT ?auto_438a35 ?auto_435a35) ( IS-CRATE ?auto_433a35) ( SURFACE-AT ?auto_433a35 ?auto_435a35) ( ON ?auto_433a35 ?auto_434a35) ( IS-CRATE ?auto_437a35) ( AVAILABLE ?auto_436a35) ( SURFACE-AT ?auto_437a35 ?auto_435a35) ( ON ?auto_437a35 ?auto_433a35) ( CLEAR ?auto_437a35) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_433a35 )(TASK-CLEAR-SURFACE ?auto_432a35 )))
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_484a37 - SURFACE )
+:vars (?auto_491a37 - HOIST ?auto_486a37 - PLACE ?auto_489a37 - SURFACE ?auto_488a37 - TRUCK ?auto_490a37 - SURFACE ?auto_487a37 - SURFACE ?auto_485a37 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_491a37 ?auto_486a37) ( SURFACE-AT ?auto_489a37 ?auto_486a37) ( ON ?auto_489a37 ?auto_484a37) ( IS-CRATE ?auto_489a37) ( TRUCK-AT ?auto_488a37 ?auto_486a37) ( IS-CRATE ?auto_490a37) ( SURFACE-AT ?auto_490a37 ?auto_486a37) ( ON ?auto_490a37 ?auto_489a37) ( IS-CRATE ?auto_487a37) ( SURFACE-AT ?auto_487a37 ?auto_486a37) ( ON ?auto_487a37 ?auto_490a37) ( IS-CRATE ?auto_485a37) ( AVAILABLE ?auto_491a37) ( SURFACE-AT ?auto_485a37 ?auto_486a37) ( ON ?auto_485a37 ?auto_487a37) ( CLEAR ?auto_485a37) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_487a37 )(TASK-CLEAR-SURFACE ?auto_484a37 )))
+Merging two methods: 
+{'head': 'TASK-CLEAR-SURFACE', 'parameters': [{'name': '?auto_432a35', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_436a35', 'type': 'HOIST'}, {'name': '?auto_435a35', 'type': 'PLACE'}, {'name': '?auto_434a35', 'type': 'SURFACE'}, {'name': '?auto_438a35', 'type': 'TRUCK'}, {'name': '?auto_433a35', 'type': 'SURFACE'}, {'name': '?auto_437a35', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_436a35 ?auto_435a35', 'SURFACE-AT ?auto_434a35 ?auto_435a35', 'ON ?auto_434a35 ?auto_432a35', 'IS-CRATE ?auto_434a35', 'TRUCK-AT ?auto_438a35 ?auto_435a35', 'IS-CRATE ?auto_433a35', 'SURFACE-AT ?auto_433a35 ?auto_435a35', 'ON ?auto_433a35 ?auto_434a35', 'IS-CRATE ?auto_437a35', 'AVAILABLE ?auto_436a35', 'SURFACE-AT ?auto_437a35 ?auto_435a35', 'ON ?auto_437a35 ?auto_433a35', 'CLEAR ?auto_437a35'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_433a35'], ['TASK-CLEAR-SURFACE', '?auto_432a35']]}
+{'head': 'TASK-CLEAR-SURFACE', 'parameters': [{'name': '?auto_484a37', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_491a37', 'type': 'HOIST'}, {'name': '?auto_486a37', 'type': 'PLACE'}, {'name': '?auto_489a37', 'type': 'SURFACE'}, {'name': '?auto_488a37', 'type': 'TRUCK'}, {'name': '?auto_490a37', 'type': 'SURFACE'}, {'name': '?auto_487a37', 'type': 'SURFACE'}, {'name': '?auto_485a37', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_491a37 ?auto_486a37', 'SURFACE-AT ?auto_489a37 ?auto_486a37', 'ON ?auto_489a37 ?auto_484a37', 'IS-CRATE ?auto_489a37', 'TRUCK-AT ?auto_488a37 ?auto_486a37', 'IS-CRATE ?auto_490a37', 'SURFACE-AT ?auto_490a37 ?auto_486a37', 'ON ?auto_490a37 ?auto_489a37', 'IS-CRATE ?auto_487a37', 'SURFACE-AT ?auto_487a37 ?auto_486a37', 'ON ?auto_487a37 ?auto_490a37', 'IS-CRATE ?auto_485a37', 'AVAILABLE ?auto_491a37', 'SURFACE-AT ?auto_485a37 ?auto_486a37', 'ON ?auto_485a37 ?auto_487a37', 'CLEAR ?auto_485a37'], 'subtasks': [['TASK-CLEAR-SURFACE', '?auto_487a37'], ['TASK-CLEAR-SURFACE', '?auto_484a37']]}
+After aligning: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_432a35 - SURFACE )
+:vars (?auto_491a37 - HOIST ?auto_486a37 - PLACE ?auto_489a37 - SURFACE ?auto_488a37 - TRUCK ?auto_490a37 - SURFACE ?auto_433a35 - SURFACE ?auto_485a37 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_491a37 ?auto_486a37) ( SURFACE-AT ?auto_489a37 ?auto_486a37) ( ON ?auto_489a37 ?auto_432a35) ( IS-CRATE ?auto_489a37) ( TRUCK-AT ?auto_488a37 ?auto_486a37) ( IS-CRATE ?auto_490a37) ( SURFACE-AT ?auto_490a37 ?auto_486a37) ( ON ?auto_490a37 ?auto_489a37) ( IS-CRATE ?auto_433a35) ( SURFACE-AT ?auto_433a35 ?auto_486a37) ( ON ?auto_433a35 ?auto_490a37) ( IS-CRATE ?auto_485a37) ( AVAILABLE ?auto_491a37) ( SURFACE-AT ?auto_485a37 ?auto_486a37) ( ON ?auto_485a37 ?auto_433a35) ( CLEAR ?auto_485a37) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_433a35 )(TASK-CLEAR-SURFACE ?auto_432a35 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_491a37', 'type': 'HOIST'}, {'name': '?auto_486a37', 'type': 'PLACE'}, {'name': '?auto_489a37', 'type': 'SURFACE'}, {'name': '?auto_488a37', 'type': 'TRUCK'}, {'name': '?auto_490a37', 'type': 'SURFACE'}, {'name': '?auto_433a35', 'type': 'SURFACE'}, {'name': '?auto_485a37', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 [{'name': '?auto_433a35', 'type': 'SURFACE'}]
+Adding the new method to self.generalized_methods
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_432a35 - SURFACE )
+:vars (?auto_433a35 - SURFACE )
+:precondition (and ( IS-CRATE ?auto_433a35) )
+:subtasks ((TASK-CLEAR-SURFACE ?auto_433a35 )(TASK-CLEAR-SURFACE ?auto_432a35 )))
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+['?auto_476a36', '?auto_482a36', '?auto_481a36', '?auto_479a36', '?auto_475a36'] [['!LOAD', '?auto_476a36', '?auto_482a36', '?auto_481a36', '?auto_479a36'], ['TASK-CLEAR-SURFACE', '?auto_475a36']]
+['?auto_549a38', '?auto_554a38', '?auto_551a38', '?auto_552a38', '?auto_546a38'] [['!LOAD', '?auto_549a38', '?auto_554a38', '?auto_551a38', '?auto_552a38'], ['TASK-CLEAR-SURFACE', '?auto_546a38']]
+Found a match: 
+HOIST-AT ?auto_549a38 ?auto_552a38
+Found a match: 
+TRUCK-AT ?auto_551a38 ?auto_552a38
+Found a match: 
+LIFTING ?auto_549a38 ?auto_554a38
+Found a match: 
+IS-CRATE ?auto_554a38
+Found two methods with the same subtasks: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_475a36 - SURFACE )
+:vars (?auto_476a36 - HOIST ?auto_479a36 - PLACE ?auto_480a36 - SURFACE ?auto_481a36 - TRUCK ?auto_478a36 - SURFACE ?auto_477a36 - SURFACE ?auto_482a36 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_476a36 ?auto_479a36) ( SURFACE-AT ?auto_480a36 ?auto_479a36) ( ON ?auto_480a36 ?auto_475a36) ( IS-CRATE ?auto_480a36) ( TRUCK-AT ?auto_481a36 ?auto_479a36) ( IS-CRATE ?auto_478a36) ( SURFACE-AT ?auto_478a36 ?auto_479a36) ( ON ?auto_478a36 ?auto_480a36) ( IS-CRATE ?auto_477a36) ( SURFACE-AT ?auto_477a36 ?auto_479a36) ( ON ?auto_477a36 ?auto_478a36) ( CLEAR ?auto_477a36) ( LIFTING ?auto_476a36 ?auto_482a36) ( IS-CRATE ?auto_482a36) )
+:subtasks ((!LOAD ?auto_476a36 ?auto_482a36 ?auto_481a36 ?auto_479a36 )(TASK-CLEAR-SURFACE ?auto_475a36 )))
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_546a38 - SURFACE )
+:vars (?auto_549a38 - HOIST ?auto_552a38 - PLACE ?auto_548a38 - SURFACE ?auto_551a38 - TRUCK ?auto_550a38 - SURFACE ?auto_553a38 - SURFACE ?auto_547a38 - SURFACE ?auto_554a38 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_549a38 ?auto_552a38) ( SURFACE-AT ?auto_548a38 ?auto_552a38) ( ON ?auto_548a38 ?auto_546a38) ( IS-CRATE ?auto_548a38) ( TRUCK-AT ?auto_551a38 ?auto_552a38) ( IS-CRATE ?auto_550a38) ( SURFACE-AT ?auto_550a38 ?auto_552a38) ( ON ?auto_550a38 ?auto_548a38) ( IS-CRATE ?auto_553a38) ( SURFACE-AT ?auto_553a38 ?auto_552a38) ( ON ?auto_553a38 ?auto_550a38) ( IS-CRATE ?auto_547a38) ( SURFACE-AT ?auto_547a38 ?auto_552a38) ( ON ?auto_547a38 ?auto_553a38) ( CLEAR ?auto_547a38) ( LIFTING ?auto_549a38 ?auto_554a38) ( IS-CRATE ?auto_554a38) )
+:subtasks ((!LOAD ?auto_549a38 ?auto_554a38 ?auto_551a38 ?auto_552a38 )(TASK-CLEAR-SURFACE ?auto_546a38 )))
+Merging two methods: 
+{'head': 'TASK-CLEAR-SURFACE', 'parameters': [{'name': '?auto_475a36', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_476a36', 'type': 'HOIST'}, {'name': '?auto_479a36', 'type': 'PLACE'}, {'name': '?auto_480a36', 'type': 'SURFACE'}, {'name': '?auto_481a36', 'type': 'TRUCK'}, {'name': '?auto_478a36', 'type': 'SURFACE'}, {'name': '?auto_477a36', 'type': 'SURFACE'}, {'name': '?auto_482a36', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_476a36 ?auto_479a36', 'SURFACE-AT ?auto_480a36 ?auto_479a36', 'ON ?auto_480a36 ?auto_475a36', 'IS-CRATE ?auto_480a36', 'TRUCK-AT ?auto_481a36 ?auto_479a36', 'IS-CRATE ?auto_478a36', 'SURFACE-AT ?auto_478a36 ?auto_479a36', 'ON ?auto_478a36 ?auto_480a36', 'IS-CRATE ?auto_477a36', 'SURFACE-AT ?auto_477a36 ?auto_479a36', 'ON ?auto_477a36 ?auto_478a36', 'CLEAR ?auto_477a36', 'LIFTING ?auto_476a36 ?auto_482a36', 'IS-CRATE ?auto_482a36'], 'subtasks': [['!LOAD', '?auto_476a36', '?auto_482a36', '?auto_481a36', '?auto_479a36'], ['TASK-CLEAR-SURFACE', '?auto_475a36']]}
+{'head': 'TASK-CLEAR-SURFACE', 'parameters': [{'name': '?auto_546a38', 'type': 'SURFACE'}], 'vars': [{'name': '?auto_549a38', 'type': 'HOIST'}, {'name': '?auto_552a38', 'type': 'PLACE'}, {'name': '?auto_548a38', 'type': 'SURFACE'}, {'name': '?auto_551a38', 'type': 'TRUCK'}, {'name': '?auto_550a38', 'type': 'SURFACE'}, {'name': '?auto_553a38', 'type': 'SURFACE'}, {'name': '?auto_547a38', 'type': 'SURFACE'}, {'name': '?auto_554a38', 'type': 'SURFACE'}], 'precondition': ['HOIST-AT ?auto_549a38 ?auto_552a38', 'SURFACE-AT ?auto_548a38 ?auto_552a38', 'ON ?auto_548a38 ?auto_546a38', 'IS-CRATE ?auto_548a38', 'TRUCK-AT ?auto_551a38 ?auto_552a38', 'IS-CRATE ?auto_550a38', 'SURFACE-AT ?auto_550a38 ?auto_552a38', 'ON ?auto_550a38 ?auto_548a38', 'IS-CRATE ?auto_553a38', 'SURFACE-AT ?auto_553a38 ?auto_552a38', 'ON ?auto_553a38 ?auto_550a38', 'IS-CRATE ?auto_547a38', 'SURFACE-AT ?auto_547a38 ?auto_552a38', 'ON ?auto_547a38 ?auto_553a38', 'CLEAR ?auto_547a38', 'LIFTING ?auto_549a38 ?auto_554a38', 'IS-CRATE ?auto_554a38'], 'subtasks': [['!LOAD', '?auto_549a38', '?auto_554a38', '?auto_551a38', '?auto_552a38'], ['TASK-CLEAR-SURFACE', '?auto_546a38']]}
+After aligning: 
+(:method TASK-CLEAR-SURFACE
+:parameters (?auto_475a36 - SURFACE )
+:vars (?auto_476a36 - HOIST ?auto_479a36 - PLACE ?auto_548a38 - SURFACE ?auto_481a36 - TRUCK ?auto_550a38 - SURFACE ?auto_553a38 - SURFACE ?auto_547a38 - SURFACE ?auto_482a36 - SURFACE )
+:precondition (and ( HOIST-AT ?auto_476a36 ?auto_479a36) ( SURFACE-AT ?auto_548a38 ?auto_479a36) ( ON ?auto_548a38 ?auto_475a36) ( IS-CRATE ?auto_548a38) ( TRUCK-AT ?auto_481a36 ?auto_479a36) ( IS-CRATE ?auto_550a38) ( SURFACE-AT ?auto_550a38 ?auto_479a36) ( ON ?auto_550a38 ?auto_548a38) ( IS-CRATE ?auto_553a38) ( SURFACE-AT ?auto_553a38 ?auto_479a36) ( ON ?auto_553a38 ?auto_550a38) ( IS-CRATE ?auto_547a38) ( SURFACE-AT ?auto_547a38 ?auto_479a36) ( ON ?auto_547a38 ?auto_553a38) ( CLEAR ?auto_547a38) ( LIFTING ?auto_476a36 ?auto_482a36) ( IS-CRATE ?auto_482a36) )
+:subtasks ((!LOAD ?auto_476a36 ?auto_482a36 ?auto_481a36 ?auto_479a36 )(TASK-CLEAR-SURFACE ?auto_475a36 )))
+	Before removing residual parameters: 
+	 [{'name': '?auto_476a36', 'type': 'HOIST'}, {'name': '?auto_479a36', 'type': 'PLACE'}, {'name': '?auto_548a38', 'type': 'SURFACE'}, {'name': '?auto_481a36', 'type': 'TRUCK'}, {'name': '?auto_550a38', 'type': 'SURFACE'}, {'name': '?auto_553a38', 'type': 'SURFACE'}, {'name': '?auto_547a38', 'type': 'SURFACE'}, {'name': '?auto_482a36', 'type': 'SURFACE'}]
+	After removing residual parameters: 
+	 [{'name': '?auto_476a36', 'type': 'HOIST'}, {'name': '?auto_479a36', 'type': 'PLACE'}, {'name': '?auto_481a36', 'type': 'TRUCK'}, {'name': '?auto_482a36', 'type': 'SURFACE'}]
+['?auto_18a2', '?auto_21a2', '?auto_20a2', '?auto_17a2', '?auto_16a2'] [['!LOAD', '?auto_18a2', '?auto_21a2', '?auto_20a2', '?auto_17a2'], ['TASK-CLEAR-SURFACE', '?auto_16a2']]
+['?auto_476a36', '?auto_482a36', '?auto_481a36', '?auto_479a36', '?auto_475a36'] [['!LOAD', '?auto_476a36', '?auto_482a36', '?auto_481a36', '?auto_479a36'], ['TASK-CLEAR-SURFACE', '?auto_475a36']]
+Found a match: 
+HOIST-AT ?auto_476a36 ?auto_479a36
+Found a match: 
+TRUCK-AT ?auto_481a36 ?auto_479a36
+Found a match: 
+LIFTING ?auto_476a36 ?auto_482a36
+Found a match: 
+IS-CRATE ?auto_482a36
+Merging success
+Removing the original methods
+Checking if two methods have the same subtasks: 
+44 8 34
+
+
+8 generalized methods learned.
+44 methods original.
+34 methods now.
+10 methods deleted.

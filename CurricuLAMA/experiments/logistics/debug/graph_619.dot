@@ -1,0 +1,9 @@
+digraph G {
+  lm0 [label="Atom in-airplane(p0, a0)", style=filled];
+  lm1 [label="Atom airplane-at(a0, l0-0)", style=bold];
+      lm1 -> lm2 [label="n"];
+  lm2 [label="Atom airplane-at(a0, l2-0)"];
+      lm2 -> lm0 [label="gn"];
+  lm3 [label="Atom obj-at(p0, l2-0)", style=bold];
+      lm3 -> lm0 [label="gn"];
+}
