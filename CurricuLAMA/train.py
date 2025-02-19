@@ -3,6 +3,14 @@ print("importing packages...")
 import os
 import sys
 sys.path.append('/home/rli12314/scratch/CurricuLAMA')
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+print("Current Directory: ", current_dir)
+relative_path = os.path.join(current_dir, '..')
+
+sys.path.append(relative_path)
+
+
 import re
 # from parse_landmark_graph import get_subgoals_from_landmark_graph, parse_landmark_graph_topdown, read_landmark_graph
 # from parse_problem import get_final_goal_task
