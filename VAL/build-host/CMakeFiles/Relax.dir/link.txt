@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -fpermissive -g -rdynamic CMakeFiles/Relax.dir/applications/Relax/src/main.cpp.o -o bin/Relax  -Wl,-rpath,"\$ORIGIN" bin/libVAL.so 

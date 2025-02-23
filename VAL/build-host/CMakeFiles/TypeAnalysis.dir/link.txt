@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -fpermissive -g -rdynamic CMakeFiles/TypeAnalysis.dir/applications/TypeAnalysis/src/main.cpp.o -o bin/TypeAnalysis  -Wl,-rpath,"\$ORIGIN" bin/libVAL.so 

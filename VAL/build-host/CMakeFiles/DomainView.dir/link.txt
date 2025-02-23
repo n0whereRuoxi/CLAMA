@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -fpermissive -g -rdynamic CMakeFiles/DomainView.dir/applications/DomainView/src/main.cpp.o -o bin/DomainView  -Wl,-rpath,"\$ORIGIN" bin/libVAL.so 

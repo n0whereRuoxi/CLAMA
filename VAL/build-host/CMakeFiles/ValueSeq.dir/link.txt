@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -fpermissive -g -rdynamic CMakeFiles/ValueSeq.dir/applications/ValueSeq/src/main.cpp.o -o bin/ValueSeq  -Wl,-rpath,"\$ORIGIN" bin/libVAL.so 

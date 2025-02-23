@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -fpermissive -g -rdynamic CMakeFiles/ToFn.dir/applications/ToFn/src/main.cpp.o -o bin/ToFn  -Wl,-rpath,"\$ORIGIN" bin/libVAL.so 
