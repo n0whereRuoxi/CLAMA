@@ -44,7 +44,7 @@ available_tags=" CXX F77"
 
 # ### BEGIN LIBTOOL CONFIG
 
-# Libtool was configured on host login-2.zaratan.umd.edu:
+# Libtool was configured on host login-1.zaratan.umd.edu:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/sh"
@@ -82,13 +82,13 @@ AR="ar"
 AR_FLAGS="cru"
 
 # A C compiler.
-LTCC="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/bin/gcc"
+LTCC="gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
 
 # A language-specific compiler.
-CC="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/bin/gcc"
+CC="gcc"
 
 # Is the compiler the GNU C compiler?
 with_gcc=yes
@@ -97,7 +97,7 @@ with_gcc=yes
 EGREP="/usr/bin/grep -E"
 
 # The linker used to build libraries.
-LD="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/binutils-2.41-fwflc45p6lmk6rf7pyqumtvdqn65uj2n/bin/ld -m elf_x86_64"
+LD="/usr/bin/ld -m elf_x86_64"
 
 # Whether we need hard or soft links.
 LN_S="ln -s"
@@ -329,10 +329,10 @@ variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COM
 link_all_deplibs=no
 
 # Compile-time system search path for libraries
-sys_lib_search_path_spec="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib64 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0 /lib64 /usr/lib64"
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/8 /usr/lib64 /lib64"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /opt/mellanox/hcoll/lib /usr/lib64/heimdal/lib                /usr/lib64/llvm17/lib/ /opt/mellanox/sharp/lib /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-idrac7 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-isvc /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64/openmanage/smpop /opt/dell/srvadmin/lib64 "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /opt/mellanox/hcoll/lib /usr/lib64/heimdal      /opt/mellanox/sharp/lib /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-idrac7 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-isvc /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64/openmanage/smpop /opt/dell/srvadmin/lib64 "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""
@@ -7320,7 +7320,7 @@ disable_libs=static
 # End:
 # ### BEGIN LIBTOOL TAG CONFIG: CXX
 
-# Libtool was configured on host login-2.zaratan.umd.edu:
+# Libtool was configured on host login-1.zaratan.umd.edu:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/sh"
@@ -7358,13 +7358,13 @@ AR="ar"
 AR_FLAGS="cru"
 
 # A C compiler.
-LTCC="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/bin/gcc"
+LTCC="gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
 
 # A language-specific compiler.
-CC="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/bin/g++"
+CC="g++"
 
 # Is the compiler the GNU C compiler?
 with_gcc=yes
@@ -7373,7 +7373,7 @@ with_gcc=yes
 EGREP="/usr/bin/grep -E"
 
 # The linker used to build libraries.
-LD="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/binutils-2.41-fwflc45p6lmk6rf7pyqumtvdqn65uj2n/bin/ld -m elf_x86_64"
+LD="/usr/bin/ld -m elf_x86_64"
 
 # Whether we need hard or soft links.
 LN_S="ln -s"
@@ -7502,11 +7502,11 @@ striplib="strip --strip-unneeded"
 
 # Dependencies to place before the objects being linked to create a
 # shared library.
-predep_objects="/lib/../lib64/crti.o /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbeginS.o"
+predep_objects="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbeginS.o"
 
 # Dependencies to place after the objects being linked to create a
 # shared library.
-postdep_objects="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtendS.o /lib/../lib64/crtn.o"
+postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/8/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o"
 
 # Dependencies to place before the objects being linked to create a
 # shared library.
@@ -7518,11 +7518,11 @@ postdeps="-lstdc++ -lm -lgcc_s -lc -lgcc_s"
 
 # The directories searched by this compiler when creating a shared
 # library
-compiler_lib_search_dirs="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib64/../lib64 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/../lib64 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib64 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../.."
+compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/8 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/8/../../.."
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib64/../lib64 -L/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/../lib64 -L/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0 -L/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib64 -L/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib -L/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../.."
+compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.."
 
 # Method to check whether dependent libraries are shared objects.
 deplibs_check_method="pass_all"
@@ -7602,10 +7602,10 @@ variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COM
 link_all_deplibs=no
 
 # Compile-time system search path for libraries
-sys_lib_search_path_spec="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib64 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0 /lib64 /usr/lib64"
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/8 /usr/lib64 /lib64"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /opt/mellanox/hcoll/lib /usr/lib64/heimdal/lib                /usr/lib64/llvm17/lib/ /opt/mellanox/sharp/lib /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-idrac7 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-isvc /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64/openmanage/smpop /opt/dell/srvadmin/lib64 "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /opt/mellanox/hcoll/lib /usr/lib64/heimdal      /opt/mellanox/sharp/lib /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-idrac7 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-isvc /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64/openmanage/smpop /opt/dell/srvadmin/lib64 "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""
@@ -7629,7 +7629,7 @@ include_expsyms=""
 
 # ### BEGIN LIBTOOL TAG CONFIG: F77
 
-# Libtool was configured on host login-2.zaratan.umd.edu:
+# Libtool was configured on host login-1.zaratan.umd.edu:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/sh"
@@ -7667,13 +7667,13 @@ AR="ar"
 AR_FLAGS="cru"
 
 # A C compiler.
-LTCC="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/bin/gcc"
+LTCC="gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
 
 # A language-specific compiler.
-CC="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/bin/gfortran"
+CC="gfortran"
 
 # Is the compiler the GNU C compiler?
 with_gcc=yes
@@ -7682,7 +7682,7 @@ with_gcc=yes
 EGREP="/usr/bin/grep -E"
 
 # The linker used to build libraries.
-LD="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/binutils-2.41-fwflc45p6lmk6rf7pyqumtvdqn65uj2n/bin/ld -m elf_x86_64"
+LD="/usr/bin/ld -m elf_x86_64"
 
 # Whether we need hard or soft links.
 LN_S="ln -s"
@@ -7914,10 +7914,10 @@ variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COM
 link_all_deplibs=no
 
 # Compile-time system search path for libraries
-sys_lib_search_path_spec="/cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib64 /cvmfs/hpcsw.umd.edu/spack-software/2023.11.20/linux-rhel8-x86_64/gcc-rh8-8.5.0/gcc-11.3.0-oedkmii7vhd6rbnqm6xufmg7d3jx4w6l/lib/gcc/x86_64-pc-linux-gnu/11.3.0 /lib64 /usr/lib64"
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/8 /usr/lib64 /lib64"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /opt/mellanox/hcoll/lib /usr/lib64/heimdal/lib                /usr/lib64/llvm17/lib/ /opt/mellanox/sharp/lib /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-idrac7 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-isvc /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64/openmanage/smpop /opt/dell/srvadmin/lib64 "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /opt/mellanox/hcoll/lib /usr/lib64/heimdal      /opt/mellanox/sharp/lib /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-idrac7 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/srvadmin-isvc /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64 /opt/dell/srvadmin/lib64/openmanage /opt/dell/srvadmin/lib64/openmanage/smpop /opt/dell/srvadmin/lib64 "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""

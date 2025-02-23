@@ -290,7 +290,8 @@ HtnDomain * DoOneExperiment(std::string l_sStripsDomainFile, std::string l_sCurr
     }
 
 
-    std::string l_sDir = "/scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA";
+    std::string l_sDir = l_sTasksFile;
+    // "/scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA";
     // std::vector<int> l_vTasks
     for(long unsigned int i=0;i<l_vCurriculum.size();i++){
       std::cout << "Reading task file: " << "/task_" + l_vCurriculum[i][2] + ".pddl" << std::endl;

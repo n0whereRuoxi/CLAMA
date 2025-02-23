@@ -384,7 +384,7 @@ def curriculama(idx, domain, curriculum_config, strip_domain_file_dir, problem_f
     configuration = "--partial_generalization --drop_unneeded --curriculum"
     os.system("{} {} {} {} {} {} {} {} {}".format(HTN_Maker_C_dir, 
         configuration, strip_domain_file_dir, curriculum_file_dir, problem_file_dir, 
-        solution_file_dir, input_HTN_domain_file_dir, output_HTN_domain_file_dir, "N/A",
+        solution_file_dir, input_HTN_domain_file_dir, output_HTN_domain_file_dir, current_dir,
         ">/dev/null 2>&1" if debug < 1 else ""))
     time_log.append(time.time() - start_time - sum(time_log))
     

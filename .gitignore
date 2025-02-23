@@ -1,2 +1,23 @@
-HTNMakerC/
+HTNMakerC/.libs
+HTNMakerC/.deps
+
+# 可执行文件
+*.exe
+a.out
+
+# 目标文件
+*.o
+*.obj
+
+# 库文件
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# 中间生成文件和临时文件
+*.d
+*.swp
+
 myenv/

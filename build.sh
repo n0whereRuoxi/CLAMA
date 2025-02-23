@@ -11,3 +11,8 @@ rm -rf builds/release/CMakeFiles
 
 # Run the build script with the release argument
 ./build.py release
+
+# Build HTN-Maker-C
+cd ../HTNMakerC
+./configure
+make
