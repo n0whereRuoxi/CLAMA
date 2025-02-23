@@ -2,14 +2,14 @@
 print("importing packages...")
 import os
 import sys
-sys.path.append('/home/rli12314/scratch/CurricuLAMA')
+# sys.path.append('/home/rli12314/scratch/CurricuLAMA')
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 print("Current Directory: ", current_dir)
-relative_path = os.path.join(current_dir, '..')
+root_path = os.path.join(current_dir, '..')
 
-sys.path.append(relative_path)
-
+sys.path.append(root_path)
+print("root path: ", root_path)
 
 import re
 # from parse_landmark_graph import get_subgoals_from_landmark_graph, parse_landmark_graph_topdown, read_landmark_graph
@@ -20,9 +20,11 @@ from landmark_graph_processor import LandmarkGraphProcessor
 import argparse
 import time
 # import tempfile
-validator = "/home/rli12314/scratch/VAL_bin/bin/Validate -v -t 0.001"
-curriculama_dir = "/scratch/zt1/project/nau-lab/user/rli12314/CurricuLAMA"
-downward_dir = "/scratch/zt1/project/nau-lab/user/rli12314/downward/fast-downward.py"
+validator = root_path + "/VAL_bin/bin/Validate -v -t 0.001"
+curriculama_dir = root_path + "/CurricuLAMA"
+downward_dir = root_path + "/downward/fast-downward.py"
+HTN_Maker_C_dir = root_path + "/HTNMakerC/htn-maker"
+
 # There are several decision making points: 
 # 1. how to group the subgoals hierarchically?
 # 2. how to select subgoal ordering?
@@ -379,7 +381,6 @@ def curriculama(idx, domain, curriculum_config, strip_domain_file_dir, problem_f
     time_log.append(time.time() - start_time - sum(time_log))
     # wait = input("Press Enter to continue.")
     # run HTN-Maker-C to learn HTN methods from curriculum
-    HTN_Maker_C_dir = "/scratch/zt1/project/nau-lab/user/rli12314/HTNMakerC/htn-maker"
     configuration = "--partial_generalization --drop_unneeded --curriculum"
     os.system("{} {} {} {} {} {} {} {} {}".format(HTN_Maker_C_dir, 
         configuration, strip_domain_file_dir, curriculum_file_dir, problem_file_dir, 
@@ -420,8 +421,8 @@ def run_experiments(n, domain, curriculum_configs_idx, debug):
         input_HTN_domain_file_dir = output_HTN_domain_file_dir
         with open('./experiments/{}/time_log_{}.txt'.format(domain,domain), 'a') as f:
             f.write('{}\n'.format(','.join([str(i) for i in time_log])))
+        wait = input("Press Enter to continue.")
         os.system("rm current_state.state current_state.1 task_*.pddl problem.curriculum sas_plan*")
-        # wait = input("Press Enter to continue.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

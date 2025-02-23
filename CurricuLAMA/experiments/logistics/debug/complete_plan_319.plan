@@ -1,3 +1,0 @@
-( defplan logistics Prob01
-  (!drive-truck t1 l1-0 l1-1 c1)
-)

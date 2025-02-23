@@ -1,5 +1,0 @@
-digraph G {
-  lm0 [label="Atom airplane-at(a0, l2-0)", style=filled];
-  lm1 [label="Atom airplane-at(a0, l1-0)", style=bold];
-      lm1 -> lm0 [label="n"];
-}

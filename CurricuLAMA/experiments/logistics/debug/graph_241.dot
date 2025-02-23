@@ -1,5 +1,0 @@
-digraph G {
-  lm0 [label="Atom truck-at(t1, l1-1)", style=filled];
-  lm1 [label="Atom truck-at(t1, l1-0)", style=bold];
-      lm1 -> lm0 [label="gn"];
-}

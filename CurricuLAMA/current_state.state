@@ -1,0 +1,7 @@
+(on-table b000)
+(on-table b003)
+(clear b003)
+(holding b001)
+(on-table b002)
+(clear b002)
+(clear b000)

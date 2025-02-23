@@ -1,3 +1,0 @@
-( defplan logistics Prob01
-  (!fly-airplane a0 l0-0 l1-0)
-)
